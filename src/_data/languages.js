@@ -7,11 +7,11 @@ export default {
     ariaLang: 'Change language'
   },
   'zh-Hans': {
-  dir: '',
-  availableText: '本页还提供以下语言版本：',
-  skipText: '跳转到主要内容',
-  ariaPrimary: '主要',
-  ariaLang: '切换语言'
+    dir: '',
+    availableText: '本页还提供以下语言版本：',
+    skipText: '跳转到主要内容',
+    ariaPrimary: '主要',
+    ariaLang: '切换语言'
   },
   'zh-Hant': {
     dir: '',

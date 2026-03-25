@@ -1,5 +1,5 @@
 ---
-title: '關於我'
+title: '關於'
 description: '一個英文子頁面'
 slugOverride: 'about'
 ---
