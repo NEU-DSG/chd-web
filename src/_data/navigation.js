@@ -5,38 +5,28 @@ export default {
       url: '/en/'
     },
     {
-      text: 'About me',
-      url: '/en/about-me/'
+      text: 'About',
+      url: '/en/about/'
     }
   ],
-  es: [
+  'zh-Hans': [
     {
-      text: 'Inicio',
-      url: '/es/'
+      text: '首页',
+      url: '/zh-Hans'
     },
     {
-      text: 'Sobre mí',
-      url: '/es/sobre-mi/'
+      text: '关于',
+      url: '/zh-Hans/about/'
     }
   ],
-  de: [
+  'zh-Hant': [
     {
-      text: 'Startseite',
-      url: '/de/'
+      text: '首頁',
+      url: '/zh-Hant'
     },
     {
-      text: 'Über mich',
-      url: '/de/ueber-mich/'
-    }
-  ],
-  fa: [
-    {
-      text: 'خانه',
-      url: '/fa/'
-    },
-    {
-      text: 'درباره‌ی من',
-      url: '/fa/drbarh-y-mn/'
+      text: '關於',
+      url: '/zh-Hant/about/'
     }
   ]
 };

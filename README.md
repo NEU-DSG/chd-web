@@ -1,14 +1,7 @@
-# eleventy-i18n
+# chd-web
 
-Minimal starter for localized content, using Eleventy's own Internationalization (I18n) plugin.
+This is a project web space for the Chinatown History directory, forked from eleventy-i18n. It uses Eleventy's own Internationalization (I18n) plugin.
 
-In an article on my personal website, I describe the structure of the starter and the decisions behind it: https://www.lenesaile.com/en/blog/internationalization-with-eleventy-20-and-netlify/
-
-## Preview
-
-https://eleventy-i18n.netlify.app
-
-## Development
 
 ### Install dependencies
 

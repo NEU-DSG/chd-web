@@ -6,25 +6,18 @@ export default {
     ariaPrimary: 'Primary',
     ariaLang: 'Change language'
   },
-  de: {
-    dir: '',
-    availableText: 'Diese Seite ist auch verfügbar in:',
-    skipText: 'Zum Hauptinhalt springen',
-    ariaPrimary: 'Primär',
-    ariaLang: 'Sprache ändern'
+  'zh-Hans': {
+  dir: '',
+  availableText: '本页还提供以下语言版本：',
+  skipText: '跳转到主要内容',
+  ariaPrimary: '主要',
+  ariaLang: '切换语言'
   },
-  es: {
+  'zh-Hant': {
     dir: '',
-    availableText: 'Esta página también está disponible en:',
-    skipText: 'Saltar al contenido principal',
-    ariaPrimary: 'Primario',
-    ariaLang: 'Cambiar idioma'
+    availableText: '本頁另有以下語言版本：',
+    skipText: '跳至主要內容',
+    ariaPrimary: '主要',
+    ariaLang: '切換語言'
   },
-  fa: {
-    dir: 'rtl',
-    availableText: 'زبان های دیگری برای این صفحه فراهم است از جمله:',
-    skipText: 'پرش به محتوای اصلی',
-    ariaPrimary: 'اصلی',
-    ariaLang: 'تغییر زبان'
-  }
 };

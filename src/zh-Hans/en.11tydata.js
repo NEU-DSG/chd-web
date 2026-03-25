@@ -1,5 +1,5 @@
 export default {
-  lang: 'es',
+  lang: 'zh-Hans',
   eleventyComputed: {
     key: data => {
       if (data.key) {

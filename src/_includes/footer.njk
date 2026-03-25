@@ -2,11 +2,20 @@
   {{ languages[page.lang].availableText }}
 
   <nav id="footer" aria-label="{{ languages[page.lang].ariaLang }}">
-    {% for link in page.url | locale_links %} {%- if not loop.first %}/{% endif %}
+    {% for link in page.url | locale_links %}
+      {%- if not loop.first %}/{% endif %}
 
-    <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{
-      link.label
-    }}</a>
+      {% set label = link.label %}
+
+      {% if link.lang == "zh-Hans" %}
+        {% set label = "简体中文" %}
+      {% elif link.lang == "zh-Hant" %}
+        {% set label = "繁體中文" %}
+      {% endif %}
+
+      <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+        {{ label }}
+      </a>
     {% endfor %}
   </nav>
 </footer>
