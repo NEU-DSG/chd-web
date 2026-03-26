@@ -1,0 +1,18 @@
+---
+pagination:
+    data: rdf-zh-Hans
+    size: 1
+    alias: collection
+permalink: zh-Hans/collection/{{ collection.organization.value | lastSegment }}/index.html
+---
+<h1> {{ collection.organizationLabel.value }}</h1>
+<h3> {{ collection.description.value}} </h3>
+
+<dl>
+{%- for key, value in collection %}
+  <dt><strong>{{ key }}</strong></dt>
+  <dd>{{ value.value }}</dd>
+{%- endfor %}
+</dl>
+
+
