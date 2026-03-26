@@ -87,7 +87,7 @@ GROUP BY ?organization ?organizationLabel ?description ?inception_year ?street_a
 ?phone_number ?email_address ?organization_type ?date_of_dissolution ?neighborhood ?country
 ?official_website
 
-LIMIT 5
+LIMIT 10
   `;
  
       try {

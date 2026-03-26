@@ -7,6 +7,10 @@ export default {
     {
       text: 'About',
       url: '/en/about/'
+    },
+    {
+      text: 'Organizations',
+      url: '/en/orglist/'
     }
   ],
   'zh-Hans': [
@@ -17,6 +21,10 @@ export default {
     {
       text: '关于',
       url: '/zh-Hans/about/'
+    },
+    {
+      text: '组织',
+      url: '/zh-Hans/orglist/'
     }
   ],
   'zh-Hant': [
@@ -27,6 +35,10 @@ export default {
     {
       text: '關於',
       url: '/zh-Hant/about/'
+    },
+    {
+      text: '組織',
+      url: '/zh-Hant/orglist/'
     }
   ]
 };
