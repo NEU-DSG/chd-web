@@ -10,6 +10,10 @@ export default async function (eleventyConfig) {
   return url.split("/").filter(Boolean).pop();
   });
 
+  eleventyConfig.addFilter("locale_swap", function(url, targetLocale) {
+  return url.replace(/^\/(en|zh-Hans|zh-Hant)\//, `/${targetLocale}/`);
+});
+
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
 
   ['src/favicon.ico', 'src/opengraph.jpg'].forEach(item =>
