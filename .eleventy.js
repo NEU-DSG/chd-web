@@ -6,6 +6,10 @@ export default async function (eleventyConfig) {
     errorMode: 'allow-fallback' // Opting out of "strict"
   });
 
+  eleventyConfig.addFilter("lastSegment", url => {
+  return url.split("/").filter(Boolean).pop();
+  });
+
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
 
   ['src/favicon.ico', 'src/opengraph.jpg'].forEach(item =>
