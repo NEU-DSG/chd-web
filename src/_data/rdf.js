@@ -1,3 +1,5 @@
+import EleventyFetch from "@11ty/eleventy-fetch";
+
 export default async function () {
   const endpoint = "http://chinatown-fuseki-nlb-b8621274c3e5cc6b.elb.us-east-1.amazonaws.com/chd";
   const query = `
@@ -84,23 +86,28 @@ WHERE {
 GROUP BY ?organization ?organizationLabel ?description ?inception_year ?street_address ?coordinate_location 
 ?phone_number ?email_address ?organization_type ?date_of_dissolution ?neighborhood ?country
 ?official_website
+
+LIMIT 5
   `;
  
-try {
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/sparql-query",
-      "Accept": "application/sparql-results+json",
-    },
-    body: query,
-  });
-  console.log("Status:", response.status);
-  const text = await response.text();
-  console.log("Body:", text.slice(0, 500));
-  return JSON.parse(text).results.bindings;
-} catch (err) {
-  console.error("Fetch error:", err.cause || err);
-  return [];
-}}
+      try {
+    const data = await EleventyFetch(endpoint + "?cache=rdf", {
+      duration: "1d",
+      type: "json",
+      fetchOptions: {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/sparql-query",
+          Accept: "application/sparql-results+json",
+        },
+        body: query,
+      },
+    });
+    return data.results.bindings;
+  } catch (err) {
+    console.error("Fetch error:", err);
+    return [];
+  }
+}
+
  
