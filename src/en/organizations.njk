@@ -9,9 +9,22 @@ permalink: en/organizations/{{ organizations.organization.value | lastSegment }}
 <h3> {{ organizations.description.value}} </h3>
 
 <dl>
+{% set skip = "organization,organizationLabel,description" %}
 {%- for key, value in organizations %}
-  <dt><strong>{{ key }}</strong></dt>
-  <dd>{{ value.value }}</dd>
+  {% if key not in skip %}
+  <dt><strong>{{ key | changeCase }}</strong></dt>
+  <dd>
+  {%- if key == "organization_type" or key == "neighborhood" or key == "country" %}
+    <a href="/en/terms/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
+  {%- elif key == "official_website" %}
+    <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
+  {%- elif key == "records_creator_for"%}
+    <a href="/en/collections/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl}}</a>
+  {%- else%}
+    {{ value.value }}
+  {% endif %}
+  </dd>
+  {% endif %}
 {%- endfor %}
 </dl>
 

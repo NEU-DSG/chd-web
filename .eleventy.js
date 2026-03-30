@@ -14,6 +14,21 @@ export default async function (eleventyConfig) {
   return url.replace(/^\/(en|zh-Hans|zh-Hant)\//, `/${targetLocale}/`);
 });
 
+  eleventyConfig.addFilter("labelFromUrl", (url) => {
+  return url.split("/").pop().replaceAll("_", " ");
+});
+
+  eleventyConfig.addFilter("changeCase", (str) => {
+  return str
+    .replace(/_/g, " ")
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+});
+
+  eleventyConfig.addFilter("capitalize", function(value) {
+    return value.replace(/\b\w/g, char => char.toUpperCase());
+});
+
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
 
   ['src/favicon.ico', 'src/opengraph.jpg'].forEach(item =>
