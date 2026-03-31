@@ -20,6 +20,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addFilter("changeCase", (str) => {
   return str
+    .replace(/_list$/, "")
     .replace(/_/g, " ")
     .replace(/([a-z])([A-Z])/g, "$1 $2")
     .replace(/\b\w/g, (c) => c.toUpperCase());

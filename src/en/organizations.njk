@@ -5,9 +5,9 @@ pagination:
     alias: organizations
 permalink: en/organizations/{{ organizations.organization.value | lastSegment }}/index.html
 ---
+organization
 <h1> {{ organizations.organizationLabel.value }}</h1>
 <h3> {{ organizations.description.value}} </h3>
-
 <dl>
 {% set skip = "organization,organizationLabel,description" %}
 {%- for key, value in organizations %}
@@ -18,8 +18,14 @@ permalink: en/organizations/{{ organizations.organization.value | lastSegment }}
     <a href="/en/terms/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
   {%- elif key == "official_website" %}
     <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
-  {%- elif key == "records_creator_for"%}
-    <a href="/en/collections/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl}}</a>
+  {%- elif key == "founders" %}
+    {% for item in value.value.split("|") %}
+      <a href="/en/people/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+    {% endfor %}
+  {%- elif key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" %}
+    {% for item in value.value.split("|") %}
+      <a href="/en/collections/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+    {% endfor %}
   {%- else%}
     {{ value.value }}
   {% endif %}
