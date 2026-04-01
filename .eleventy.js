@@ -30,6 +30,12 @@ export default async function (eleventyConfig) {
     return value.replace(/\b\w/g, char => char.toUpperCase());
 });
 
+  eleventyConfig.addFilter("toLatLng", (str) => {
+    if (!str) return null;
+    const [lat, lng] = str.split(",").map(Number);
+    return [lat, lng];
+});
+
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
 
   ['src/favicon.ico', 'src/opengraph.jpg'].forEach(item =>

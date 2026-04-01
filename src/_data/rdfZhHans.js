@@ -66,19 +66,28 @@ WHERE {
     }	
 
     OPTIONAL {
-    	?organization prop:founder ?founder .
+    	?organization prop:founder ?founder_uri .
+      ?founder_uri rdfs:label ?founder .
+      FILTER(LANG(?founder) = "zh-Hans")
+      
     }
   	
   	OPTIONAL {
-    	?organization prop:maintainer_of ?maintainer_of .
+    	?organization prop:maintainer_of ?maintainer_of_uri .
+      ?maintainer_of_uri rdfs:label ?maintainer_of .
+      FILTER(LANG(?maintainer_of) = "zh-Hans")
   	}
   
   	OPTIONAL {
-    	?organization prop:donor_for ?donor_for .
+    	?organization prop:donor_for ?donor_for_uri .
+      ?donor_for_uri rdfs:label ?donor_for .
+      FILTER(LANG(?donor_for) = "zh-Hans")
   	}
   
   	OPTIONAL {
-    	?organization prop:records_creator_for ?records_creator_for .
+    	?organization prop:records_creator_for ?records_creator_for_uri .
+      ?records_creator_for_uri rdfs:label ?records_creator_for .
+      FILTER(LANG(?records_creator_for) = "zh-Hans")
   	}
   	
 }
@@ -90,7 +99,7 @@ GROUP BY ?organization ?organizationLabel ?description ?inception_year ?street_a
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=rdf", {
+    const data = await EleventyFetch(endpoint + "?cache=rdfzhhans", {
       duration: "1d",
       type: "json",
       fetchOptions: {

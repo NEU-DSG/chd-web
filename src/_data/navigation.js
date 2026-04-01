@@ -11,7 +11,12 @@ export default {
     {
       text: 'Organizations',
       url: '/en/orglist/'
+    },
+    {
+      text: 'Map',
+      url: '/en/map/'
     }
+    
   ],
   'zh-Hans': [
     {
@@ -25,6 +30,10 @@ export default {
     {
       text: '组织',
       url: '/zh-Hans/orglist/'
+    },
+    {
+      text: '地图',
+      url: '/zh-Hans/map/'
     }
   ],
   'zh-Hant': [
@@ -39,6 +48,10 @@ export default {
     {
       text: '組織',
       url: '/zh-Hant/orglist/'
+    },
+    {
+      text: '地圖',
+      url: '/zh-Hant/map/'
     }
   ]
 };
