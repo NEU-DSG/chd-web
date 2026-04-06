@@ -38,7 +38,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
 
-  ['src/favicon.ico', 'src/opengraph.jpg'].forEach(item =>
+  ['src/favicon.ico'].forEach(item =>
     eleventyConfig.addPassthroughCopy(item)
   );
 
