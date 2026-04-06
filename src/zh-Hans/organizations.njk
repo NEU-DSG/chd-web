@@ -5,8 +5,8 @@ pagination:
     alias: organizations
 permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegment }}/index.html
 ---
-组织
 <h1> {{ organizations.organizationLabel.value }}</h1>
+<em>组织</em>
 <h3> {{ organizations.description.value}} </h3>
 <dl>
 {% set skip = "organization,organizationLabel,description" %}
