@@ -66,19 +66,28 @@ WHERE {
     }	
 
     OPTIONAL {
-    	?organization prop:founder ?founder .
+    	?organization prop:founder ?founder_uri .
+      ?founder_uri rdfs:label ?founder .
+      FILTER(LANG(?founder) = "zh-Hant")
+      
     }
   	
   	OPTIONAL {
-    	?organization prop:maintainer_of ?maintainer_of .
+    	?organization prop:maintainer_of ?maintainer_of_uri .
+      ?maintainer_of_uri rdfs:label ?maintainer_of .
+      FILTER(LANG(?maintainer_of) = "zh-Hant")
   	}
   
   	OPTIONAL {
-    	?organization prop:donor_for ?donor_for .
+    	?organization prop:donor_for ?donor_for_uri .
+      ?donor_for_uri rdfs:label ?donor_for .
+      FILTER(LANG(?donor_for) = "zh-Hant")
   	}
   
   	OPTIONAL {
-    	?organization prop:records_creator_for ?records_creator_for .
+    	?organization prop:records_creator_for ?records_creator_for_uri .
+      ?records_creator_for_uri rdfs:label ?records_creator_for .
+      FILTER(LANG(?records_creator_for) = "zh-Hant")
   	}
   	
 }
