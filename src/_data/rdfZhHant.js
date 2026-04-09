@@ -5,7 +5,7 @@ export default async function () {
   const query = `
     # Define namespace/prefixes
 PREFIX onto: <https://chinatowncollections.library.northeastern.edu/onto/>
-PREFIX prop: <https://chinatowncollections.library.northeastern.edu/property/>
+PREFIX prop: <https://chinatowncollections.library.northeastern.edu/properties/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
