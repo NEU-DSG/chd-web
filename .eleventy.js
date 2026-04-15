@@ -10,6 +10,28 @@ export default async function (eleventyConfig) {
   return url.split("/").filter(Boolean).pop();
   });
 
+  eleventyConfig.addFilter("makePlural", prop => {
+    if (prop == "founder") {
+      return prop + "s"
+    } else {
+      return prop + "_list"
+    }
+  });
+
+  eleventyConfig.addFilter("makeSingular", prop => {
+  if (prop === "founders") {
+    return "founder";
+  } else if (prop.endsWith("_list")) {
+    return prop.slice(0, -5);
+  } else {
+    return prop;
+  }
+});
+
+eleventyConfig.addFilter("translate", (str) => {
+  return str.replace(/ /g, "_").replace(/[().,\[\]"'<>{}|\\^]/g, "");
+});
+
   eleventyConfig.addFilter("locale_swap", function(url, targetLocale) {
   return url.replace(/^\/(en|zh-Hans|zh-Hant)\//, `/${targetLocale}/`);
 });
@@ -25,6 +47,10 @@ export default async function (eleventyConfig) {
     .replace(/([a-z])([A-Z])/g, "$1 $2")
     .replace(/\b\w/g, (c) => c.toUpperCase());
 });
+
+  eleventyConfig.addFilter('log', value => {
+    console.log(value)
+  });
 
   eleventyConfig.addFilter("capitalize", function(value) {
     return value.replace(/\b\w/g, char => char.toUpperCase());
