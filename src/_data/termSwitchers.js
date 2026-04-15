@@ -1,23 +1,24 @@
-
 import EleventyFetch from "@11ty/eleventy-fetch";
 
 export default async function () {
   const endpoint = "http://chinatown-fuseki-nlb-b8621274c3e5cc6b.elb.us-east-1.amazonaws.com/chd";
   const query = `
-    PREFIX prop: <https://chinatowncollections.library.northeastern.edu/properties/>
+    PREFIX terms: <https://chinatowncollections.library.northeastern.edu/terms/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-    SELECT ?p ?pLabelZh ?pLabelEn WHERE {
-      ?p rdfs:label ?pLabelZh .
-      ?p rdfs:label ?pLabelEn .
-      FILTER(LANG(?pLabelZh) = "zh-Hans")
-      FILTER(LANG(?pLabelEn) = "en")
-      FILTER(STRSTARTS(STR(?p), STR(prop:)))
+    SELECT ?t ?tLabelZhhans ?tLabelZhhant ?tLabelEn 
+    WHERE {
+        ?t rdfs:label ?tLabelZhhans .
+        ?t rdfs:label ?tLabelEn .
+        ?t rdfs:label ?tLabelZhhant .
+        FILTER(LANG(?tLabelZhhans) = "zh-Hans")
+        FILTER(LANG(?tLabelZhhant) = "zh-Hant")
+        FILTER(LANG(?tLabelEn) = "en")
+        FILTER(STRSTARTS(STR(?t), STR(terms:)))
     }
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=rdfzhhanslabels", {
+    const data = await EleventyFetch(endpoint + "?cache=collectionSwitcher", {
       duration: "1d",
       type: "json",
       fetchOptions: {
@@ -33,10 +34,11 @@ export default async function () {
   // Build a lookup
     const labels = {};
     for (const binding of data.results.bindings) {
-      const localName = binding.p.value.split("/").pop();
+      const localName = binding.t.value.split("/").pop();
       labels[localName] = {
-        zh: binding.pLabelZh.value,
-        en: binding.pLabelEn.value,
+        en: binding.tLabelEn.value,
+        zhhans: binding.tLabelZhhans.value,
+        zhhant: binding.tLabelZhhant.value,
       };
     }
     return labels;

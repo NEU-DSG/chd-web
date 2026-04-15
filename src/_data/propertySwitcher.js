@@ -7,11 +7,14 @@ export default async function () {
     PREFIX prop: <https://chinatowncollections.library.northeastern.edu/properties/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    SELECT ?p ?pLabelZh ?pLabelEn WHERE {
-      ?p rdfs:label ?pLabelZh .
+    SELECT ?p ?pLabelEn ?pLabelZhhans ?pLabelZhhant WHERE {
       ?p rdfs:label ?pLabelEn .
-      FILTER(LANG(?pLabelZh) = "zh-Hans")
+      ?p rdfs:label ?pLabelZhhans .
+      ?p rdfs:label ?pLabelZhhant
+      
       FILTER(LANG(?pLabelEn) = "en")
+      FILTER(LANG(?pLabelZhhans) = "zh-Hans")
+      FILTER(LANG(?pLabelZhhant) = "zh-Hant")
       FILTER(STRSTARTS(STR(?p), STR(prop:)))
     }
   `;
@@ -35,8 +38,9 @@ export default async function () {
     for (const binding of data.results.bindings) {
       const localName = binding.p.value.split("/").pop();
       labels[localName] = {
-        zh: binding.pLabelZh.value,
         en: binding.pLabelEn.value,
+        zhhans: binding.pLabelZhhans.value,
+        zhhant: binding.pLabelZhhant.value,
       };
     }
     return labels;
