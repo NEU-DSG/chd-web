@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-data: rdf
+data: organizationsEn
 ---
 
 {% block head %}
@@ -30,7 +30,7 @@ data: rdf
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-	const organizations = {{ rdf | dump | safe }};
+	const organizations = {{ organizationsEn | dump | safe }};
 
 	organizations.forEach(loc => {
 		const coordStr = loc.coordinate_location?.value;
