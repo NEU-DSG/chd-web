@@ -1,0 +1,37 @@
+---
+pagination:
+    data: peopleZhHans
+    size: 1
+    alias: people
+permalink: zh-Hans/people/{{ people.person.value | lastSegment }}/index.html
+---
+<h1> {{ people.personLabel.value }}</h1>
+<em>人</em>
+<h3> {{ people.description.value}} </h3>
+<dl>
+{% set skip = "person,personLabel,description" %}
+{%- for key, value in people %}
+    {% if key not in skip %}
+  {% if key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" or key == "contact_for_list" or key == "founder_of_list" %}
+    <dt><strong>{{ propertySwitcher[key | makeSingular].zhhans }}</strong></dt>
+  {% else %}
+    <dt><strong>{{ propertySwitcher[key].zhhans }}</strong></dt>
+  {% endif%}
+  <dd>
+  {%- if key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" or key == "contact_for_list" %}
+    {% for item in value.value.split("|") %}
+      <a href="/en/collections/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+    {% endfor %}
+  {%- elif key == "founder_of_list"  %}
+    {% for item in value.value.split("|") %}
+      <a href="/en/organizations/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+    {% endfor %}
+  {%- elif key == "email_address" %}
+    <a href="mailto:{{ value.value }}">{{ value.value }}</a>
+  {%- else%}
+    {{ value.value }}
+  {% endif %}
+  </dd>
+  {% endif %}
+{%- endfor %}
+</dl>
