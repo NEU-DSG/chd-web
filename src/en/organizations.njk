@@ -18,6 +18,8 @@ permalink: en/organizations/{{ organizations.organization.value | lastSegment }}
     <a href="/en/terms/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
   {%- elif key == "official_website" %}
     <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
+  {%- elif key == "email_address" %}
+    <a href="mailto:{{ value.value }}">{{ value.value }}</a>
   {%- elif key == "founders" %}
     {% for item in value.value.split("|") %}
       <a href="/en/people/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
