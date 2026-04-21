@@ -10,11 +10,9 @@ permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegme
 <h3> {{ organizations.description.value}} </h3>
 <dl>
 {% set skip = "organization,organizationLabel,description" %}
-{{ propertySwitcher | dump }}
 {%- for key, value in organizations %}
   {# organization, organizationLabel and description are already displayed#}
   {% if key not in skip %}
-  {{ key | dump }}
   {# Labels #}
   {# Displaying the zh-Hans labels. Because the properties are pluralized in the SPARQL query, we need to un-pluralize them 
    in order to get the zh-Hans labels from the index. Index retrieved from rdfZhHansLabels.js file#}
@@ -27,20 +25,20 @@ permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegme
   {# Data Fields #}
   <dd>
   {# Terms #}
-  {%- if key == "organization_type" or key == "neighborhood" or key == "country" %}
-    <a href="/en/terms/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
+  {%- if key == "organization_type" or key == "location" or key == "country" %}
+    <a href="/zh-Hans/terms/{{ value.value | lastSegment }}">{{ termSwitcher[value.value | lastSegment].zhhans }}</a>
   {# Website #}
   {%- elif key == "official_website" %}
     <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
   {# Founders #}
   {%- elif key == "founders" %}
     {% for item in value.value.split("|") %}
-      <a href="/en/people/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+      <a href="/zh-Hans/people/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
     {% endfor %}
   {# Other Linked Records #}
   {%- elif key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" %}
     {% for item in value.value.split("|") %}
-      <a href="/en/collections/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+      <a href="/zh-Hans/collections/{{ item | lastSegment }}">{{ collectionSwitcher[item | lastSegment].zhhans}}</a><br>
     {% endfor %}
   {%- else%}
     {{ value.value }}

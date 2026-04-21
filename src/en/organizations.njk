@@ -14,7 +14,7 @@ permalink: en/organizations/{{ organizations.organization.value | lastSegment }}
   {% if key not in skip %}
   <dt><strong>{{ key | changeCase }}</strong></dt>
   <dd>
-  {%- if key == "organization_type" or key == "neighborhood" or key == "country" %}
+  {%- if key == "organization_type" or key == "location" or key == "country" %}
     <a href="/en/terms/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
   {%- elif key == "official_website" %}
     <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
