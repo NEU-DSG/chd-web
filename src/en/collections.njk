@@ -1,0 +1,48 @@
+---
+pagination:
+    data: collectionsEn
+    size: 1
+    alias: collectionData
+permalink: en/collections/{{ collectionData.collection.value | lastSegment }}/index.html
+---
+<h1> {{ collectionData.collectionLabel.value }}</h1>
+<em>collection</em>
+<h3> {{ collectionData.description.value}} </h3>
+<dl>
+{% set skip = "collection,collectionLabel,description" %}
+{%- for key, value in collectionData %}
+  
+  {% if key not in skip %}
+  <dt><strong>{{ key | changeCase }}</strong></dt>
+    <dd>
+    {# single value terms #}
+    {%- if key == "collection_type" or key == "digitization_status" or key == "access_restriction_status" %}
+        <a href="/en/terms/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
+    {# multi value terms #}
+    {%- elif key == "material_types_general_list" or key == "material_types_specific_list" or key == "subject_list" or key == "language_list" %}
+        {% for item in value.value.split("|") %}
+        <a href="/en/terms/{{ item | lastSegment }}">{{ item | labelFromUrl | capitalize}}</a><br>
+        {% endfor %}
+    {# URL Literals #}
+    {%- elif key == "official_website" or key == "described_at_url"%}
+        <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
+    {# Connects to People/Organizations/Collections #}
+    {%- elif key == "founder_list" or key == "creator_list" or key == "maintainer_list" or key == "donor_list" or key == "contact_list" %}
+        {% for item in value.value.split("|") %}
+        {% if "people" in item %}
+            <a href="/en/people/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+        {% else %}
+            <a href="/en/organizations/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+        {% endif %}
+        {% endfor %}
+    {%- elif key == "related_collection"%}
+        <a href="/en/collections/{{ value.value | lastSegment }}">{{ value.value | labelFromUrl | capitalize }}</a>
+    {%- else%}
+        {{ value.value }}
+    {% endif %}
+    </dd>
+  {% endif %}
+{%- endfor %}
+</dl>
+
+

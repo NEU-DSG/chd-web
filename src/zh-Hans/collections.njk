@@ -1,0 +1,51 @@
+---
+pagination:
+    data: collectionsZhHans
+    size: 1
+    alias: collectionData
+permalink: zh-Hans/collections/{{ collectionData.collection.value | lastSegment }}/index.html
+---
+<h1> {{ collectionData.collectionLabel.value }}</h1>
+<em>收藏</em>
+<h3> {{ collectionData.description.value}} </h3>
+<dl>
+{% set skip = "collection,collectionLabel,description" %}
+{%- for key, value in collectionData %}
+  {% if key not in skip %}
+  {% if key == "creator_list" or key == "maintainer_list" or key == "donor_list" or key == "founder_list" or key == "donor_list" or key == "contact_list" or key == "material_types_general_list" or key == "material_types_specific_list" or key == "subject_list" or key == "language_list"  %}
+    <dt><strong>{{ propertySwitcher[key | makeSingular].zhhans }}</strong></dt>
+  {% else %}
+    <dt><strong>{{ propertySwitcher[key].zhhans }}</strong></dt>
+  {% endif%}
+    <dd>
+    {# single value terms #}
+    {%- if key == "collection_type" or key == "digitization_status" or key == "access_restriction_status" %}
+        <a href="/zh-Hans/terms/{{ value.value | lastSegment }}">{{ termSwitcher[value.value | lastSegment].zhhans }}</a>
+    {# multi value terms #}
+    {%- elif key == "material_types_general_list" or key == "material_types_specific_list" or key == "subject_list" or key == "language_list" %}
+        {% for item in value.value.split("|") %}
+        <a href="/zh-Hans/terms/{{ item | lastSegment }}">{{ termSwitcher[item | lastSegment].zhhans }}</a><br>
+        {% endfor %}
+    {# URL Literals #}
+    {%- elif key == "official_website" or key == "described_at_url"%}
+        <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
+    {# Connects to People/Organizations/Collections #}
+    {%- elif key == "founder_list" or key == "creator_list" or key == "maintainer_list" or key == "donor_list" or key == "contact_list" %}
+        {% for item in value.value.split("|") %}
+        {% if "people" in item %}
+            <a href="/zh-Hans/people/{{ item | lastSegment }}">{{ item | labelFromUrl }}</a><br>
+        {% else %}
+            <a href="/zh-Hans/organizations/{{ item | lastSegment }}">{{ organizationSwitcher[item | lastSegment].zhhans}}</a><br>
+        {% endif %}
+        {% endfor %}
+    {%- elif key == "related_collection"%}
+        <a href="/zh-Hans/collections/{{ value.value | lastSegment }}">{{ collectionSwitcher[value.value | lastSegment].zhhans }}</a>
+    {%- else%}
+        {{ value.value }}
+    {% endif %}
+    </dd>
+  {% endif %}
+{%- endfor %}
+</dl>
+
+

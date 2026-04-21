@@ -9,6 +9,10 @@ export default {
       url: '/en/about/'
     },
     {
+      text: 'Collections',
+      url: '/en/collectionlist/'
+    },
+    {
       text: 'Organizations',
       url: '/en/orglist/'
     },
@@ -32,6 +36,10 @@ export default {
       url: '/zh-Hans/about/'
     },
     {
+      text: '收藏',
+      url: '/zh-Hans/collectionlist/'
+    },
+    {
       text: '组织',
       url: '/zh-Hans/orglist/'
     },
@@ -52,6 +60,10 @@ export default {
     {
       text: '關於',
       url: '/zh-Hant/about/'
+    },
+    {
+      text: '收藏',
+      url: '/zh_Hant/collectionlist/'
     },
     {
       text: '組織',
