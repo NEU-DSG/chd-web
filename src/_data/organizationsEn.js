@@ -90,7 +90,7 @@ GROUP BY ?organization ?organizationLabel ?description ?inception_year ?street_a
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=rdf", {
+    const data = await EleventyFetch(endpoint + "?cache=organizationsEn", {
       duration: "1d",
       type: "json",
       fetchOptions: {

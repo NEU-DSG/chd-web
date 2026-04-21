@@ -87,7 +87,7 @@ GROUP BY ?organization ?organizationLabel ?description ?inception_year ?street_a
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=rdfzhhans", {
+    const data = await EleventyFetch(endpoint + "?cache=organizationsZhHans", {
       duration: "1d",
       type: "json",
       fetchOptions: {
