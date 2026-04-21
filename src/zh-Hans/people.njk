@@ -20,11 +20,11 @@ permalink: zh-Hans/people/{{ people.person.value | lastSegment }}/index.html
   <dd>
   {%- if key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" or key == "contact_for_list" %}
     {% for item in value.value.split("|") %}
-      <a href="/en/collections/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+      <a href="/en/collections/{{ item | lastSegment }}">{{ collectionSwitcher[item | lastSegment].zhhans}}</a><br>
     {% endfor %}
   {%- elif key == "founder_of_list"  %}
     {% for item in value.value.split("|") %}
-      <a href="/en/organizations/{{ item | lastSegment }}">{{ item | labelFromUrl}}</a><br>
+      <a href="/en/organizations/{{ item | lastSegment }}">{{ organizationSwitcher[item | lastSegment].zhhans}}</a><br>
     {% endfor %}
   {%- elif key == "email_address" %}
     <a href="mailto:{{ value.value }}">{{ value.value }}</a>
