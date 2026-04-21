@@ -20,7 +20,7 @@ export default async function () {
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=rdfzhhanslabels", {
+    const data = await EleventyFetch(endpoint + "?cache=propertySwitcher", {
       duration: "1d",
       type: "json",
       fetchOptions: {

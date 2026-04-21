@@ -19,7 +19,7 @@ export default async function () {
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=collectionSwitcher", {
+    const data = await EleventyFetch(endpoint + "?cache=personSwitcher", {
       duration: "1d",
       type: "json",
       fetchOptions: {
