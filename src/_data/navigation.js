@@ -13,6 +13,10 @@ export default {
       url: '/en/orglist/'
     },
     {
+      text: 'People',
+      url: '/en/peoplelist'
+    },
+    {
       text: 'Map',
       url: '/en/map/'
     }
@@ -32,6 +36,10 @@ export default {
       url: '/zh-Hans/orglist/'
     },
     {
+      text: '人们',
+      url: '/zh-Hans/peoplelist'
+    },
+    {
       text: '地图',
       url: '/zh-Hans/map/'
     }
@@ -48,6 +56,10 @@ export default {
     {
       text: '組織',
       url: '/zh-Hant/orglist/'
+    },
+    {
+      text: '人們',
+      url: '/zh-Hant/peoplelist'
     },
     {
       text: '地圖',
