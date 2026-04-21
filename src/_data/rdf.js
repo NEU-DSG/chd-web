@@ -11,7 +11,7 @@ PREFIX schema: <https://schema.org/>
 
 # Select fields to return
 SELECT ?organization ?organizationLabel ?description ?inception_year ?street_address ?coordinate_location 
-?phone_number ?email_address ?organization_type ?date_of_dissolution ?neighborhood ?country
+?phone_number ?email_address ?organization_type ?date_of_dissolution ?location ?country
 ?official_website (GROUP_CONCAT(DISTINCT ?founder; separator="|") AS ?founders) (GROUP_CONCAT(DISTINCT ?maintainer_of; separator="|") AS ?maintainer_of_list) (GROUP_CONCAT(DISTINCT ?donor_for; separator="|") AS ?donor_for_list) (GROUP_CONCAT(DISTINCT ?records_creator_for; separator="|") AS ?records_creator_for_list)
 
 # Query
@@ -54,7 +54,7 @@ WHERE {
     }	
 
     OPTIONAL {
-    	?organization prop:late ?neighborhood .
+    	?organization prop:location ?location .
     }	
 
     OPTIONAL {
@@ -84,7 +84,7 @@ WHERE {
 }
 
 GROUP BY ?organization ?organizationLabel ?description ?inception_year ?street_address ?coordinate_location 
-?phone_number ?email_address ?organization_type ?date_of_dissolution ?neighborhood ?country
+?phone_number ?email_address ?organization_type ?date_of_dissolution ?location ?country
 ?official_website
 
   `;
