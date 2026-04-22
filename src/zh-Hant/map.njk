@@ -38,6 +38,6 @@ data: organizationsZhHant
 		const [lat, lng] = coordStr.split(",").map(Number);
 		L.marker([lat, lng])
 			.addTo(map)
-			.bindPopup(`<strong>${loc.organizationLabel.value}</strong>`);
+			.bindPopup(`<strong><a href="/zh-Hant/organizations/${ loc.organization.value.split('/').pop() }">${loc.organizationLabel.value}</a></strong>`);
 	});
 </script>
