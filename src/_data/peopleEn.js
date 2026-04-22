@@ -59,7 +59,7 @@ WHERE {
 
 GROUP BY ?person ?personLabel ?description ?phone_number ?email_address 
 
-
+ORDER BY ?person
   `;
  
       try {

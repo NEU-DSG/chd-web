@@ -118,6 +118,8 @@ WHERE {
 GROUP BY ?collection ?collectionLabel ?description ?collection_type ?digitization_status ?access_restriction_status 
 ?access_policy_notes ?project_status ?project_start_year ?project_end_year ?materials_start_year ?materials_end_year
 ?official_website ?described_at_url ?related_collection
+
+ORDER BY ?collection
   `;
  
       try {
