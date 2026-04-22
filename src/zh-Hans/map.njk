@@ -32,12 +32,28 @@ data: organizationsZhHans
 
 	const organizations = {{ organizationsZhHans | dump | safe }};
 
+	// Store markers by ID
+	const markers = {};
+
 	organizations.forEach(loc => {
 		const coordStr = loc.coordinate_location?.value;
 		if (!coordStr) return;
 		const [lat, lng] = coordStr.split(",").map(Number);
-		L.marker([lat, lng])
+		// grab id for each org
+		const id = loc.organization.value.split("/").pop();
+		const marker = L.marker([lat, lng])
 			.addTo(map)
 			.bindPopup(`<strong><a href="/zh-Hans/organizations/${ loc.organization.value.split('/').pop() }">${loc.organizationLabel.value}</a></strong>`);
+		// add id to markers dict
+		markers[id] = { marker, lat, lng };
 	});
+
+	const params = new URLSearchParams(window.location.search);
+	const targetOrg = params.get("org");
+	// if both exist, retrieve the marker from the dict and display
+	if (targetOrg && markers[targetOrg]) {
+		const { marker, lat, lng } = markers[targetOrg];
+		map.setView([lat, lng], 16);
+		marker.openPopup();
+	}
 </script>
