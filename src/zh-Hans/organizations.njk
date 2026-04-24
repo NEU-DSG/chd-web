@@ -49,5 +49,7 @@ permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegme
   {% endif %}
 {%- endfor %}
 </dl>
-<strong><a href="/zh-Hans/map/?org={{ organizations.organization.value | lastSegment }}">在地图上查看</a></strong>
+{% if organizations.coordinate_location.value %}
+  <strong><a href="/zh-Hans/map/?org={{ organizations.organization.value | lastSegment }}">在地图上查看</a></strong>
+{% endif %}
 
