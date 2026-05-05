@@ -1,0 +1,52 @@
+---
+layout: base.njk
+---
+{# Create search box and results #}
+<input id="searchbox" type="text" onkeydown="if(event.key === 'Enter') search()">
+<button id="searchbutton" onclick="search()"> Search</button>
+<ul id="searchresults"></ul>
+
+{# script for clientside search via Lucene #}
+<script>
+    function highlight(text, term) {
+        var regex = new RegExp('(\\b' + term + '\\b)', 'gi');
+        return text.replace(regex, '<mark>$1</mark>');
+    }
+    function search() {
+        console.log(document.getElementById("searchbox").value);
+        var searchTerm = document.getElementById("searchbox").value;
+        var sparqlQuery = `PREFIX text: <http://jena.apache.org/text#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX schema: <https://schema.org/>
+        SELECT DISTINCT ?s ?label ?description WHERE {
+            ?s text:query (rdfs:label schema:description '${searchTerm}' 'lang:en') .
+            ?s rdfs:label ?label .
+            ?s schema:description ?description .
+            FILTER(lang(?label) = "en")
+            FILTER(lang(?description) = "en")
+        }`;
+        
+        fetch('http://chinatown-fuseki-nlb-b8621274c3e5cc6b.elb.us-east-1.amazonaws.com/chd', {
+        method: 'POST', 
+        headers: {
+            "Content-Type": "application/sparql-query",
+            "Accept": "application/sparql-results+json"
+        },
+        body: sparqlQuery
+        })
+        .then(response => response.json())
+        .then(document.getElementById("searchresults").innerHTML = "")
+        .then(data => data.results.bindings.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '/en' + item.s.value.slice(item.s.value.indexOf("/", 8));
+        a.innerHTML = highlight(item.label.value, searchTerm);
+        li.appendChild(a);
+        const desc = document.createElement('p');
+        desc.innerHTML = highlight(item.description.value, searchTerm);
+        desc.style.marginLeft = "20px";
+        li.appendChild(desc);
+        document.getElementById("searchresults").appendChild(li);
+    }));
+    }
+</script>

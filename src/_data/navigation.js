@@ -23,6 +23,10 @@ export default {
     {
       text: 'Map',
       url: '/en/map/'
+    },
+    {
+      text: 'Search',
+      url: '/en/search/'
     }
     
   ],
