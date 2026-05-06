@@ -12,7 +12,6 @@ npm install
 ### Working locally
 
 Starts development server by default on `http://localhost:8080`. Watches tasks to compile when changes detected.
-Remember to manually change to a local folder: `http://localhost:8080/en/`. Redirects are only working on the server.
 
 ```
 npm start
