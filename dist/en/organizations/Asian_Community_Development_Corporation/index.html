@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title></title>
+
+    <!-- prettier-ignore -->
+    <style>
+      /* custom */
+      body{font-size:1.1rem;}a{text-decoration:underline!important;}nav#footer{all:unset}.skip-link{clip:rect(1px,1px,1px,1px);display:block;left:1rem;top:4rem;z-index:999}.skip-link,.visually-hidden{height:1px;overflow:hidden;position:absolute;width:1px}.visually-hidden{clip:rect(0,0,0,0);white-space:nowrap}.skip-link:focus,.visually-hidden:focus{clip:auto;background-color:var(--background);color:var(--links);height:auto;line-height:1;overflow:visible;padding:1rem;width:auto}.skip-link:not(:focus){clip:rect(0 0 0 0);border:0;height:auto;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;}
+
+      /* bahunya inline, unused removed */
+      :root{--background-body:#0d1117;--background:#161b22;--background-bright:rgba(240,246,252,0.15);--background-alt:#1a242f;--selection:#1c76c5;--text-main:#c9d1d9;--text-bright:#e3e9f0;--text-muted:#8b949e;--links:#e3bc5e;--focus:#388bfd;--focus-background:#0c2d6b;--border:#21252c;--border-muted:#21262d;--border-bright:#8b949e;--button-hover:#324759;--monospace:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;--sans-serif:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Segoe UI Emoji,Apple Color Emoji,Noto Color Emoji,sans-serif;font-family:var(--sans-serif);line-height:1.7;max-width:50rem;margin:6rem auto;padding:0 10px;word-wrap:break-word;color:#c9d1d9;color:var(--text-main);background:#0d1117;background:var(--background-body);text-rendering:optimizeLegibility}h1,h2,h3,h4,h5{margin:3rem 0 1.38rem;line-height:1.3}h1{font-size:2.488rem}h2{font-size:2.074rem}h1,h2,h3,h4,h5,h6,strong{color:#e3e9f0;color:var(--text-bright)}ol,ul{padding-left:2em}a{text-decoration:none;color:#e3bc5e;color:var(--links)}footer{border-top:1px solid #21252c;border-top:1px solid var(--border);padding-top:10px;color:#8b949e;color:var(--text-muted)}body>footer{margin-top:40px}header nav:first-of-type{position:fixed;top:0;left:0;background:rgba(0,0,0,.5);padding:0 calc(50vw - 25rem);display:flex;align-items:center;width:100%;z-index:999}header nav:first-of-type:before{backdrop-filter:saturate(180%) blur(5px);-webkit-backdrop-filter:saturate(180%) blur(5px);content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0}header nav:first-of-type a{margin:10px;display:inline-block}header nav:first-of-type ul{list-style-type:none;margin:0;padding:0;overflow:hidden;display:inline}header nav:first-of-type>ul>li{float:left}header nav:first-of-type>ul>li:lang(fa){float:right}
+    </style>
+
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Asian_Community_Development_Corporation/"
+    />
+
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Asian_American_Resource_Workshop/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Boston_Greenspace_Alliance/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Boston_Urban_Gardeners/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Cambridge_Historical_Commission/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Chinatown_Community_Land_Trust/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Chinese_Historical_Society_of_New_England/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Chinese_Progressive_Association/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/City_of_Boston_Archives/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/International_Society/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Kwong_Kow_Chinese_School/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Moakley_Archive_Institute/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Northeastern_University_Archives_and_Special_Collections/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Radcliffe_Institute_Harvard_University/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/organizations/Wah_Lum_Kung_Fu_Athletic_Association/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Asian_American_Resource_Workshop/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Asian_Community_Development_Corporation/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Boston_Greenspace_Alliance/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Boston_Urban_Gardeners/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Cambridge_Historical_Commission/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Chinatown_Community_Land_Trust/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Chinese_Historical_Society_of_New_England/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Chinese_Progressive_Association/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/City_of_Boston_Archives/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/International_Society/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Kwong_Kow_Chinese_School/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Moakley_Archive_Institute/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Northeastern_University_Archives_and_Special_Collections/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Radcliffe_Institute_Harvard_University/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/organizations/Wah_Lum_Kung_Fu_Athletic_Association/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Asian_American_Resource_Workshop/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Asian_Community_Development_Corporation/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Boston_Greenspace_Alliance/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Boston_Urban_Gardeners/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Cambridge_Historical_Commission/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Chinatown_Community_Land_Trust/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Chinese_Historical_Society_of_New_England/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Chinese_Progressive_Association/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/City_of_Boston_Archives/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/International_Society/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Kwong_Kow_Chinese_School/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Moakley_Archive_Institute/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Northeastern_University_Archives_and_Special_Collections/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Radcliffe_Institute_Harvard_University/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston/"
+    />
+    
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/organizations/Wah_Lum_Kung_Fu_Athletic_Association/"
+    />
+    
+
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="http://localhost:8080/en/organizations/Asian_American_Resource_Workshop/"
+    />
+
+    <link rel="canonical" href="http://localhost:8080/en/organizations/Asian_Community_Development_Corporation/" />
+    <meta
+      name="description"
+      content="
+    Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin
+    "
+    />
+    <meta name="generator" content="Eleventy v3.1.2" />
+    <meta property="og:site_name" content="18n-starter" />
+    <meta property="og:title" content=" | 18n-starter" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin" />
+    <meta property="og:url" content="http://localhost:8080/en/organizations/Asian_Community_Development_Corporation/" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
+    
+  </head>
+
+  <body>
+    
+
+<a href="#main" class="skip-link">Jump to main content</a>
+
+<header>
+  <nav aria-label="Primary">
+    <ul>
+      
+      <li>
+        <a
+          href="/en/"
+           data-state="active"
+          >Home</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/en/about/"
+          
+          >About</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/en/collectionlist/"
+          
+          >Collections</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/en/orglist/"
+          
+          >Organizations</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/en/peoplelist"
+          
+          >People</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/en/map/"
+          
+          >Map</a
+        >
+      </li>
+      
+      <li>
+        <a
+          href="/en/search/"
+          
+          >Search</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main id="#main">
+      <h1></h1>
+      <h1> Asian Community Development Corporation</h1>
+<em>organization</em>
+<h3> community development organization headquartered in Boston </h3>
+<dl>
+
+  
+  
+  
+  
+  <dt><strong>Inception Year</strong></dt>
+  <dd>
+    1987
+  
+  </dd>
+  
+  
+  <dt><strong>Street Address</strong></dt>
+  <dd>
+    38 Oak St, Boston, Massachusetts 02111
+  
+  </dd>
+  
+  
+  <dt><strong>Coordinate Location</strong></dt>
+  <dd>
+    42.34836, -71.06324
+  
+  </dd>
+  
+  
+  <dt><strong>Phone Number</strong></dt>
+  <dd>
+    (617) 482-2380
+  
+  </dd>
+  
+  
+  <dt><strong>Email Address</strong></dt>
+  <dd>
+    <a href="mailto:info@asiancdc.org">info@asiancdc.org</a>
+  </dd>
+  
+  
+  <dt><strong>Organization Type</strong></dt>
+  <dd>
+    <a href="/en/terms/community_organization">Community Organization</a>
+  </dd>
+  
+  
+  <dt><strong>Location</strong></dt>
+  <dd>
+    <a href="/en/terms/boston">Boston</a>
+  </dd>
+  
+  
+  <dt><strong>Country</strong></dt>
+  <dd>
+    <a href="/en/terms/united_states_of_america">United States Of America</a>
+  </dd>
+  
+  
+  <dt><strong>Official Website</strong></dt>
+  <dd>
+    <a href="https://asiancdc.org/" target="_blank">https://asiancdc.org/</a>
+  </dd>
+  
+  
+  <dt><strong>Founders</strong></dt>
+  <dd>
+    
+      <a href="/en/people/Tunney_Lee">Tunney Lee</a><br>
+    
+      <a href="/en/people/Jacquie_L_Kay">Jacquie L Kay</a><br>
+    
+  </dd>
+  
+  
+  <dt><strong>Maintainer Of</strong></dt>
+  <dd>
+    
+      <a href="/en/collections/Chinatown_Story_Cart">Chinatown Story Cart</a><br>
+    
+  </dd>
+  
+  
+  <dt><strong>Donor For</strong></dt>
+  <dd>
+    
+      <a href="/en/collections/Asian_Community_Development_Corporation_Jacquie_L_Kay_records">Asian Community Development Corporation Jacquie L Kay records</a><br>
+    
+  </dd>
+  
+</dl>
+
+  <strong><a href="/en/map/?org=Asian_Community_Development_Corporation">View on map</a></strong>
+
+
+
+
+    </main>
+
+    <footer>
+  This page is also available in:
+
+  <nav id="footer" aria-label="Change language">
+    
+    
+    
+      
+    
+      
+        
+
+        
+          
+        
+
+        <a href="/zh-Hans/organizations/Asian_Community_Development_Corporation/" lang="zh-Hans" hreflang="zh-Hans">
+          简体中文
+        </a>
+      
+    
+       / 
+        
+
+        
+          
+        
+
+        <a href="/zh-Hant/organizations/Asian_Community_Development_Corporation/" lang="zh-Hant" hreflang="zh-Hant">
+          繁體中文
+        </a>
+      
+    
+  </nav>
+</footer>
+  </body>
+</html>
