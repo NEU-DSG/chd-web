@@ -9,17 +9,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18' 
-
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Build Eleventy Site
-      run: npm run build
-
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1-node16
       with:
