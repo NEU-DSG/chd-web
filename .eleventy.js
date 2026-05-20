@@ -28,6 +28,8 @@ export default async function (eleventyConfig) {
   }
 });
 
+eleventyConfig.addFilter("split", (str, sep) => str.split(sep));
+
 eleventyConfig.addFilter("translate", (str) => {
   return str.replace(/ /g, "_").replace(/[().,\[\]"'<>{}|\\^]/g, "");
 });
