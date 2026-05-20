@@ -10,6 +10,8 @@ slugOverride: 'collectionlist'
     <a href="/zh-Hans/collections/{{ item.collection.value | lastSegment }}/">
       {{ item.collectionLabel.value }}
     </a>
+    <p class="blurb"> {{ item.description.value }} </p>
   </li>
+  
 {% endfor %}
 </ul>
