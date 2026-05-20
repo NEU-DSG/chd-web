@@ -17,10 +17,25 @@
           {% set label = "English" %}
         {% endif %}
 
-        <a href="{{ page.url | locale_swap(lang) }}" lang="{{ lang }}" hreflang="{{ lang }}">
+        <a
+          class="lang-switch"
+          href="{{ page.url | locale_swap(lang) }}"
+          lang="{{ lang }}"
+          hreflang="{{ lang }}"
+        >
           {{ label }}
         </a>
       {% endif %}
     {% endfor %}
   </nav>
 </footer>
+
+<script>
+  const query = window.location.search;
+
+  if (query) {
+    document.querySelectorAll(".lang-switch").forEach(link => {
+      link.href += query;
+    });
+  }
+</script>
