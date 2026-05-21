@@ -1,0 +1,18 @@
+---
+pagination:
+    data: termsZhHans
+    size: 1
+    alias: terms
+permalink: zh-Hans/terms/{{ terms.term.value | lastSegment }}/index.html
+---
+<h1> {{ terms.termLabel.value }}</h1>
+<em>术语</em>
+<h3> {{ terms.description.value}} </h3>
+{% if terms.wikidata_correlate.value %}
+<dl>
+    <dt><strong>维基数据关联</strong></dt>
+        <dd>
+            <a target="_blank" href="https://wikidata.org/wiki/{{ terms.wikidata_correlate.value }}">{{ terms.wikidata_correlate.value }}</a><br>
+        </dd>
+</dl>
+{% endif %}
