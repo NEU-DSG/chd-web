@@ -9,19 +9,21 @@ PREFIX prop: <https://chinatowncollections.library.northeastern.edu/properties/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
         
-SELECT ?term ?termLabel ?description
+SELECT ?term ?termLabel ?description ?wikidata_correlate
 
 WHERE {
     ?term a ?type ;
         rdfs:label ?termLabel ;
         schema:description ?description . 
+  
+  	OPTIONAL {
+    	?term prop:wikidata_correlate ?wikidata_correlate .
+    }	
 
     FILTER (STRSTARTS(STR(?term), STR(terms:)))
     FILTER (lang(?termLabel) = "en")
     FILTER (lang(?description) = "en")
 }
-
-GROUP BY ?term ?termLabel ?description
 
 ORDER BY ?termLabel
   `;
