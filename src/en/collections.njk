@@ -5,9 +5,10 @@ pagination:
     alias: collectionData
 permalink: en/collections/{{ collectionData.collection.value | lastSegment }}/index.html
 ---
-<h1> {{ collectionData.collectionLabel.value }}</h1>
-<em>collection</em>
-<h3> {{ collectionData.description.value}} </h3>
+<a class="back-link" href="/en/collectionlist"> ← Back to Collections </a>
+<h1 class="obj-title"> {{ collectionData.collectionLabel.value }}</h1>
+<p class="type-tag">collection</p>
+<p class="description"> {{ collectionData.description.value}} </p>
 <dl>
 {% set skip = "collection,collectionLabel,description" %}
 {%- for key, value in collectionData %}

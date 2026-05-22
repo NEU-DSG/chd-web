@@ -5,9 +5,10 @@ pagination:
     alias: organizations
 permalink: zh-Hant/organizations/{{ organizations.organization.value | lastSegment }}/index.html
 ---
-<h1> {{ organizations.organizationLabel.value }}</h1>
-<em>組織</em>
-<h3> {{ organizations.description.value}} </h3>
+<a class="back-link" href="/zh-Hant/orglist"> ← 返回組織 </a>
+<h1 class="obj-title"> {{ organizations.organizationLabel.value }}</h1>
+<p class="type-tag">組織</p>
+<p class="description"> {{ organizations.description.value}} </p>
 <dl>
 {% set skip = "organization,organizationLabel,description" %}
 {%- for key, value in organizations %}

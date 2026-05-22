@@ -5,9 +5,10 @@ pagination:
     alias: people
 permalink: zh-Hans/people/{{ people.person.value | lastSegment }}/index.html
 ---
-<h1> {{ people.personLabel.value }}</h1>
-<em>人</em>
-<h3> {{ people.description.value}} </h3>
+<a class="back-link" href="/zh-Hans/peoplelist"> ← 返回人员 </a>
+<h1 class="obj-title"> {{ people.personLabel.value }}</h1>
+<p class="type-tag">人</p>
+<p class="description"> {{ people.description.value}} </p>
 <dl>
 {% set skip = "person,personLabel,description" %}
 {%- for key, value in people %}

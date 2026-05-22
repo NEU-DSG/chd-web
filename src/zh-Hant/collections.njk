@@ -5,9 +5,10 @@ pagination:
     alias: collectionData
 permalink: zh-Hant/collections/{{ collectionData.collection.value | lastSegment }}/index.html
 ---
-<h1> {{ collectionData.collectionLabel.value }}</h1>
-<em>收藏</em>
-<h3> {{ collectionData.description.value}} </h3>
+<a class="back-link" href="/zh-Hant/peoplelist"> ← 返回收藏集 </a>
+<h1 class="obj-title"> {{ collectionData.collectionLabel.value }}</h1>
+<p class="type-tag">收藏</p>
+<p class="description"> {{ collectionData.description.value}} </p>
 <dl>
 {% set skip = "collection,collectionLabel,description" %}
 {%- for key, value in collectionData %}
