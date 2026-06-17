@@ -65,6 +65,7 @@ eleventyConfig.addFilter("translate", (str) => {
 });
 
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
+  eleventyConfig.addPassthroughCopy("src/styles");
 
   ['src/favicon.ico'].forEach(item =>
     eleventyConfig.addPassthroughCopy(item)
