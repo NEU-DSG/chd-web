@@ -1,41 +1,40 @@
 <footer>
-  {{ languages[page.lang].availableText }}
-
-  <nav id="footer" aria-label="{{ languages[page.lang].ariaLang }}">
-    {% set locales = ["en", "zh-Hans", "zh-Hant"] %}
-    {% set first = true %}
-    {% for lang in locales %}
-      {% if lang != page.lang %}
-        {%- if not first %} / {% endif %}
-        {% set first = false %}
-
-        {% if lang == "zh-Hans" %}
-          {% set label = "简体中文" %}
-        {% elif lang == "zh-Hant" %}
-          {% set label = "繁體中文" %}
-        {% else %}
-          {% set label = "English" %}
-        {% endif %}
-
-        <a
-          class="lang-switch"
-          href="{{ page.url | locale_swap(lang) }}"
-          lang="{{ lang }}"
-          hreflang="{{ lang }}"
-        >
-          {{ label }}
-        </a>
-      {% endif %}
-    {% endfor %}
-  </nav>
+  <div class="lang-switch--footer">
+    {% include "langswitcher.njk" %}
+  </div>
 </footer>
 
 <script>
-  const query = window.location.search;
+  (function () {
+    // Keep any query string on every language link — header dropdown AND footer
+    var query = window.location.search;
+    if (query) {
+      document.querySelectorAll("a.lang-switch").forEach(function (link) {
+        link.href += query;
+      });
+    }
 
-  if (query) {
-    document.querySelectorAll(".lang-switch").forEach(link => {
-      link.href += query;
-    });
-  }
+    // Header language dropdown
+    var dd = document.querySelector(".lang-dropdown");
+    if (dd) {
+      var btn = dd.querySelector(".lang-dropdown__button");
+      var menu = dd.querySelector(".lang-dropdown__menu");
+
+      function setOpen(open) {
+        menu.hidden = !open;
+        btn.setAttribute("aria-expanded", String(open));
+      }
+
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setOpen(menu.hidden);
+      });
+      document.addEventListener("click", function (e) {
+        if (!dd.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setOpen(false);
+      });
+    }
+  })();
 </script>

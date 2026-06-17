@@ -7,21 +7,7 @@
     <title>关于</title>
 
     <!-- prettier-ignore -->
-    <style>
-          /* bahunya inline, unused removed */
-      :root{--background-body:#0d1117;--background:#161b22;--background-bright:rgba(240,246,252,0.15);--background-alt:#1a242f;--selection:#1c76c5;--text-main:#c9d1d9;--text-bright:#e3e9f0;--text-muted:#8b949e;--links:#e3bc5e;--focus:#388bfd;--focus-background:#0c2d6b;--border:#21252c;--border-muted:#21262d;--border-bright:#8b949e;--button-hover:#324759;--monospace:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;--sans-serif:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Segoe UI Emoji,Apple Color Emoji,Noto Color Emoji,sans-serif;font-family:var(--sans-serif);line-height:1.7;max-width:50rem;margin:6rem auto;padding:0 10px;word-wrap:break-word;color:#c9d1d9;color:var(--text-main);background:#0d1117;background:var(--background-body);text-rendering:optimizeLegibility}h1,h2,h3,h4,h5{margin:3rem 0 1.38rem;line-height:1.3}h1{font-size:2.488rem}h2{font-size:2.074rem}h1,h2,h3,h4,h5,h6,strong{color:#e3e9f0;color:var(--text-bright)}ol,ul{padding-left:2em}a{text-decoration:none;color:#e3bc5e;color:var(--links)}footer{border-top:1px solid #21252c;border-top:1px solid var(--border);padding-top:10px;color:#8b949e;color:var(--text-muted)}body>footer{margin-top:40px}header nav:first-of-type{position:fixed;top:0;left:0;background:rgba(0,0,0,.5);padding:0 calc(50vw - 25rem);display:flex;align-items:center;width:100%;z-index:999}header nav:first-of-type:before{backdrop-filter:saturate(180%) blur(5px);-webkit-backdrop-filter:saturate(180%) blur(5px);content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0}header nav:first-of-type a{margin:10px;display:inline-block}header nav:first-of-type ul{list-style-type:none;margin:0;padding:0;overflow:hidden;display:inline}header nav:first-of-type>ul>li{float:left}header nav:first-of-type>ul>li:lang(fa){float:right}
-      /* custom */
-      body{font-size:1.1rem;}a{text-decoration:underline!important;}nav#footer{all:unset}.skip-link{clip:rect(1px,1px,1px,1px);display:block;left:1rem;top:4rem;z-index:999}.skip-link,.visually-hidden{height:1px;overflow:hidden;position:absolute;width:1px}.visually-hidden{clip:rect(0,0,0,0);white-space:nowrap}.skip-link:focus,.visually-hidden:focus{clip:auto;background-color:var(--background);color:var(--links);height:auto;line-height:1;overflow:visible;padding:1rem;width:auto}.skip-link:not(:focus){clip:rect(0 0 0 0);border:0;height:auto;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;}
-      dl { margin: 1.5rem 0; }
-      dt { color: var(--text-bright); font-weight: 600; margin-top: 1rem; }
-      dd { color: var(--text-main); margin: 0.25rem 0 0 1.5rem; }
-      .obj-title { font-size: 1.75rem; margin: 0 0 4px; }
-      .description { font-size: 1rem; color: var(--text-main); line-height: 1.7; margin: 1rem 0; }
-      .type-tag { font-size: 0.95rem; color: var(--text-muted); font-style: italic; }
-      .back-link { font-size: 0.95rem; color: #e3bc5e; display: inline-block; margin-bottom: 1rem; }
-      .blurb { color: var(--text-muted); margin: 0.25rem 0 0.5rem; }
-
-    </style>
+    <link rel="stylesheet" href="/styles/main.css">
 
     <link
       rel="alternate"
@@ -128,8 +114,62 @@
   </nav>
 </header>
 
-    <main id="#main">
-      <h1>关于</h1>
+    <main id="main">
+      <div class="page-head">
+        <h1>关于</h1>
+        
+
+
+<div class="lang-dropdown">
+  <button
+    type="button"
+    class="lang-dropdown__button"
+    aria-expanded="false"
+    aria-controls="lang-menu"
+  >
+    <span lang="zh-Hans">简体中文</span>
+    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+  </button>
+
+  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+    
+    <li>
+      <a
+        class="lang-switch"
+        href="/en/about/"
+        lang="en"
+        hreflang="en"
+        
+        >English</a
+      >
+    </li>
+    
+    <li>
+      <a
+        class="lang-switch"
+        href="/zh-Hans/about/"
+        lang="zh-Hans"
+        hreflang="zh-Hans"
+        aria-current="true"
+        >简体中文</a
+      >
+    </li>
+    
+    <li>
+      <a
+        class="lang-switch"
+        href="/zh-Hant/about/"
+        lang="zh-Hant"
+        hreflang="zh-Hant"
+        
+        >繁體中文</a
+      >
+    </li>
+    
+  </ul>
+</div>
+      </div>
+
       <h2>项目背景</h2>
 <p>波士顿华埠是许多面向社区的文化和活动家组织所在地。与许多社区长期居民一起，这些组织拥有大量的历史照片、时事通讯、传单、采访录音、地图、会议纪要等。此外，许多当地图书馆、档案馆和博物馆都收藏了与华埠历史有关的馆藏。这些材料共同讲述了一个强大复杂的历史，可用来加深对这个社区历史的理解。</p>
 <p>2021 年春季，波士顿研究中心会见了多方社区合作伙伴，包括波士顿华埠社区中心、包氏艺术中心、纽英伦华人历史协会、华埠社区土地信托、波士顿公共图书馆华埠分馆、华埠图书馆之友，以及作者 Michael Liu 博士。在一系列规划会议中，我们的合作伙伴提到，社区历史资料散布在全市各处的情况令人担忧，有些公众可以获得，但更多却深藏难得。他们进一步建议，如有一个可公开访问的数据库将相关馆藏相互联接起来，即可让希望能详细了解其社区历史的社区成员受益，以此作为社区研究的起点。这些讨论还表明，此类存档资料可为正在进行的社区项目提供信息（例如，关于华埠移民历史的互动地图），识别需要保存支持的项目，并为未来的合作努力建立伙伴关系，包括数字化项目。我们的顾问还敦促创建一个双语网站，以确保波士顿华埠社区可以接触到项目。</p>
@@ -148,59 +188,73 @@
     </main>
 
     <footer>
-  本页还提供以下语言版本：
+  <div class="lang-switch--footer">
+    
 
-  <nav id="footer" aria-label="切换语言">
-    
-    
-    
-      
-        
 
-        
-          
-        
+<span class="lang-available">本页还提供以下语言版本：</span>
 
-        <a
-          class="lang-switch"
-          href="/en/about/"
-          lang="en"
-          hreflang="en"
-        >
-          English
-        </a>
-      
+<nav class="lang-nav" aria-label="切换语言">
+  
     
-      
+    <a
+      class="lang-switch"
+      href="/en/about/"
+      lang="en"
+      hreflang="en"
+      >English</a
+    >
     
-       / 
-        
-
-        
-          
-        
-
-        <a
-          class="lang-switch"
-          href="/zh-Hant/about/"
-          lang="zh-Hant"
-          hreflang="zh-Hant"
-        >
-          繁體中文
-        </a>
-      
+  
     
-  </nav>
+  
+    
+    <a
+      class="lang-switch"
+      href="/zh-Hant/about/"
+      lang="zh-Hant"
+      hreflang="zh-Hant"
+      >繁體中文</a
+    >
+    
+  
+</nav>
+  </div>
 </footer>
 
 <script>
-  const query = window.location.search;
+  (function () {
+    // Keep any query string on every language link — header dropdown AND footer
+    var query = window.location.search;
+    if (query) {
+      document.querySelectorAll("a.lang-switch").forEach(function (link) {
+        link.href += query;
+      });
+    }
 
-  if (query) {
-    document.querySelectorAll(".lang-switch").forEach(link => {
-      link.href += query;
-    });
-  }
+    // Header language dropdown
+    var dd = document.querySelector(".lang-dropdown");
+    if (dd) {
+      var btn = dd.querySelector(".lang-dropdown__button");
+      var menu = dd.querySelector(".lang-dropdown__menu");
+
+      function setOpen(open) {
+        menu.hidden = !open;
+        btn.setAttribute("aria-expanded", String(open));
+      }
+
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setOpen(menu.hidden);
+      });
+      document.addEventListener("click", function (e) {
+        if (!dd.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setOpen(false);
+      });
+    }
+  })();
 </script>
   </body>
 </html>

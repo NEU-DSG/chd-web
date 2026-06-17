@@ -1,0 +1,29 @@
+{% set locales = ["en", "zh-Hans", "zh-Hant"] %}
+{% set labels = { "en": "English", "zh-Hans": "简体中文", "zh-Hant": "繁體中文" } %}
+
+<div class="lang-dropdown">
+  <button
+    type="button"
+    class="lang-dropdown__button"
+    aria-expanded="false"
+    aria-controls="lang-menu"
+  >
+    <span lang="{{ page.lang }}">{{ labels[page.lang] }}</span>
+    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+  </button>
+
+  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+    {% for lang in locales %}
+    <li>
+      <a
+        class="lang-switch"
+        href="{{ page.url | locale_swap(lang) }}"
+        lang="{{ lang }}"
+        hreflang="{{ lang }}"
+        {% if lang == page.lang %}aria-current="true"{% endif %}
+        >{{ labels[lang] }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>

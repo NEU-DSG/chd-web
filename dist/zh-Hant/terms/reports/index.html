@@ -7,21 +7,7 @@
     <title></title>
 
     <!-- prettier-ignore -->
-    <style>
-          /* bahunya inline, unused removed */
-      :root{--background-body:#0d1117;--background:#161b22;--background-bright:rgba(240,246,252,0.15);--background-alt:#1a242f;--selection:#1c76c5;--text-main:#c9d1d9;--text-bright:#e3e9f0;--text-muted:#8b949e;--links:#e3bc5e;--focus:#388bfd;--focus-background:#0c2d6b;--border:#21252c;--border-muted:#21262d;--border-bright:#8b949e;--button-hover:#324759;--monospace:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;--sans-serif:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Segoe UI Emoji,Apple Color Emoji,Noto Color Emoji,sans-serif;font-family:var(--sans-serif);line-height:1.7;max-width:50rem;margin:6rem auto;padding:0 10px;word-wrap:break-word;color:#c9d1d9;color:var(--text-main);background:#0d1117;background:var(--background-body);text-rendering:optimizeLegibility}h1,h2,h3,h4,h5{margin:3rem 0 1.38rem;line-height:1.3}h1{font-size:2.488rem}h2{font-size:2.074rem}h1,h2,h3,h4,h5,h6,strong{color:#e3e9f0;color:var(--text-bright)}ol,ul{padding-left:2em}a{text-decoration:none;color:#e3bc5e;color:var(--links)}footer{border-top:1px solid #21252c;border-top:1px solid var(--border);padding-top:10px;color:#8b949e;color:var(--text-muted)}body>footer{margin-top:40px}header nav:first-of-type{position:fixed;top:0;left:0;background:rgba(0,0,0,.5);padding:0 calc(50vw - 25rem);display:flex;align-items:center;width:100%;z-index:999}header nav:first-of-type:before{backdrop-filter:saturate(180%) blur(5px);-webkit-backdrop-filter:saturate(180%) blur(5px);content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0}header nav:first-of-type a{margin:10px;display:inline-block}header nav:first-of-type ul{list-style-type:none;margin:0;padding:0;overflow:hidden;display:inline}header nav:first-of-type>ul>li{float:left}header nav:first-of-type>ul>li:lang(fa){float:right}
-      /* custom */
-      body{font-size:1.1rem;}a{text-decoration:underline!important;}nav#footer{all:unset}.skip-link{clip:rect(1px,1px,1px,1px);display:block;left:1rem;top:4rem;z-index:999}.skip-link,.visually-hidden{height:1px;overflow:hidden;position:absolute;width:1px}.visually-hidden{clip:rect(0,0,0,0);white-space:nowrap}.skip-link:focus,.visually-hidden:focus{clip:auto;background-color:var(--background);color:var(--links);height:auto;line-height:1;overflow:visible;padding:1rem;width:auto}.skip-link:not(:focus){clip:rect(0 0 0 0);border:0;height:auto;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;}
-      dl { margin: 1.5rem 0; }
-      dt { color: var(--text-bright); font-weight: 600; margin-top: 1rem; }
-      dd { color: var(--text-main); margin: 0.25rem 0 0 1.5rem; }
-      .obj-title { font-size: 1.75rem; margin: 0 0 4px; }
-      .description { font-size: 1rem; color: var(--text-main); line-height: 1.7; margin: 1rem 0; }
-      .type-tag { font-size: 0.95rem; color: var(--text-muted); font-style: italic; }
-      .back-link { font-size: 0.95rem; color: #e3bc5e; display: inline-block; margin-bottom: 1rem; }
-      .blurb { color: var(--text-muted); margin: 0.25rem 0 0.5rem; }
-
-    </style>
+    <link rel="stylesheet" href="/styles/main.css">
 
     <link
       rel="alternate"
@@ -1388,8 +1374,62 @@
   </nav>
 </header>
 
-    <main id="#main">
-      <h1></h1>
+    <main id="main">
+      <div class="page-head">
+        <h1></h1>
+        
+
+
+<div class="lang-dropdown">
+  <button
+    type="button"
+    class="lang-dropdown__button"
+    aria-expanded="false"
+    aria-controls="lang-menu"
+  >
+    <span lang="zh-Hant">繁體中文</span>
+    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+  </button>
+
+  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+    
+    <li>
+      <a
+        class="lang-switch"
+        href="/en/terms/reports/"
+        lang="en"
+        hreflang="en"
+        
+        >English</a
+      >
+    </li>
+    
+    <li>
+      <a
+        class="lang-switch"
+        href="/zh-Hans/terms/reports/"
+        lang="zh-Hans"
+        hreflang="zh-Hans"
+        
+        >简体中文</a
+      >
+    </li>
+    
+    <li>
+      <a
+        class="lang-switch"
+        href="/zh-Hant/terms/reports/"
+        lang="zh-Hant"
+        hreflang="zh-Hant"
+        aria-current="true"
+        >繁體中文</a
+      >
+    </li>
+    
+  </ul>
+</div>
+      </div>
+
       <h1> 報告</h1>
 <em>術語</em>
 <h3> 資訊性、正式且詳細的文本 </h3>
@@ -1404,59 +1444,73 @@
     </main>
 
     <footer>
-  本頁另有以下語言版本：
+  <div class="lang-switch--footer">
+    
 
-  <nav id="footer" aria-label="切換語言">
-    
-    
-    
-      
-        
 
-        
-          
-        
+<span class="lang-available">本頁另有以下語言版本：</span>
 
-        <a
-          class="lang-switch"
-          href="/en/terms/reports/"
-          lang="en"
-          hreflang="en"
-        >
-          English
-        </a>
-      
+<nav class="lang-nav" aria-label="切換語言">
+  
     
-       / 
-        
-
-        
-          
-        
-
-        <a
-          class="lang-switch"
-          href="/zh-Hans/terms/reports/"
-          lang="zh-Hans"
-          hreflang="zh-Hans"
-        >
-          简体中文
-        </a>
-      
+    <a
+      class="lang-switch"
+      href="/en/terms/reports/"
+      lang="en"
+      hreflang="en"
+      >English</a
+    >
     
-      
+  
     
-  </nav>
+    <a
+      class="lang-switch"
+      href="/zh-Hans/terms/reports/"
+      lang="zh-Hans"
+      hreflang="zh-Hans"
+      >简体中文</a
+    >
+    
+  
+    
+  
+</nav>
+  </div>
 </footer>
 
 <script>
-  const query = window.location.search;
+  (function () {
+    // Keep any query string on every language link — header dropdown AND footer
+    var query = window.location.search;
+    if (query) {
+      document.querySelectorAll("a.lang-switch").forEach(function (link) {
+        link.href += query;
+      });
+    }
 
-  if (query) {
-    document.querySelectorAll(".lang-switch").forEach(link => {
-      link.href += query;
-    });
-  }
+    // Header language dropdown
+    var dd = document.querySelector(".lang-dropdown");
+    if (dd) {
+      var btn = dd.querySelector(".lang-dropdown__button");
+      var menu = dd.querySelector(".lang-dropdown__menu");
+
+      function setOpen(open) {
+        menu.hidden = !open;
+        btn.setAttribute("aria-expanded", String(open));
+      }
+
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setOpen(menu.hidden);
+      });
+      document.addEventListener("click", function (e) {
+        if (!dd.contains(e.target)) setOpen(false);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setOpen(false);
+      });
+    }
+  })();
 </script>
   </body>
 </html>
