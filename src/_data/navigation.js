@@ -27,6 +27,10 @@ export default {
     {
       text: 'Search',
       url: '/en/search/'
+    },
+    {
+      text: 'Add',
+      url: '/en/form/'
     }
     
   ],
