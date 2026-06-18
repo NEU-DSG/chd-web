@@ -690,38 +690,54 @@
 </footer>
 
 <script>
-  (function () {
-    // Keep any query string on every language link — header dropdown AND footer
-    var query = window.location.search;
-    if (query) {
-      document.querySelectorAll("a.lang-switch").forEach(function (link) {
-        link.href += query;
-      });
+// immediately initialize
+(() => {
+  // Keep any query string on every language link — header dropdown AND footer
+  const query = window.location.search;
+
+  if (query) {
+    document.querySelectorAll("a.lang-switch").forEach(link => {
+      const url = new URL(link.href, window.location.origin);
+      url.search = query;
+      link.href = url.toString();
+    });
+  }
+
+  // Header language dropdown
+  // check if dropdown exists
+  const dropdown = document.querySelector(".lang-dropdown");
+  if (!dropdown) return;
+
+  // grab items
+  const button = dropdown.querySelector(".lang-dropdown__button");
+  const menu = dropdown.querySelector(".lang-dropdown__menu");
+
+  // function for opening and closing menu
+  function setOpen(open) {
+  menu.hidden = !open;
+  button.setAttribute("aria-expanded", open);
+  }
+
+  // listen for click
+  button.addEventListener("click", event => {
+    event.stopPropagation();
+    setOpen(menu.hidden);
+  });
+
+  // listen for click away
+  document.addEventListener("click", event => {
+    if (!dropdown.contains(event.target)) {
+      setOpen(false);
     }
+  });
 
-    // Header language dropdown
-    var dd = document.querySelector(".lang-dropdown");
-    if (dd) {
-      var btn = dd.querySelector(".lang-dropdown__button");
-      var menu = dd.querySelector(".lang-dropdown__menu");
-
-      function setOpen(open) {
-        menu.hidden = !open;
-        btn.setAttribute("aria-expanded", String(open));
-      }
-
-      btn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        setOpen(menu.hidden);
-      });
-      document.addEventListener("click", function (e) {
-        if (!dd.contains(e.target)) setOpen(false);
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") setOpen(false);
-      });
+  // listen for keydown
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      setOpen(false);
     }
-  })();
+  });
+})();
 </script>
   </body>
 </html>
