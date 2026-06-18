@@ -29,7 +29,7 @@ export default {
       url: '/en/search/'
     },
     {
-      text: 'Add',
+      text: 'Add Collection',
       url: '/en/form/'
     }
     
@@ -58,6 +58,10 @@ export default {
     {
       text: '地图',
       url: '/zh-Hans/map/'
+    },
+    {
+      text: '添加收藏',
+      url: '/zh-Hans/form/'
     }
   ],
   'zh-Hant': [
@@ -71,7 +75,7 @@ export default {
     },
     {
       text: '收藏',
-      url: '/zh_Hant/collectionlist/'
+      url: '/zh-Hant/collectionlist/'
     },
     {
       text: '組織',
@@ -84,6 +88,10 @@ export default {
     {
       text: '地圖',
       url: '/zh-Hant/map/'
+    },
+    {
+      text: '新增收藏',
+      url: '/zh-Hant/form/'
     }
   ]
 };
