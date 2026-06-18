@@ -60,6 +60,10 @@ export default {
       url: '/zh-Hans/map/'
     },
     {
+      text: '搜索',
+      url: '/zh-Hans/search/'
+    },
+    {
       text: '添加收藏',
       url: '/zh-Hans/form/'
     }
@@ -88,6 +92,10 @@ export default {
     {
       text: '地圖',
       url: '/zh-Hant/map/'
+    },
+    {
+      text: '搜尋',
+      url: '/zh-Hant/search/'
     },
     {
       text: '新增收藏',
