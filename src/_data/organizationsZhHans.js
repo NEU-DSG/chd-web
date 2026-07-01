@@ -1,7 +1,7 @@
 import EleventyFetch from "@11ty/eleventy-fetch";
 
 export default async function () {
-  const endpoint = "http://chinatown-fuseki-nlb-b8621274c3e5cc6b.elb.us-east-1.amazonaws.com/chd";
+  const endpoint = "https://chd-dev-fuseki.library.northeastern.edu/chd";
   const query = `
     PREFIX onto: <https://chinatowncollections.library.northeastern.edu/onto/>
 PREFIX prop: <https://chinatowncollections.library.northeastern.edu/properties/>

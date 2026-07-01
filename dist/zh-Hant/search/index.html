@@ -212,7 +212,7 @@
             FILTER(lang(?description) = "en")
         }`;
         
-        fetch('http://chinatown-fuseki-nlb-b8621274c3e5cc6b.elb.us-east-1.amazonaws.com/chd', {
+        fetch('https://chd-dev-fuseki.library.northeastern.edu/chd', {
         method: 'POST', 
         headers: {
             "Content-Type": "application/sparql-query",

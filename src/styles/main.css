@@ -345,3 +345,8 @@ dd {
     content: " / ";
     color: var(--text-muted);
 }
+
+iframe {
+    background-color: #EEEDFC;
+    margin-top: 1.5rem;
+}
