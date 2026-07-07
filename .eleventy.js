@@ -10,6 +10,11 @@ export default async function (eleventyConfig) {
   return url.split("/").filter(Boolean).pop();
   });
 
+  eleventyConfig.addFilter("firstSlash", url => {
+  return url.split(".edu/")[1];
+});
+
+
   eleventyConfig.addFilter("makePlural", prop => {
     if (prop == "founder") {
       return prop + "s"

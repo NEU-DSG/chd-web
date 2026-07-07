@@ -5,14 +5,26 @@ pagination:
     alias: terms
 permalink: en/terms/{{ terms.term.value | lastSegment }}/index.html
 ---
-<h1> {{ terms.termLabel.value }}</h1>
-<em>term</em>
-<h3> {{ terms.description.value}} </h3>
-{% if terms.wikidata_correlate.value %}
+<h1 class="obj-title"> {{ terms.termLabel.value }}</h1>
+<p class="type-tag">term</p>
+<p class="description"> {{ terms.description.value}} </p>
 <dl>
+{% if terms.wikidata_correlate.value %}
     <dt><strong>Wikidata Correlate</strong></dt>
         <dd>
             <a target="_blank" href="https://wikidata.org/wiki/{{ terms.wikidata_correlate.value }}">{{ terms.wikidata_correlate.value }}</a><br>
         </dd>
-</dl>
+    
 {% endif %}
+    <dt><strong>Collections with term: "{{ terms.termLabel.value }}"</strong></dt>
+    <dd>
+        {% for item in referencedBy %}
+            <a href="/en/{{ item.resource.value | firstSlash }}">{{ item.resourceLabel.value }}</a><br>
+        {% endfor %}
+    </dd>
+</dl>
+<h2></h2>
+
+<ul>
+
+</ul>
