@@ -8,11 +8,17 @@ permalink: zh-Hant/terms/{{ terms.term.value | lastSegment }}/index.html
 <h1> {{ terms.termLabel.value }}</h1>
 <em>術語</em>
 <h3> {{ terms.description.value}} </h3>
-{% if terms.wikidata_correlate.value %}
 <dl>
+{% if terms.wikidata_correlate.value %}
     <dt><strong>維基數據關聯</strong></dt>
         <dd>
             <a target="_blank" href="https://wikidata.org/wiki/{{ terms.wikidata_correlate.value }}">{{ terms.wikidata_correlate.value }}</a><br>
         </dd>
-</dl>
 {% endif %}
+    <dt><strong>具有術語的實體： "{{ terms.termLabel.value }}"</strong></dt>
+    <dd>
+        {% for item in referencedBy %}
+            <a href="/zh-Hant/{{ item.resource.value | firstSlash }}">{{ item.resourceLabel.value }}</a><br>
+        {% endfor %}
+    </dd>
+</dl>

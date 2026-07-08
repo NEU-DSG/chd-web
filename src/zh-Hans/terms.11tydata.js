@@ -16,7 +16,7 @@ WHERE {
     ?resource ?predicate <${termUri}> ;
               rdfs:label ?resourceLabel .
 
-    FILTER(lang(?resourceLabel) = "en")
+    FILTER(lang(?resourceLabel) = "zh-Hans")
 }
 
 ORDER BY ?resourceLabel

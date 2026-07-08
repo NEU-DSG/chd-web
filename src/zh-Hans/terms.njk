@@ -8,11 +8,19 @@ permalink: zh-Hans/terms/{{ terms.term.value | lastSegment }}/index.html
 <h1> {{ terms.termLabel.value }}</h1>
 <em>术语</em>
 <h3> {{ terms.description.value}} </h3>
-{% if terms.wikidata_correlate.value %}
 <dl>
+{% if terms.wikidata_correlate.value %}
+
     <dt><strong>维基数据关联</strong></dt>
         <dd>
             <a target="_blank" href="https://wikidata.org/wiki/{{ terms.wikidata_correlate.value }}">{{ terms.wikidata_correlate.value }}</a><br>
         </dd>
-</dl>
+
 {% endif %}
+    <dt><strong>包含该术语的实体： "{{ terms.termLabel.value }}"</strong></dt>
+    <dd>
+        {% for item in referencedBy %}
+            <a href="/zh-Hans/{{ item.resource.value | firstSlash }}">{{ item.resourceLabel.value }}</a><br>
+        {% endfor %}
+    </dd>
+</dl>

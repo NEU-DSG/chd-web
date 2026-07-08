@@ -16,7 +16,7 @@ permalink: en/terms/{{ terms.term.value | lastSegment }}/index.html
         </dd>
     
 {% endif %}
-    <dt><strong>Collections with term: "{{ terms.termLabel.value }}"</strong></dt>
+    <dt><strong>Entities with term: "{{ terms.termLabel.value }}"</strong></dt>
     <dd>
         {% for item in referencedBy %}
             <a href="/en/{{ item.resource.value | firstSlash }}">{{ item.resourceLabel.value }}</a><br>
