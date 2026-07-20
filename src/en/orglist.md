@@ -5,7 +5,7 @@ slugOverride: 'orglist'
 ---
 
 <ul>
-{% for item in organizationsEn %}
+{% for item in organizationfolder.organizationsEn %}
   <li>
     <a href="/en/organizations/{{ item.organization.value | lastSegment }}/">
       {{ item.organizationLabel.value }}

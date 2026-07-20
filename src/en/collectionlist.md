@@ -4,7 +4,7 @@ description: 'Listing all collections'
 slugOverride: 'collectionlist'
 ---
 <ul>
-{% for item in collectionsEn %}
+{% for item in collectionfolder.collectionsEn %}
   <li>
     <a href="/en/collections/{{ item.collection.value | lastSegment }}/">
       {{ item.collectionLabel.value }}

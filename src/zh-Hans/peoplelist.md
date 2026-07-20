@@ -5,7 +5,7 @@ slugOverride: 'peoplelist'
 ---
 
 <ul>
-{% for item in peopleZhHans %}
+{% for item in peoplefolder.peopleZhHans %}
   <li>
     <a href="/zh-Hans/people/{{ item.person.value | lastSegment }}/">
       {{ item.personLabel.value }}

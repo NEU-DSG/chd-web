@@ -5,7 +5,7 @@ slugOverride: 'collectionlist'
 ---
 
 <ul>
-{% for item in collectionsZhHant %}
+{% for item in collectionfolder.collectionsZhHant %}
   <li>
     <a href="/zh-Hant/collections/{{ item.collection.value | lastSegment }}/">
       {{ item.collectionLabel.value }}
