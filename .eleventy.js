@@ -1,6 +1,6 @@
 import {EleventyI18nPlugin} from '@11ty/eleventy';
 
-export default async function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: 'en', // Required
     errorMode: 'allow-fallback' // Opting out of "strict"
