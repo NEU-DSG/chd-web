@@ -21,11 +21,11 @@ permalink: zh-Hant/collections/{{ collectionData.collection.value | lastSegment 
     <dd>
     {# single value terms #}
     {%- if key == "collection_type" or key == "digitization_status" or key == "access_restriction_status" %}
-        <a href="/zh-Hant/terms/{{ value.value | lastSegment }}">{{ termSwitcher[value.value | lastSegment].zhhant }}</a>
+        <a href="/zh-Hant/terms/{{ value.value | lastSegment }}">{{ termfolder.termSwitcher[value.value | lastSegment].zhhant }}</a>
     {# multi value terms #}
     {%- elif key == "material_types_general_list" or key == "material_types_specific_list" or key == "subject_list" or key == "language_list" %}
         {% for item in value.value.split("|") %}
-        <a href="/zh-Hant/terms/{{ item | lastSegment }}">{{ termSwitcher[item | lastSegment].zhhant }}</a><br>
+        <a href="/zh-Hant/terms/{{ item | lastSegment }}">{{ termfolder.termSwitcher[item | lastSegment].zhhant }}</a><br>
         {% endfor %}
     {# URL Literals #}
     {%- elif key == "official_website" or key == "described_at_url"%}
@@ -36,11 +36,11 @@ permalink: zh-Hant/collections/{{ collectionData.collection.value | lastSegment 
         {% if "people" in item %}
             <a href="/zh-Hant/people/{{ item | lastSegment }}">{{ item | labelFromUrl }}</a><br>
         {% else %}
-            <a href="/zh-Hant/organizations/{{ item | lastSegment }}">{{ organizationSwitcher[item | lastSegment].zhhant}}</a><br>
+            <a href="/zh-Hant/organizations/{{ item | lastSegment }}">{{ organizationfolder.organizationSwitcher[item | lastSegment].zhhant}}</a><br>
         {% endif %}
         {% endfor %}
     {%- elif key == "related_collection"%}
-        <a href="/zh-Hant/collections/{{ value.value | lastSegment }}">{{ collectionSwitcher[value.value | lastSegment].zhhant }}</a>
+        <a href="/zh-Hant/collections/{{ value.value | lastSegment }}">{{ collectionfolder.collectionSwitcher[value.value | lastSegment].zhhant }}</a>
     {%- else%}
         {{ value.value }}
     {% endif %}

@@ -27,7 +27,7 @@ permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegme
   <dd>
   {# Terms #}
   {%- if key == "organization_type" or key == "location" or key == "country" %}
-    <a href="/zh-Hans/terms/{{ value.value | lastSegment }}">{{ termSwitcher[value.value | lastSegment].zhhans }}</a>
+    <a href="/zh-Hans/terms/{{ value.value | lastSegment }}">{{ termfolder.termSwitcher[value.value | lastSegment].zhhans }}</a>
   {# Website #}
   {%- elif key == "official_website" %}
     <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
@@ -41,7 +41,7 @@ permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegme
   {# Other Linked Records #}
   {%- elif key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" %}
     {% for item in value.value.split("|") %}
-      <a href="/zh-Hans/collections/{{ item | lastSegment }}">{{ collectionSwitcher[item | lastSegment].zhhans}}</a><br>
+      <a href="/zh-Hans/collections/{{ item | lastSegment }}">{{ collectionfolder.collectionSwitcher[item | lastSegment].zhhans}}</a><br>
     {% endfor %}
   {%- else%}
     {{ value.value }}

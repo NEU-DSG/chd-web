@@ -123,7 +123,7 @@ ORDER BY ?collection
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=collectionsZhHans", {
+    const data = await EleventyFetch(endpoint + "?cache=collectionsZhHant", {
       duration: "1d",
       type: "json",
       fetchOptions: {

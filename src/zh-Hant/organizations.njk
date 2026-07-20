@@ -27,7 +27,7 @@ permalink: zh-Hant/organizations/{{ organizations.organization.value | lastSegme
   <dd>
   {# Terms #}
   {%- if key == "organization_type" or key == "location" or key == "country" %}
-    <a href="/zh-Hant/terms/{{ value.value | lastSegment }}">{{ termSwitcher[value.value | lastSegment].zhhant }}</a>
+    <a href="/zh-Hant/terms/{{ value.value | lastSegment }}">{{ termfolder.termSwitcher[value.value | lastSegment].zhhant }}</a>
   {# Website #}
   {%- elif key == "official_website" %}
     <a href="{{ value.value }}" target="_blank">{{ value.value }}</a>
@@ -41,7 +41,7 @@ permalink: zh-Hant/organizations/{{ organizations.organization.value | lastSegme
   {# Other Linked Records #}
   {%- elif key == "records_creator_for_list" or key == "maintainer_of_list" or key == "donor_for_list" %}
     {% for item in value.value.split("|") %}
-      <a href="/zh-Hant/collections/{{ item | lastSegment }}">{{ collectionSwitcher[item | lastSegment].zhhant}}</a><br>
+      <a href="/zh-Hant/collections/{{ item | lastSegment }}">{{ collectionfolder.collectionSwitcher[item | lastSegment].zhhant}}</a><br>
     {% endfor %}
   {%- else%}
     {{ value.value }}

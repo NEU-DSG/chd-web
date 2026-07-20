@@ -63,7 +63,7 @@ ORDER BY ?person
   `;
  
       try {
-    const data = await EleventyFetch(endpoint + "?cache=peopleZhHans", {
+    const data = await EleventyFetch(endpoint + "?cache=peopleZhHant", {
       duration: "1d",
       type: "json",
       fetchOptions: {
