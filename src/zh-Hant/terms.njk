@@ -4,8 +4,10 @@ pagination:
     size: 1
     alias: terms
 permalink: zh-Hant/terms/{{ terms.term.value | lastSegment }}/index.html
+eleventyComputed:
+    title: "{{ terms.termLabel.value}}"
+    description: "{{ terms.description.value }}"
 ---
-<h1> {{ terms.termLabel.value }}</h1>
 <em>術語</em>
 <h3> {{ terms.description.value}} </h3>
 <dl>

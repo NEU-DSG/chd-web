@@ -4,11 +4,13 @@ pagination:
     size: 1
     alias: collectionData
 permalink: en/collections/{{ collectionData.collection.value | lastSegment }}/index.html
+eleventyComputed:
+    title: "{{ collectionData.collectionLabel.value }}"
+    description: "{{ collectionData.description.value }}"
 ---
-<a class="back-link" href="/en/collectionlist"> ← Back to Collections </a>
-<h1 class="obj-title"> {{ collectionData.collectionLabel.value }}</h1>
 <p class="type-tag">collection</p>
 <p class="description"> {{ collectionData.description.value}} </p>
+<a class="back-link" href="/en/collectionlist"> ← Back to Collections </a>
 <dl>
 {% set skip = "collection,collectionLabel,description" %}
 {%- for key, value in collectionData %}

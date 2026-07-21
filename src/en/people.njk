@@ -4,11 +4,13 @@ pagination:
     size: 1
     alias: people
 permalink: en/people/{{ people.person.value | lastSegment }}/index.html
+eleventyComputed:
+    title: "{{ people.personLabel.value}}"
+    description: "{{ people.description.value }}"
 ---
-<a class="back-link" href="/en/peoplelist"> ← Back to People </a>
-<h1 class="obj-title"> {{ people.personLabel.value }}</h1>
 <p class="type-tag">person</p>
-<p class="description">  {{ people.description.value}} </p>
+<p class="description">  {{ people.description.value }} </p>
+<a class="back-link" href="/en/peoplelist"> ← Back to People </a>
 <dl>
 {% set skip = "person,personLabel,description" %}
 {%- for key, value in people %}

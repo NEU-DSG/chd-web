@@ -4,8 +4,10 @@ pagination:
     size: 1
     alias: terms
 permalink: en/terms/{{ terms.term.value | lastSegment }}/index.html
+eleventyComputed:
+    title: "{{ terms.termLabel.value}}"
+    description: "{{ terms.description.value }}"
 ---
-<h1 class="obj-title"> {{ terms.termLabel.value }}</h1>
 <p class="type-tag">term</p>
 <p class="description"> {{ terms.description.value}} </p>
 <dl>

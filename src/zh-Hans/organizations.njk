@@ -4,11 +4,13 @@ pagination:
     size: 1
     alias: organizations
 permalink: zh-Hans/organizations/{{ organizations.organization.value | lastSegment }}/index.html
+eleventyComputed:
+    title: "{{ organizations.organizationLabel.value }}"
+    description: "{{ organizations.description.value }}"
 ---
-<a class="back-link" href="/zh-Hans/orglist"> ← 返回组织 </a>
-<h1 class="obj-title"> {{ organizations.organizationLabel.value }}</h1>
 <p class="type-tag">组织</p>
 <p class="description"> {{ organizations.description.value}} </p>
+<a class="back-link" href="/zh-Hans/orglist"> ← 返回组织 </a>
 <dl>
 {% set skip = "organization,organizationLabel,description" %}
 {%- for key, value in organizations %}
