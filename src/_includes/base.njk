@@ -15,12 +15,10 @@
       href="{{ meta.url }}{{ page.url }}"
     />
 
-    {% for link in page.url | locale_links %}
-    <link
-      rel="alternate"
-      hreflang="{{ link.lang }}"
-      href="{{ meta.url }}{{ link.url }}"
-    />
+    {% for code, lang in languages %}
+      {% if code != page.lang %}
+      <link rel="alternate" hreflang="{{ code }}" href="{{ meta.url }}{{ page.url | locale_url(code) }}" />
+      {% endif %}
     {% endfor %}
 
     <link
@@ -46,7 +44,6 @@
     <meta property="og:url" content="{{ meta.url }}{{ page.url }}" />
     <meta property="og:locale" content="{{ page.lang }}" />
     <meta property="og:image" content="{{ meta.url }}{{ meta.ogImage }}" />
-    {% block head %}{% endblock %}
   </head>
 
   <body>
