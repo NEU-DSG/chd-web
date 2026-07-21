@@ -14,18 +14,16 @@
       hreflang="zh-Hant"
       href="http://localhost:8080/zh-Hant/about/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/about/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/about/" />
-      
-    
-      
-    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/about/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/about/"
+    />
 
     <link
       rel="alternate"
@@ -51,239 +49,213 @@
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳至主要內容</a>
 
-<a href="#main" class="skip-link">跳至主要內容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hant" data-state="active">首頁</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hant"
-           data-state="active"
-          >首頁</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/about/"
-           aria-current="page" data-state="active"
-          >關於</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/collectionlist/"
-          
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/orglist/"
-          
-          >組織</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/peoplelist"
-          
-          >人們</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/map/"
-          
-          >地圖</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/search/"
-          
-          >搜尋</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/form/"
-          
-          >新增收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hant/about/" aria-current="page" data-state="active"
+              >關於</a
+            >
+          </li>
+
+          <li>
+            <a href="/zh-Hant/collectionlist/">收藏</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/orglist/">組織</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/peoplelist">人們</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/map/">地圖</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/search/">搜尋</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/form/">新增收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1>關於</h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hant">繁體中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hant">繁體中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a class="lang-switch" href="/en/about/" lang="en" hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/about/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/about/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/about/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        aria-current="true"
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/about/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/about/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                aria-current="true"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <h2>專案背景</h2>
-<p>波士頓華埠是許多面向社區的文化與行動者組織所在地。與許多社區長期居民一樣，這些組織擁有大量的歷史照片、時事通訊、傳單、訪談錄音、地圖、會議紀錄等。此外，許多當地的圖書館、檔案館與博物館也收藏了與華埠歷史相關的館藏。這些資料共同講述了一段強大而複雜的歷史，可用來加深對這個社區歷史的理解。</p>
-<p>2021 年春季，波士頓研究中心會見了多方社區合作夥伴，包括波士頓華埠社區中心、包氏藝術中心、紐英崙華人歷史協會、華埠社區土地信託、波士頓公共圖書館華埠分館、華埠圖書館之友，以及作者 Michael Liu 博士。在一系列規劃會議中，我們的合作夥伴提到，社區歷史資料分散在全市各處的情況令人擔憂，有些對公眾開放，但更多卻深藏難得。他們進一步建議，如果有一個可公開存取的資料庫，能將相關館藏彼此連結起來，將可讓希望深入了解自身社區歷史的社區成員受益，並作為社區研究的起點。這些討論亦顯示，此類檔案資料可為正在進行的社區專案提供資訊（例如關於華埠移民歷史的互動地圖），辨識需要保存與支援的項目，並為未來的合作（包括數位化專案）建立夥伴關係。我們的顧問也強調應建立一個雙語網站，以確保波士頓華埠社區能夠接觸到該專案。</p>
-<h2>執行</h2>
-<p>考量這些共同的目標，我們與社區顧問合作設計了一份調查問卷，並提供簡體中文、繁體中文與英文版本。我們將該問卷的紙本與數位版本分享給典藏機構與社區成員，並於 2021 年收集回覆，以記錄分散於多所大學與其他典藏機構、部落格、藝術空間、個人收藏及其他記錄華埠歷史方式中的檔案館藏。</p>
-<p>我們建立了資料模型，以結構化方式呈現館藏、組織與人物，從而建立一個可搜尋與瀏覽的館藏目錄。在設計資料模型與受控詞彙表時，我們參考了類似專案（如 COURAGE），並諮詢了檔案專業人員。波士頓研究中心的工作人員依據這些模型對最初的調查回覆進行解析與編碼，並在需要時與受訪者進一步聯繫，以取得更多相關資訊。在完成英文編碼後，我們聘請翻譯人員將相關內容翻譯為簡體中文。</p>
-<p>接著，資料被載入至一個自訂的 Wikibase 實例中。Wikibase 是一套免費且開源的知識庫軟體，可用來表示各種實體及其之間的關係。我們選擇 Wikibase，是因為其對多語言資料的支援，使我們能夠輕鬆地以英文與中文儲存欄位名稱與數值；同時，其靈活的資料模型也讓我們未來有可能擴展專案範圍，納入如事件等其他實體。</p>
-<p>最後，我們開發了一個網站，從 Wikibase 擷取資料並以更友善的方式呈現。該專案的網頁介面目前使用 Snowman，這是一款用於 SPARQL 後端的靜態網站產生器。</p>
-<p>2022 年夏季，波士頓研究中心與紐英崙華人歷史協會合作，與利害關係人舉行設計工作坊，蒐集他們對華埠館藏專案的回饋。本次會議由 Heang Leung Rubin 博士主持。該小組提供了關於如何確保網站在可用性、互動性與視覺吸引力方面符合潛在使用者需求的建議，這些使用者包括社區居民、社區機構、學生、學者、教育工作者以及華埠訪客。</p>
-<p>在專案的下一階段，我們計畫將這些資料遷移至一個由 CERES 支援的網站，該網站將具備瀏覽功能以及更為複雜的設計。</p>
-<h2>關於波士頓研究中心</h2>
-<p>波士頓研究中心設於東北大學圖書館，是一個數位社區歷史與檔案實驗室，並與波士頓公共圖書館合作成立。其使命是透過開發與運用新技術，協助揭示波士頓深厚的鄰里與社區歷史。透過這些技術，波士頓居民可以分享過去未被充分呈現的社區故事，並更深入理解過去如何形塑現在。</p>
-<p>雖然波士頓研究中心設於東北大學，但其目標是成為眾多波士頓組織（包括公民、研究、教學與文化遺產機構）之間的協作平台，致力於建立機構合作關係並促進社區參與。</p>
-<p>本專案部分經費來自安德魯·梅隆基金會與美國國家人文基金會的慷慨支持。</p>
-
+      <p>
+        波士頓華埠是許多面向社區的文化與行動者組織所在地。與許多社區長期居民一樣，這些組織擁有大量的歷史照片、時事通訊、傳單、訪談錄音、地圖、會議紀錄等。此外，許多當地的圖書館、檔案館與博物館也收藏了與華埠歷史相關的館藏。這些資料共同講述了一段強大而複雜的歷史，可用來加深對這個社區歷史的理解。
+      </p>
+      <p>
+        2021
+        年春季，波士頓研究中心會見了多方社區合作夥伴，包括波士頓華埠社區中心、包氏藝術中心、紐英崙華人歷史協會、華埠社區土地信託、波士頓公共圖書館華埠分館、華埠圖書館之友，以及作者
+        Michael Liu
+        博士。在一系列規劃會議中，我們的合作夥伴提到，社區歷史資料分散在全市各處的情況令人擔憂，有些對公眾開放，但更多卻深藏難得。他們進一步建議，如果有一個可公開存取的資料庫，能將相關館藏彼此連結起來，將可讓希望深入了解自身社區歷史的社區成員受益，並作為社區研究的起點。這些討論亦顯示，此類檔案資料可為正在進行的社區專案提供資訊（例如關於華埠移民歷史的互動地圖），辨識需要保存與支援的項目，並為未來的合作（包括數位化專案）建立夥伴關係。我們的顧問也強調應建立一個雙語網站，以確保波士頓華埠社區能夠接觸到該專案。
+      </p>
+      <h2>執行</h2>
+      <p>
+        考量這些共同的目標，我們與社區顧問合作設計了一份調查問卷，並提供簡體中文、繁體中文與英文版本。我們將該問卷的紙本與數位版本分享給典藏機構與社區成員，並於
+        2021
+        年收集回覆，以記錄分散於多所大學與其他典藏機構、部落格、藝術空間、個人收藏及其他記錄華埠歷史方式中的檔案館藏。
+      </p>
+      <p>
+        我們建立了資料模型，以結構化方式呈現館藏、組織與人物，從而建立一個可搜尋與瀏覽的館藏目錄。在設計資料模型與受控詞彙表時，我們參考了類似專案（如
+        COURAGE），並諮詢了檔案專業人員。波士頓研究中心的工作人員依據這些模型對最初的調查回覆進行解析與編碼，並在需要時與受訪者進一步聯繫，以取得更多相關資訊。在完成英文編碼後，我們聘請翻譯人員將相關內容翻譯為簡體中文。
+      </p>
+      <p>
+        接著，資料被載入至一個自訂的 Wikibase 實例中。Wikibase
+        是一套免費且開源的知識庫軟體，可用來表示各種實體及其之間的關係。我們選擇
+        Wikibase，是因為其對多語言資料的支援，使我們能夠輕鬆地以英文與中文儲存欄位名稱與數值；同時，其靈活的資料模型也讓我們未來有可能擴展專案範圍，納入如事件等其他實體。
+      </p>
+      <p>
+        最後，我們開發了一個網站，從 Wikibase
+        擷取資料並以更友善的方式呈現。該專案的網頁介面目前使用
+        Snowman，這是一款用於 SPARQL 後端的靜態網站產生器。
+      </p>
+      <p>
+        2022
+        年夏季，波士頓研究中心與紐英崙華人歷史協會合作，與利害關係人舉行設計工作坊，蒐集他們對華埠館藏專案的回饋。本次會議由
+        Heang Leung Rubin
+        博士主持。該小組提供了關於如何確保網站在可用性、互動性與視覺吸引力方面符合潛在使用者需求的建議，這些使用者包括社區居民、社區機構、學生、學者、教育工作者以及華埠訪客。
+      </p>
+      <p>
+        在專案的下一階段，我們計畫將這些資料遷移至一個由 CERES
+        支援的網站，該網站將具備瀏覽功能以及更為複雜的設計。
+      </p>
+      <h2>關於波士頓研究中心</h2>
+      <p>
+        波士頓研究中心設於東北大學圖書館，是一個數位社區歷史與檔案實驗室，並與波士頓公共圖書館合作成立。其使命是透過開發與運用新技術，協助揭示波士頓深厚的鄰里與社區歷史。透過這些技術，波士頓居民可以分享過去未被充分呈現的社區故事，並更深入理解過去如何形塑現在。
+      </p>
+      <p>
+        雖然波士頓研究中心設於東北大學，但其目標是成為眾多波士頓組織（包括公民、研究、教學與文化遺產機構）之間的協作平台，致力於建立機構合作關係並促進社區參與。
+      </p>
+      <p>本專案部分經費來自安德魯·梅隆基金會與美國國家人文基金會的慷慨支持。</p>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本頁另有以下語言版本：</span>
 
+        <nav class="lang-nav" aria-label="切換語言">
+          <a class="lang-switch" href="/en/about/" lang="en" hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本頁另有以下語言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hans/about/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切換語言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/about/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/about/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

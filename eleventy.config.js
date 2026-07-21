@@ -1,4 +1,6 @@
 import {EleventyI18nPlugin} from '@11ty/eleventy';
+import prettier from "prettier";
+
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -80,6 +82,13 @@ eleventyConfig.addFilter("translate", (str) => {
     const [lat, lng] = str.split(",").map(Number);
     return [lat, lng];
 });
+
+  eleventyConfig.addTransform("prettier", async function (content) {
+      if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+        return await prettier.format(content, { parser: "html" });
+      }
+      return content;
+    });
 
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
   eleventyConfig.addPassthroughCopy("src/styles");

@@ -15,11 +15,11 @@
       href="{{ meta.url }}{{ page.url }}"
     />
 
-    {% for code, lang in languages %}
-      {% if code != page.lang %}
+    {%- for code, lang in languages %}
+      {%- if code != page.lang %}
       <link rel="alternate" hreflang="{{ code }}" href="{{ meta.url }}{{ page.url | locale_url(code) }}" />
-      {% endif %}
-    {% endfor %}
+      {%- endif %}
+    {%- endfor %}
 
     <link
       rel="alternate"

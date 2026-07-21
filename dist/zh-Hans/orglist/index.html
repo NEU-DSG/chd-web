@@ -14,18 +14,16 @@
       hreflang="zh-Hans"
       href="http://localhost:8080/zh-Hans/orglist/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/orglist/" />
-      
-    
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hant" href="http://localhost:8080/zh-Hant/orglist/" />
-      
-    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/orglist/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/orglist/"
+    />
 
     <link
       rel="alternate"
@@ -51,335 +49,289 @@
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳转到主要内容</a>
 
-<a href="#main" class="skip-link">跳转到主要内容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hans" data-state="active">首页</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hans"
-           data-state="active"
-          >首页</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/about/"
-          
-          >关于</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/collectionlist/"
-          
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/orglist/"
-           aria-current="page" data-state="active"
-          >组织</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/peoplelist"
-          
-          >人们</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/map/"
-          
-          >地图</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/search/"
-          
-          >搜索</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/form/"
-          
-          >添加收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hans/about/">关于</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/collectionlist/">收藏</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/orglist/" aria-current="page" data-state="active"
+              >组织</a
+            >
+          </li>
+
+          <li>
+            <a href="/zh-Hans/peoplelist">人们</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/map/">地图</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/search/">搜索</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/form/">添加收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1>组织</h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hans">简体中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hans">简体中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a class="lang-switch" href="/en/orglist/" lang="en" hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/orglist/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/orglist/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        aria-current="true"
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/orglist/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/orglist/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                aria-current="true"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/orglist/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <ul>
-  <li>
-    <a href="/zh-Hans/organizations/Asian_American_Resource_Workshop/">
-      亚裔美国人资源研讨会
-    </a>
-    <p class="blurb"> 位波士顿泛亚社区组织 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Asian_Community_Development_Corporation/">
-      亚裔社区发展公司
-    </a>
-    <p class="blurb"> 总部位于波士顿的社区发展组织 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Boston_Greenspace_Alliance/">
-      波士顿绿地联盟
-    </a>
-    <p class="blurb"> 波士顿非营利组织 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Boston_Urban_Gardeners/">
-      波士顿城市园丁
-    </a>
-    <p class="blurb"> 波士顿的园艺和社区发展组织 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Cambridge_Historical_Commission/">
-      剑桥历史委员会
-    </a>
-    <p class="blurb"> 马萨诸塞州剑桥市政府机构 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Chinatown_Community_Land_Trust/">
-      华埠社区土地信托
-    </a>
-    <p class="blurb"> 总部位于波士顿的非营利性公司 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England/">
-      新英格兰华人联合慈善会
-    </a>
-    <p class="blurb"> 新英格兰华人社区的伞式组织 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Chinese_Historical_Society_of_New_England/">
-      纽英伦华人历史协会
-    </a>
-    <p class="blurb"> 美国马萨诸塞州历史学会 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Chinese_Progressive_Association/">
-      华人进步协会
-    </a>
-    <p class="blurb"> 波士顿组织 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/City_of_Boston_Archives/">
-      波士顿市档案馆
-    </a>
-    <p class="blurb"> 美国马萨诸塞州波士顿历史记录库 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/International_Society/">
-      国际学会
-    </a>
-    <p class="blurb"> 马萨诸塞州波士顿中国文化协会 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Kwong_Kow_Chinese_School/">
-      广教中文学校
-    </a>
-    <p class="blurb"> 马萨诸塞州波士顿的中文学校 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Moakley_Archive_Institute/">
-      萨福克大学莫克利档案馆
-    </a>
-    <p class="blurb"> 萨福克大学档案馆 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library/">
-      波士顿公共图书馆诺曼·B·莱文塔尔地图与教育中心
-    </a>
-    <p class="blurb"> 马萨诸塞州波士顿的特藏中心 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Northeastern_University_Archives_and_Special_Collections/">
-      东北大学档案与特藏
-    </a>
-    <p class="blurb"> 东北大学大学档案馆 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Radcliffe_Institute_Harvard_University/">
-      哈佛大学拉德克利夫研究所
-    </a>
-    <p class="blurb"> 哈佛大学分部 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston/">
-      约瑟夫·P·希利图书馆大学档案馆和特别馆藏 
- 马萨诸塞大学波士顿分校
-    </a>
-    <p class="blurb"> 马萨诸塞大学波士顿分校大学档案 </p>
-  </li>
-  <li>
-    <a href="/zh-Hans/organizations/Wah_Lum_Kung_Fu_Athletic_Association/">
-      华林功夫田径会
-    </a>
-    <p class="blurb"> 位于马萨诸塞州波士顿的武术学校 </p>
-  </li>
-</ul>
+        <li>
+          <a href="/zh-Hans/organizations/Asian_American_Resource_Workshop/">
+            亚裔美国人资源研讨会
+          </a>
+          <p class="blurb">位波士顿泛亚社区组织</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Asian_Community_Development_Corporation/"
+          >
+            亚裔社区发展公司
+          </a>
+          <p class="blurb">总部位于波士顿的社区发展组织</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Boston_Greenspace_Alliance/">
+            波士顿绿地联盟
+          </a>
+          <p class="blurb">波士顿非营利组织</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Boston_Urban_Gardeners/">
+            波士顿城市园丁
+          </a>
+          <p class="blurb">波士顿的园艺和社区发展组织</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Cambridge_Historical_Commission/">
+            剑桥历史委员会
+          </a>
+          <p class="blurb">马萨诸塞州剑桥市政府机构</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Chinatown_Community_Land_Trust/">
+            华埠社区土地信托
+          </a>
+          <p class="blurb">总部位于波士顿的非营利性公司</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England/"
+          >
+            新英格兰华人联合慈善会
+          </a>
+          <p class="blurb">新英格兰华人社区的伞式组织</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Chinese_Historical_Society_of_New_England/"
+          >
+            纽英伦华人历史协会
+          </a>
+          <p class="blurb">美国马萨诸塞州历史学会</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Chinese_Progressive_Association/">
+            华人进步协会
+          </a>
+          <p class="blurb">波士顿组织</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/City_of_Boston_Archives/">
+            波士顿市档案馆
+          </a>
+          <p class="blurb">美国马萨诸塞州波士顿历史记录库</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/International_Society/"> 国际学会 </a>
+          <p class="blurb">马萨诸塞州波士顿中国文化协会</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Kwong_Kow_Chinese_School/">
+            广教中文学校
+          </a>
+          <p class="blurb">马萨诸塞州波士顿的中文学校</p>
+        </li>
+        <li>
+          <a href="/zh-Hans/organizations/Moakley_Archive_Institute/">
+            萨福克大学莫克利档案馆
+          </a>
+          <p class="blurb">萨福克大学档案馆</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library/"
+          >
+            波士顿公共图书馆诺曼·B·莱文塔尔地图与教育中心
+          </a>
+          <p class="blurb">马萨诸塞州波士顿的特藏中心</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Northeastern_University_Archives_and_Special_Collections/"
+          >
+            东北大学档案与特藏
+          </a>
+          <p class="blurb">东北大学大学档案馆</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Radcliffe_Institute_Harvard_University/"
+          >
+            哈佛大学拉德克利夫研究所
+          </a>
+          <p class="blurb">哈佛大学分部</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston/"
+          >
+            约瑟夫·P·希利图书馆大学档案馆和特别馆藏 马萨诸塞大学波士顿分校
+          </a>
+          <p class="blurb">马萨诸塞大学波士顿分校大学档案</p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hans/organizations/Wah_Lum_Kung_Fu_Athletic_Association/"
+          >
+            华林功夫田径会
+          </a>
+          <p class="blurb">位于马萨诸塞州波士顿的武术学校</p>
+        </li>
+      </ul>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本页还提供以下语言版本：</span>
 
+        <nav class="lang-nav" aria-label="切换语言">
+          <a class="lang-switch" href="/en/orglist/" lang="en" hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本页还提供以下语言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hant/orglist/"
+            lang="zh-Hant"
+            hreflang="zh-Hant"
+            >繁體中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切换语言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/orglist/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hant/orglist/"
-      lang="zh-Hant"
-      hreflang="zh-Hant"
-      >繁體中文</a
-    >
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

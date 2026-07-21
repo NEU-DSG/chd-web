@@ -14,18 +14,16 @@
       hreflang="zh-Hant"
       href="http://localhost:8080/zh-Hant/peoplelist/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/peoplelist/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/peoplelist/" />
-      
-    
-      
-    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/peoplelist/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/peoplelist/"
+    />
 
     <link
       rel="alternate"
@@ -45,364 +43,270 @@
     <meta property="og:title" content="人們 | 18n-starter" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Listing all people" />
-    <meta property="og:url" content="http://localhost:8080/zh-Hant/peoplelist/" />
+    <meta
+      property="og:url"
+      content="http://localhost:8080/zh-Hant/peoplelist/"
+    />
     <meta property="og:locale" content="zh-Hant" />
     <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳至主要內容</a>
 
-<a href="#main" class="skip-link">跳至主要內容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hant" data-state="active">首頁</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hant"
-           data-state="active"
-          >首頁</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/about/"
-          
-          >關於</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/collectionlist/"
-          
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/orglist/"
-          
-          >組織</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/peoplelist"
-           data-state="active"
-          >人們</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/map/"
-          
-          >地圖</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/search/"
-          
-          >搜尋</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/form/"
-          
-          >新增收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hant/about/">關於</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/collectionlist/">收藏</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/orglist/">組織</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/peoplelist" data-state="active">人們</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/map/">地圖</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/search/">搜尋</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/form/">新增收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1>人們</h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hant">繁體中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hant">繁體中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a
+                class="lang-switch"
+                href="/en/peoplelist/"
+                lang="en"
+                hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/peoplelist/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/peoplelist/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/peoplelist/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        aria-current="true"
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/peoplelist/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/peoplelist/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                aria-current="true"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <ul>
-  <li>
-    <a href="/zh-Hant/people/Carmen_Chan/">
-      Carmen Chan
-    </a>
-    <p class="blurb"> 《舢板報》記者 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Carol_Mon_Lee/">
-      Carol Mon Lee
-    </a>
-    <p class="blurb"> Mong Q. Lee 的女兒 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Caroline_Chang/">
-      Caroline Chang
-    </a>
-    <p class="blurb"> 波士頓的活動家和社區領袖 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Cheng_Imm_Tan/">
-      Cheng Imm Tan
-    </a>
-    <p class="blurb"> 波士頓的活動人士 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Crystal_Bi_Wegner/">
-      Crystal Bi Wegner
-    </a>
-    <p class="blurb"> 社區藝術家、多媒體藝術家和教育家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Cynthia_Lee_Johnson/">
-      Cynthia Lee Johnson
-    </a>
-    <p class="blurb"> Mong Q. Lee 的女兒 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Cynthia_Yee/">
-      Cynthia Yee
-    </a>
-    <p class="blurb"> 教育家、作家、藝術家和藝術合作者 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Gianna_Stewart/">
-      Gianna Stewart
-    </a>
-    <p class="blurb"> 波士頓藝術家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Harry_Hom_Dow/">
-      Harry Hom Dow
-    </a>
-    <p class="blurb"> 波士頓律師兼活動家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Jacquie_L_Kay/">
-      Jacquie L. Kay
-    </a>
-    <p class="blurb"> 波士頓亞裔美國人社區和住房開發活動家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Jeffrey_Wong/">
-      Jeffrey Wong
-    </a>
-    <p class="blurb"> 波士頓上海印刷公司的老闆 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Judy_Branfman/">
-      Judy Branfman
-    </a>
-    <p class="blurb"> 紀錄片導演兼作家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Layne_Wong/">
-      Layne Wong
-    </a>
-    <p class="blurb"> Rose Lok的孫女 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Lily_Xie/">
-      Lily Xie
-    </a>
-    <p class="blurb"> 藝術家和教育家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Lydia_Lowe/">
-      Lydia Lowe
-    </a>
-    <p class="blurb"> 波士頓的活動人士 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Margaret_Wong/">
-      Margaret Wong
-    </a>
-    <p class="blurb"> 餐廳老闆 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Mong_Q_Lee/">
-      Mong Q. Lee
-    </a>
-    <p class="blurb"> 波士頓畫家 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Moy_Lok/">
-      Moy Lok
-    </a>
-    <p class="blurb"> Rose Lok 的母親 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Rose_Lok/">
-      Rose Lok
-    </a>
-    <p class="blurb"> 新英格蘭首位華裔女飛行員 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Tim_Kendell/">
-      Tim Kendell
-    </a>
-    <p class="blurb"> Francis P. Kendall（波士頓華僑飛行愛國俱樂部教練）的孫子 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Tunney_Lee/">
-      Tunney Lee
-    </a>
-    <p class="blurb"> 華裔美國城市規劃師 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/people/Yu-Wen_Wu/">
-      Yu-Wen Wu
-    </a>
-    <p class="blurb"> 波士頓視覺藝術家 </p>
-  </li>
-</ul>
+        <li>
+          <a href="/zh-Hant/people/Carmen_Chan/"> Carmen Chan </a>
+          <p class="blurb">《舢板報》記者</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Carol_Mon_Lee/"> Carol Mon Lee </a>
+          <p class="blurb">Mong Q. Lee 的女兒</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Caroline_Chang/"> Caroline Chang </a>
+          <p class="blurb">波士頓的活動家和社區領袖</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Cheng_Imm_Tan/"> Cheng Imm Tan </a>
+          <p class="blurb">波士頓的活動人士</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Crystal_Bi_Wegner/"> Crystal Bi Wegner </a>
+          <p class="blurb">社區藝術家、多媒體藝術家和教育家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Cynthia_Lee_Johnson/">
+            Cynthia Lee Johnson
+          </a>
+          <p class="blurb">Mong Q. Lee 的女兒</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Cynthia_Yee/"> Cynthia Yee </a>
+          <p class="blurb">教育家、作家、藝術家和藝術合作者</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Gianna_Stewart/"> Gianna Stewart </a>
+          <p class="blurb">波士頓藝術家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Harry_Hom_Dow/"> Harry Hom Dow </a>
+          <p class="blurb">波士頓律師兼活動家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Jacquie_L_Kay/"> Jacquie L. Kay </a>
+          <p class="blurb">波士頓亞裔美國人社區和住房開發活動家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Jeffrey_Wong/"> Jeffrey Wong </a>
+          <p class="blurb">波士頓上海印刷公司的老闆</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Judy_Branfman/"> Judy Branfman </a>
+          <p class="blurb">紀錄片導演兼作家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Layne_Wong/"> Layne Wong </a>
+          <p class="blurb">Rose Lok的孫女</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Lily_Xie/"> Lily Xie </a>
+          <p class="blurb">藝術家和教育家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Lydia_Lowe/"> Lydia Lowe </a>
+          <p class="blurb">波士頓的活動人士</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Margaret_Wong/"> Margaret Wong </a>
+          <p class="blurb">餐廳老闆</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Mong_Q_Lee/"> Mong Q. Lee </a>
+          <p class="blurb">波士頓畫家</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Moy_Lok/"> Moy Lok </a>
+          <p class="blurb">Rose Lok 的母親</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Rose_Lok/"> Rose Lok </a>
+          <p class="blurb">新英格蘭首位華裔女飛行員</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Tim_Kendell/"> Tim Kendell </a>
+          <p class="blurb">
+            Francis P. Kendall（波士頓華僑飛行愛國俱樂部教練）的孫子
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Tunney_Lee/"> Tunney Lee </a>
+          <p class="blurb">華裔美國城市規劃師</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/people/Yu-Wen_Wu/"> Yu-Wen Wu </a>
+          <p class="blurb">波士頓視覺藝術家</p>
+        </li>
+      </ul>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本頁另有以下語言版本：</span>
 
+        <nav class="lang-nav" aria-label="切換語言">
+          <a class="lang-switch" href="/en/peoplelist/" lang="en" hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本頁另有以下語言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hans/peoplelist/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切換語言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/peoplelist/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/peoplelist/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

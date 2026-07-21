@@ -14,18 +14,16 @@
       hreflang="zh-Hant"
       href="http://localhost:8080/zh-Hant/collectionlist/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/collectionlist/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/collectionlist/" />
-      
-    
-      
-    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/collectionlist/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/collectionlist/"
+    />
 
     <link
       rel="alternate"
@@ -33,7 +31,10 @@
       href="http://localhost:8080/en/collectionlist/"
     />
 
-    <link rel="canonical" href="http://localhost:8080/zh-Hant/collectionlist/" />
+    <link
+      rel="canonical"
+      href="http://localhost:8080/zh-Hant/collectionlist/"
+    />
     <meta
       name="description"
       content="
@@ -45,442 +46,510 @@
     <meta property="og:title" content="收藏 | 18n-starter" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Listing all collections" />
-    <meta property="og:url" content="http://localhost:8080/zh-Hant/collectionlist/" />
+    <meta
+      property="og:url"
+      content="http://localhost:8080/zh-Hant/collectionlist/"
+    />
     <meta property="og:locale" content="zh-Hant" />
     <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳至主要內容</a>
 
-<a href="#main" class="skip-link">跳至主要內容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hant" data-state="active">首頁</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hant"
-           data-state="active"
-          >首頁</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/about/"
-          
-          >關於</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/collectionlist/"
-           aria-current="page" data-state="active"
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/orglist/"
-          
-          >組織</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/peoplelist"
-          
-          >人們</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/map/"
-          
-          >地圖</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/search/"
-          
-          >搜尋</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/form/"
-          
-          >新增收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hant/about/">關於</a>
+          </li>
+
+          <li>
+            <a
+              href="/zh-Hant/collectionlist/"
+              aria-current="page"
+              data-state="active"
+              >收藏</a
+            >
+          </li>
+
+          <li>
+            <a href="/zh-Hant/orglist/">組織</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/peoplelist">人們</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/map/">地圖</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/search/">搜尋</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/form/">新增收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1>收藏</h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hant">繁體中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hant">繁體中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a
+                class="lang-switch"
+                href="/en/collectionlist/"
+                lang="en"
+                hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/collectionlist/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/collectionlist/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/collectionlist/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        aria-current="true"
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/collectionlist/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/collectionlist/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                aria-current="true"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <ul>
-  <li>
-    <a href="/zh-Hant/collections/Asian_American_Resource_Workshop_records/">
-      亞裔美國人資源研討會記錄
-    </a>
-    <p class="blurb"> 本館藏檔案記錄了亞裔美國人權利組織（AARW）為亞裔美國人爭取民權和反暴力所做的努力，以及他們創建的亞裔美國人教育和文化資源。此外，還包括有關「安全網暴力預防計畫」及「糯米計畫」的資料。文件類型包括會議記錄、日曆、撥款申請、預算、照片、漫畫等。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Asian_Community_Development_Corporation_Jacquie_L_Kay_records/">
-      亞洲社區發展公司（Jacquie L. Kay）記錄
-    </a>
-    <p class="blurb"> 亞洲社區發展公司（ACDC）的檔案記錄了其在城市地區為亞裔美國人提供經濟適用房、小型企業發展、教育和職業培訓等方面的援助。檔案的大部分內容記錄了ACDC的兩個開發項目：橡樹台（Oak Terrace）和大都會（The Metropolitan），包括資金報告、專案進度報告和設計規範。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Boston_200_records/">
-      波士頓 200 筆記錄
-    </a>
-    <p class="blurb"> 本系列口述歷史資料記錄了唐人街和南端的歷史。其中，標示為「南端」的口述歷史資料往往涉及唐人街的人物和活動。許多口述歷史的文字記錄並不完整，而且似乎經過編輯。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Boston_Greenspace_Alliance_records/">
-      波士頓綠地聯盟記錄
-    </a>
-    <p class="blurb"> 「該系列收藏包含一個名為《唐人街，2004》（第 3 盒，第 146 文件夾）的資料文件夾。” </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Boston_Urban_Gardeners_records/">
-      波士頓城市園丁記錄
-    </a>
-    <p class="blurb"> 此系列收藏包括一些關於20世紀80年代唐人街的資料，例如調查報告（商業、住房、使用者）、土地利用報告、規劃圖、地圖（市中心十字路口和唐人街）以及一本出版物（《唐人街1988：社區發展的城市設計》）。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Carmen_Chans_Sampan_photos/">
-      Carmen Chan 的《舢板》報紙照片
-    </a>
-    <p class="blurb"> 本系列照片由唐人街地方報紙《舢板報》記者陳嘉門拍攝，其中包含大量黑白照片。您可以透過東北大學檔案館及特藏部查閱《舢板報》的數位化版本。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Caroline_Chang_collection/">
-      Caroline Chang 馆藏
-    </a>
-    <p class="blurb"> 這是CHSNE眾多館藏之一。目前尚未進行整理，因此如需了解研究資料的可用性，請聯絡CHSNE。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Cheng_Imm_Tan_papers/">
-      Cheng Imm Tan 文件
-    </a>
-    <p class="blurb"> 這個館藏包含 Gund Kwok 的音訊、視訊、圖片和教學文件，這是波士頓華埠的一個全女性亞裔舞獅團。 也包含一些 Cheng Imm Tan 的法律和個人文件，例如，移民和旅行證件、獎項和家庭照片。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Chinatown_Story_Cart/">
-      唐人街故事車
-    </a>
-    <p class="blurb"> 這是一個創作於2020-2021年的藝術計畫。該計畫與BCNC、CSTO和ACDC等當地青年團體合作，收集了關於唐人街社區居民生活及其疫情經歷的訪談資料，並創作了相關視覺媒體作品。此外，該計畫還包括一系列包含視覺藝術作品和反思活動的系列故事，這些故事被發送給居民並由居民收集。大部分作品已數位化。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Chinese_American_Experiences_Mass_Memories_Road_Show/">
-      華裔美國人經歷馬薩諸塞州回憶巡迴展
-    </a>
-    <p class="blurb"> 「華裔美國人經歷：麻薩諸塞回憶巡迴展」是一個數位館藏，收錄了社區成員提供的物品（照片、文件、影片訪談）。這些資料是在2018年6月2日於唐人街包氏藝術中心舉辦的參與式檔案整理活動中收集的。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Chinese_American_Women_Oral_History_Project/">
-      美籍華裔婦女口述歷史項目
-    </a>
-    <p class="blurb"> 本系列口述歷史主要圍繞在中國生活、移民美國及定居、家庭生活、教育、工作、民族認同、同化與文化適應以及與中國的持續聯繫等主題。資料主要以錄音帶形式呈現。新英格蘭華人歷史學會也藏有該系列的部分副本，但尚未進行整理或數位化處理。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Chinese_Consolidated_Benevolent_Association_of_New_England_Inc_CCBA_documents/">
-      新英格蘭華人聯合會（CCBA）文件
-    </a>
-    <p class="blurb"> 主要收藏與唐人街相關的實體文件（會議記錄、傳單、照片），最早可追溯到 20 世紀 80 年代，其中包括唐人街牌坊的設計/建築圖。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Chinese_Progressive_Association_records/">
-      中華進步協會記錄
-    </a>
-    <p class="blurb"> 華人進步協會的檔案記錄了1970年代至2000年代波士頓唐人街及大波士頓地區華人及亞裔美國人社區的各項活動和倡導工作。內容涵蓋城市發展、移民權益、工人權益、種族暴力、租戶權益、華人文化活動等。檔案包括行政記錄、照片、影片和剪報。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Chinese_Women_Workers_Oral_History_Project/">
-      中國女工口述歷史項目
-    </a>
-    <p class="blurb"> 本合集收錄了七位移民女性工人的訪談，她們都是華人進步協會和亞太裔美國勞工聯盟的活躍領導者。資料包括音訊和視訊錄音以及訪談文字稿。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/FayFoto_Boston_photographs/">
-      FayFoto 波士頓攝影作品
-    </a>
-    <p class="blurb"> 波士頓照片集，包括唐人街的空拍照片。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Harry_Hom_Dow_Papers/">
-      Harry Hom Dow 文件
-    </a>
-    <p class="blurb"> 道氏是華裔移民的兒子，在1882年《排華法案》生效期間於麻薩諸塞州長大，當時反華情緒和歧視十分普遍。儘管面臨這些挑戰，這位薩福克大學法學院的畢業生仍然成為第一位通過馬薩諸塞州律師資格考試的華裔美國人，他曾服役於軍隊，開設了自己的律師事務所，並成為一位知名的社會活動家。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Haymarket_Peoples_Fund_records/">
-      乾草市場人民基金記錄
-    </a>
-    <p class="blurb"> 此系列資料包括1978年唐人街人民進步協會的相關資料，以及關於唐人街社區壁畫和唐人街房屋土地開發工作小組的未註明日期資料。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Hudson_Street_Chronicles/">
-      哈德遜街紀事
-    </a>
-    <p class="blurb"> 這是辛西亞·葉個人網站上的照片、故事和文章集。她探討了繁榮的社區生活和兒童發展之道、結構性種族主義如何壓迫、如何培養女性主義以及社會正義在美國的體現等主題。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/International_Society_Records/">
-      國際學會記錄
-    </a>
-    <p class="blurb"> 國際協會的前身是成立於1979年的華人經濟發展委員會。華人經濟發展委員會的宗旨是改善波士頓華人社區的社會經濟狀況，支持中華文化，並增進波士頓市民對中華文化的了解。本館藏包含文字記錄和照片，包括剪報、會議記錄和宣傳冊。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Jeffrey_Wong_type_sets/">
-      Jeffrey Wong字體設計
-    </a>
-    <p class="blurb"> 這是 Yu-Wen Wu 的一個個人館藏，他擁有上海印刷公司的排版。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Judy_Branfman_papers_and_Standing_Our_Ground_records/">
-      Judy Branfman 的文件和「堅守陣地 (Standing Our Ground)」記錄
-    </a>
-    <p class="blurb"> 該系列藏品包括 1988 年唐人街用戶調查、1989 年對唐人街居民 Kam Lee 和 Carol Lee 的採訪記錄和錄音，以及 1989 年唐人街的照片。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Kwong_Kao_Chinese_School_Gung_Ho_Club/">
-      廣高中文學校，Gung Ho俱樂部
-    </a>
-    <p class="blurb"> 這是CHSNE眾多館藏之一。該館藏尚未整理，主要由機構文件組成。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Margaret_Wong_Collection_restauranteur/">
-      Margaret Wong 收藏 [餐廳老闆]
-    </a>
-    <p class="blurb"> 這是CHSNE眾多館藏之一。該館藏尚未整理。如需查詢研究資料的可用性，請聯絡CHSNE。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Menu_Collection/">
-      選單系列
-    </a>
-    <p class="blurb"> 收集了波士頓唐人街、大波士頓地區和新英格蘭地區中餐館的菜單。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Mong_Q_Lee_collection/">
-      Mong Q. Lee 館藏
-    </a>
-    <p class="blurb"> 該收藏包含了李夢琪的大部分遺物，例如文憑、證書、藝術品、報紙文章以及信件。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/National_Register_of_Historic_Places_Multiple_Property_Documentation_Form_for_Bostons_Chinatown/">
-      波士頓唐人街國家史蹟名錄多項房產文件表格
-    </a>
-    <p class="blurb"> 一份研究文件，日期為 2016 年 6 月 1 日，其中包含波士頓唐人街國家歷史名勝名錄多處房產文件表格的副本。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Newspapers_at_Northeastern_University_Archives_and_Special_Collections/">
-      東北大學檔案館與特藏部的報紙
-    </a>
-    <p class="blurb"> 本合集收錄了《舢板》雜誌以及其他報紙，例如《波士頓環球報》和《波士頓鳳凰報》，這些報紙都記錄了唐人街的歷史。報紙上刊登了唐人街及其知名人物的照片，並報導了唐人街的持續發展和衰落。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Norman_B_Leventhal_Map_Education_Center_Collection/">
-      Norman B. Leventhal 地圖中心館藏
-    </a>
-    <p class="blurb"> 館藏包括從 19 世紀至今的波士頓地圖（包括唐人街地圖）以及從 19 世紀 70 年代到 19 世紀 80 年代的建築物和業主地圖集。此外，該館藏還包括波士頓重建局（1960 年代至 1990 年代）的規劃圖和地圖。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Rose_Lok_Collection/">
-      Rose Lok 館藏
-    </a>
-    <p class="blurb"> 這是一份與羅絲·洛和中華民國愛國飛行隊有關的資料集。其中一些資料涉及洛的副駕駛以及其他一些特別訪談。此外，還包括一些電子郵件，解釋了這批資料是如何落入中國歷史學會東北分會（CHSNE）手中的。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Storytelling_sessions_with_ACDC_Hudson_Street_residents_and_Cynthia_Yee_January_2020/">
-      2020年1月，ACDC哈德遜街居民與辛西婭·伊舉辦故事分享會
-    </a>
-    <p class="blurb"> 2020 年 1 月，ACDC、哈德遜街居民和 Cynthia Yee 舉辦了一系列講故事活動，並收集了相關音訊錄音。以下連結提供了講故事活動的剪輯版本，但完整版本受到限制。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Tunney_Lee_Collection/">
-      Tunney Lee 收藏
-    </a>
-    <p class="blurb"> 這是CHSNE眾多館藏之一。目前正在整理中，暫不可用於研究。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Wah_Lum_Kung_Fu_Athletic_Association_Wah_Lum_Kung_Fu_New_England_Headquarter/">
-      華林功夫體育協會/華林功夫新英格蘭總部
-    </a>
-    <p class="blurb"> 華林功夫館在波士頓唐人街已有四十餘年歷史。該館積極參與唐人街的大部分公共慶祝活動，例如舞獅和武術表演。它不僅吸引了周邊社區的居民前來唐人街學習和練習，還將中國傳統文化帶到新英格蘭各地表演。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Washing/">
-      洗滌
-    </a>
-    <p class="blurb"> 《洗滌》（Washing）是一個於2021年創作的藝術項目，探討了I-90和I-93高速公路對唐人街的影響。此計畫由唐人街居民和社區成員（Michael Liu、Doug Brugge和Mary Knasas）的訪談組成，訪談內容由唐人街居民團隊合作收集。訪談僅提供音訊。目前正在進行的項目包括製作一部電影、一本雜誌和一個網站。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Yu-Wen_Wu_Lantern_Projects/">
-      Yu-Wen Wu 燈籠項目
-    </a>
-    <p class="blurb"> Yu-Wen Wu 燈籠計畫是綠道保護協會 (Greenway Conservancy) 委託的戶外公共藝術計畫。 這些燈籠是用來講述波士頓華端口歷史和現狀的實體。 伴隨這件藝術品的是每個燈籠（照片和藝術品）的描述目錄和一個描述社區參與過程和製造的影片。 </p>
-  </li>
-  <li>
-    <a href="/zh-Hant/collections/Yuu_Brothers_Collection/">
-      Yuu 兄弟藏品
-    </a>
-    <p class="blurb"> 二戰期間，所有三個 Yuu 氏兄弟都在美國武裝部隊服役。 Yuu 氏據信是唯一一個有三個兒子同時在二戰中服役的華裔美國人家庭。 他們的父親在第一次世界大戰中在約翰·約瑟夫·潘興將軍手下服役。 （由 Joseph Yuu 和紐英崙華人歷史協會 (CHSNE) 館藏提供。） </p>
-  </li>
-</ul>
+        <li>
+          <a
+            href="/zh-Hant/collections/Asian_American_Resource_Workshop_records/"
+          >
+            亞裔美國人資源研討會記錄
+          </a>
+          <p class="blurb">
+            本館藏檔案記錄了亞裔美國人權利組織（AARW）為亞裔美國人爭取民權和反暴力所做的努力，以及他們創建的亞裔美國人教育和文化資源。此外，還包括有關「安全網暴力預防計畫」及「糯米計畫」的資料。文件類型包括會議記錄、日曆、撥款申請、預算、照片、漫畫等。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Asian_Community_Development_Corporation_Jacquie_L_Kay_records/"
+          >
+            亞洲社區發展公司（Jacquie L. Kay）記錄
+          </a>
+          <p class="blurb">
+            亞洲社區發展公司（ACDC）的檔案記錄了其在城市地區為亞裔美國人提供經濟適用房、小型企業發展、教育和職業培訓等方面的援助。檔案的大部分內容記錄了ACDC的兩個開發項目：橡樹台（Oak
+            Terrace）和大都會（The
+            Metropolitan），包括資金報告、專案進度報告和設計規範。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Boston_200_records/">
+            波士頓 200 筆記錄
+          </a>
+          <p class="blurb">
+            本系列口述歷史資料記錄了唐人街和南端的歷史。其中，標示為「南端」的口述歷史資料往往涉及唐人街的人物和活動。許多口述歷史的文字記錄並不完整，而且似乎經過編輯。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Boston_Greenspace_Alliance_records/">
+            波士頓綠地聯盟記錄
+          </a>
+          <p class="blurb">
+            「該系列收藏包含一個名為《唐人街，2004》（第 3 盒，第 146
+            文件夾）的資料文件夾。”
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Boston_Urban_Gardeners_records/">
+            波士頓城市園丁記錄
+          </a>
+          <p class="blurb">
+            此系列收藏包括一些關於20世紀80年代唐人街的資料，例如調查報告（商業、住房、使用者）、土地利用報告、規劃圖、地圖（市中心十字路口和唐人街）以及一本出版物（《唐人街1988：社區發展的城市設計》）。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Carmen_Chans_Sampan_photos/">
+            Carmen Chan 的《舢板》報紙照片
+          </a>
+          <p class="blurb">
+            本系列照片由唐人街地方報紙《舢板報》記者陳嘉門拍攝，其中包含大量黑白照片。您可以透過東北大學檔案館及特藏部查閱《舢板報》的數位化版本。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Caroline_Chang_collection/">
+            Caroline Chang 馆藏
+          </a>
+          <p class="blurb">
+            這是CHSNE眾多館藏之一。目前尚未進行整理，因此如需了解研究資料的可用性，請聯絡CHSNE。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Cheng_Imm_Tan_papers/">
+            Cheng Imm Tan 文件
+          </a>
+          <p class="blurb">
+            這個館藏包含 Gund Kwok
+            的音訊、視訊、圖片和教學文件，這是波士頓華埠的一個全女性亞裔舞獅團。
+            也包含一些 Cheng Imm Tan
+            的法律和個人文件，例如，移民和旅行證件、獎項和家庭照片。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Chinatown_Story_Cart/">
+            唐人街故事車
+          </a>
+          <p class="blurb">
+            這是一個創作於2020-2021年的藝術計畫。該計畫與BCNC、CSTO和ACDC等當地青年團體合作，收集了關於唐人街社區居民生活及其疫情經歷的訪談資料，並創作了相關視覺媒體作品。此外，該計畫還包括一系列包含視覺藝術作品和反思活動的系列故事，這些故事被發送給居民並由居民收集。大部分作品已數位化。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Chinese_American_Experiences_Mass_Memories_Road_Show/"
+          >
+            華裔美國人經歷馬薩諸塞州回憶巡迴展
+          </a>
+          <p class="blurb">
+            「華裔美國人經歷：麻薩諸塞回憶巡迴展」是一個數位館藏，收錄了社區成員提供的物品（照片、文件、影片訪談）。這些資料是在2018年6月2日於唐人街包氏藝術中心舉辦的參與式檔案整理活動中收集的。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Chinese_American_Women_Oral_History_Project/"
+          >
+            美籍華裔婦女口述歷史項目
+          </a>
+          <p class="blurb">
+            本系列口述歷史主要圍繞在中國生活、移民美國及定居、家庭生活、教育、工作、民族認同、同化與文化適應以及與中國的持續聯繫等主題。資料主要以錄音帶形式呈現。新英格蘭華人歷史學會也藏有該系列的部分副本，但尚未進行整理或數位化處理。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Chinese_Consolidated_Benevolent_Association_of_New_England_Inc_CCBA_documents/"
+          >
+            新英格蘭華人聯合會（CCBA）文件
+          </a>
+          <p class="blurb">
+            主要收藏與唐人街相關的實體文件（會議記錄、傳單、照片），最早可追溯到
+            20 世紀 80 年代，其中包括唐人街牌坊的設計/建築圖。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Chinese_Progressive_Association_records/"
+          >
+            中華進步協會記錄
+          </a>
+          <p class="blurb">
+            華人進步協會的檔案記錄了1970年代至2000年代波士頓唐人街及大波士頓地區華人及亞裔美國人社區的各項活動和倡導工作。內容涵蓋城市發展、移民權益、工人權益、種族暴力、租戶權益、華人文化活動等。檔案包括行政記錄、照片、影片和剪報。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Chinese_Women_Workers_Oral_History_Project/"
+          >
+            中國女工口述歷史項目
+          </a>
+          <p class="blurb">
+            本合集收錄了七位移民女性工人的訪談，她們都是華人進步協會和亞太裔美國勞工聯盟的活躍領導者。資料包括音訊和視訊錄音以及訪談文字稿。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/FayFoto_Boston_photographs/">
+            FayFoto 波士頓攝影作品
+          </a>
+          <p class="blurb">波士頓照片集，包括唐人街的空拍照片。</p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Harry_Hom_Dow_Papers/">
+            Harry Hom Dow 文件
+          </a>
+          <p class="blurb">
+            道氏是華裔移民的兒子，在1882年《排華法案》生效期間於麻薩諸塞州長大，當時反華情緒和歧視十分普遍。儘管面臨這些挑戰，這位薩福克大學法學院的畢業生仍然成為第一位通過馬薩諸塞州律師資格考試的華裔美國人，他曾服役於軍隊，開設了自己的律師事務所，並成為一位知名的社會活動家。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Haymarket_Peoples_Fund_records/">
+            乾草市場人民基金記錄
+          </a>
+          <p class="blurb">
+            此系列資料包括1978年唐人街人民進步協會的相關資料，以及關於唐人街社區壁畫和唐人街房屋土地開發工作小組的未註明日期資料。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Hudson_Street_Chronicles/">
+            哈德遜街紀事
+          </a>
+          <p class="blurb">
+            這是辛西亞·葉個人網站上的照片、故事和文章集。她探討了繁榮的社區生活和兒童發展之道、結構性種族主義如何壓迫、如何培養女性主義以及社會正義在美國的體現等主題。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/International_Society_Records/">
+            國際學會記錄
+          </a>
+          <p class="blurb">
+            國際協會的前身是成立於1979年的華人經濟發展委員會。華人經濟發展委員會的宗旨是改善波士頓華人社區的社會經濟狀況，支持中華文化，並增進波士頓市民對中華文化的了解。本館藏包含文字記錄和照片，包括剪報、會議記錄和宣傳冊。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Jeffrey_Wong_type_sets/">
+            Jeffrey Wong字體設計
+          </a>
+          <p class="blurb">
+            這是 Yu-Wen Wu 的一個個人館藏，他擁有上海印刷公司的排版。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Judy_Branfman_papers_and_Standing_Our_Ground_records/"
+          >
+            Judy Branfman 的文件和「堅守陣地 (Standing Our Ground)」記錄
+          </a>
+          <p class="blurb">
+            該系列藏品包括 1988 年唐人街用戶調查、1989 年對唐人街居民 Kam Lee 和
+            Carol Lee 的採訪記錄和錄音，以及 1989 年唐人街的照片。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Kwong_Kao_Chinese_School_Gung_Ho_Club/">
+            廣高中文學校，Gung Ho俱樂部
+          </a>
+          <p class="blurb">
+            這是CHSNE眾多館藏之一。該館藏尚未整理，主要由機構文件組成。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Margaret_Wong_Collection_restauranteur/"
+          >
+            Margaret Wong 收藏 [餐廳老闆]
+          </a>
+          <p class="blurb">
+            這是CHSNE眾多館藏之一。該館藏尚未整理。如需查詢研究資料的可用性，請聯絡CHSNE。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Menu_Collection/"> 選單系列 </a>
+          <p class="blurb">
+            收集了波士頓唐人街、大波士頓地區和新英格蘭地區中餐館的菜單。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Mong_Q_Lee_collection/">
+            Mong Q. Lee 館藏
+          </a>
+          <p class="blurb">
+            該收藏包含了李夢琪的大部分遺物，例如文憑、證書、藝術品、報紙文章以及信件。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/National_Register_of_Historic_Places_Multiple_Property_Documentation_Form_for_Bostons_Chinatown/"
+          >
+            波士頓唐人街國家史蹟名錄多項房產文件表格
+          </a>
+          <p class="blurb">
+            一份研究文件，日期為 2016 年 6 月 1
+            日，其中包含波士頓唐人街國家歷史名勝名錄多處房產文件表格的副本。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Newspapers_at_Northeastern_University_Archives_and_Special_Collections/"
+          >
+            東北大學檔案館與特藏部的報紙
+          </a>
+          <p class="blurb">
+            本合集收錄了《舢板》雜誌以及其他報紙，例如《波士頓環球報》和《波士頓鳳凰報》，這些報紙都記錄了唐人街的歷史。報紙上刊登了唐人街及其知名人物的照片，並報導了唐人街的持續發展和衰落。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Norman_B_Leventhal_Map_Education_Center_Collection/"
+          >
+            Norman B. Leventhal 地圖中心館藏
+          </a>
+          <p class="blurb">
+            館藏包括從 19 世紀至今的波士頓地圖（包括唐人街地圖）以及從 19 世紀
+            70 年代到 19 世紀 80
+            年代的建築物和業主地圖集。此外，該館藏還包括波士頓重建局（1960
+            年代至 1990 年代）的規劃圖和地圖。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Rose_Lok_Collection/">
+            Rose Lok 館藏
+          </a>
+          <p class="blurb">
+            這是一份與羅絲·洛和中華民國愛國飛行隊有關的資料集。其中一些資料涉及洛的副駕駛以及其他一些特別訪談。此外，還包括一些電子郵件，解釋了這批資料是如何落入中國歷史學會東北分會（CHSNE）手中的。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Storytelling_sessions_with_ACDC_Hudson_Street_residents_and_Cynthia_Yee_January_2020/"
+          >
+            2020年1月，ACDC哈德遜街居民與辛西婭·伊舉辦故事分享會
+          </a>
+          <p class="blurb">
+            2020 年 1 月，ACDC、哈德遜街居民和 Cynthia Yee
+            舉辦了一系列講故事活動，並收集了相關音訊錄音。以下連結提供了講故事活動的剪輯版本，但完整版本受到限制。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Tunney_Lee_Collection/">
+            Tunney Lee 收藏
+          </a>
+          <p class="blurb">
+            這是CHSNE眾多館藏之一。目前正在整理中，暫不可用於研究。
+          </p>
+        </li>
+        <li>
+          <a
+            href="/zh-Hant/collections/Wah_Lum_Kung_Fu_Athletic_Association_Wah_Lum_Kung_Fu_New_England_Headquarter/"
+          >
+            華林功夫體育協會/華林功夫新英格蘭總部
+          </a>
+          <p class="blurb">
+            華林功夫館在波士頓唐人街已有四十餘年歷史。該館積極參與唐人街的大部分公共慶祝活動，例如舞獅和武術表演。它不僅吸引了周邊社區的居民前來唐人街學習和練習，還將中國傳統文化帶到新英格蘭各地表演。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Washing/"> 洗滌 </a>
+          <p class="blurb">
+            《洗滌》（Washing）是一個於2021年創作的藝術項目，探討了I-90和I-93高速公路對唐人街的影響。此計畫由唐人街居民和社區成員（Michael
+            Liu、Doug Brugge和Mary
+            Knasas）的訪談組成，訪談內容由唐人街居民團隊合作收集。訪談僅提供音訊。目前正在進行的項目包括製作一部電影、一本雜誌和一個網站。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Yu-Wen_Wu_Lantern_Projects/">
+            Yu-Wen Wu 燈籠項目
+          </a>
+          <p class="blurb">
+            Yu-Wen Wu 燈籠計畫是綠道保護協會 (Greenway Conservancy)
+            委託的戶外公共藝術計畫。
+            這些燈籠是用來講述波士頓華端口歷史和現狀的實體。
+            伴隨這件藝術品的是每個燈籠（照片和藝術品）的描述目錄和一個描述社區參與過程和製造的影片。
+          </p>
+        </li>
+        <li>
+          <a href="/zh-Hant/collections/Yuu_Brothers_Collection/">
+            Yuu 兄弟藏品
+          </a>
+          <p class="blurb">
+            二戰期間，所有三個 Yuu 氏兄弟都在美國武裝部隊服役。 Yuu
+            氏據信是唯一一個有三個兒子同時在二戰中服役的華裔美國人家庭。
+            他們的父親在第一次世界大戰中在約翰·約瑟夫·潘興將軍手下服役。 （由
+            Joseph Yuu 和紐英崙華人歷史協會 (CHSNE) 館藏提供。）
+          </p>
+        </li>
+      </ul>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本頁另有以下語言版本：</span>
 
+        <nav class="lang-nav" aria-label="切換語言">
+          <a
+            class="lang-switch"
+            href="/en/collectionlist/"
+            lang="en"
+            hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本頁另有以下語言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hans/collectionlist/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切換語言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/collectionlist/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/collectionlist/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

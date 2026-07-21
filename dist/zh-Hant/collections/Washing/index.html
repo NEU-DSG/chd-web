@@ -14,18 +14,16 @@
       hreflang="zh-Hant"
       href="http://localhost:8080/zh-Hant/collections/Washing/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/collections/Asian_American_Resource_Workshop_records/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/collections/Asian_American_Resource_Workshop_records/" />
-      
-    
-      
-    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/collections/Asian_American_Resource_Workshop_records/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/collections/Asian_American_Resource_Workshop_records/"
+    />
 
     <link
       rel="alternate"
@@ -33,7 +31,10 @@
       href="http://localhost:8080/en/collections/Asian_American_Resource_Workshop_records/"
     />
 
-    <link rel="canonical" href="http://localhost:8080/zh-Hant/collections/Washing/" />
+    <link
+      rel="canonical"
+      href="http://localhost:8080/zh-Hant/collections/Washing/"
+    />
     <meta
       name="description"
       content="
@@ -44,418 +45,284 @@
     <meta property="og:site_name" content="18n-starter" />
     <meta property="og:title" content=" | 18n-starter" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin" />
-    <meta property="og:url" content="http://localhost:8080/zh-Hant/collections/Washing/" />
+    <meta
+      property="og:description"
+      content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin"
+    />
+    <meta
+      property="og:url"
+      content="http://localhost:8080/zh-Hant/collections/Washing/"
+    />
     <meta property="og:locale" content="zh-Hant" />
     <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳至主要內容</a>
 
-<a href="#main" class="skip-link">跳至主要內容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hant" data-state="active">首頁</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hant"
-           data-state="active"
-          >首頁</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/about/"
-          
-          >關於</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/collectionlist/"
-          
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/orglist/"
-          
-          >組織</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/peoplelist"
-          
-          >人們</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/map/"
-          
-          >地圖</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/search/"
-          
-          >搜尋</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/form/"
-          
-          >新增收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hant/about/">關於</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/collectionlist/">收藏</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/orglist/">組織</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/peoplelist">人們</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/map/">地圖</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/search/">搜尋</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/form/">新增收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1></h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hant">繁體中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hant">繁體中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a
+                class="lang-switch"
+                href="/en/collections/Washing/"
+                lang="en"
+                hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/collections/Washing/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/collections/Washing/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/collections/Washing/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        aria-current="true"
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/collections/Washing/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/collections/Washing/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                aria-current="true"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <a class="back-link" href="/zh-Hant/peoplelist"> ← 返回收藏集 </a>
-<h1 class="obj-title"> 洗滌</h1>
-<p class="type-tag">收藏</p>
-<p class="description"> 《洗滌》（Washing）是一個於2021年創作的藝術項目，探討了I-90和I-93高速公路對唐人街的影響。此計畫由唐人街居民和社區成員（Michael Liu、Doug Brugge和Mary Knasas）的訪談組成，訪談內容由唐人街居民團隊合作收集。訪談僅提供音訊。目前正在進行的項目包括製作一部電影、一本雜誌和一個網站。 </p>
-<dl>
+      <h1 class="obj-title">洗滌</h1>
+      <p class="type-tag">收藏</p>
+      <p class="description">
+        《洗滌》（Washing）是一個於2021年創作的藝術項目，探討了I-90和I-93高速公路對唐人街的影響。此計畫由唐人街居民和社區成員（Michael
+        Liu、Doug Brugge和Mary
+        Knasas）的訪談組成，訪談內容由唐人街居民團隊合作收集。訪談僅提供音訊。目前正在進行的項目包括製作一部電影、一本雜誌和一個網站。
+      </p>
+      <dl>
+        <dt><strong>收藏類型</strong></dt>
 
-  
-  
-  
-  
-  
-    <dt><strong>收藏類型</strong></dt>
-  
-    <dd>
-    
-        <a href="/zh-Hant/terms/website">網站</a>
-    
-    </dd>
-  
-  
-  
-    <dt><strong>數位化狀態</strong></dt>
-  
-    <dd>
-    
-        <a href="/zh-Hant/terms/fully_digitized">完全數位化</a>
-    
-    </dd>
-  
-  
-  
-    <dt><strong>存取限制狀態</strong></dt>
-  
-    <dd>
-    
-        <a href="/zh-Hant/terms/not_yet_determined_access">待確認</a>
-    
-    </dd>
-  
-  
-  
-    <dt><strong>專案狀態</strong></dt>
-  
-    <dd>
-    
-        音訊已經過處理——數位化、整理、編輯、混音和母帶處理，用於這件藝術作品。
-    
-    </dd>
-  
-  
-  
-    <dt><strong>專案啟動年份</strong></dt>
-  
-    <dd>
-    
-        2020
-    
-    </dd>
-  
-  
-  
-    <dt><strong>專案年終</strong></dt>
-  
-    <dd>
-    
-        2022
-    
-    </dd>
-  
-  
-  
-    <dt><strong>材料起始年份</strong></dt>
-  
-    <dd>
-    
-        2020
-    
-    </dd>
-  
-  
-  
-    <dt><strong>年末物資</strong></dt>
-  
-    <dd>
-    
-        2022
-    
-    </dd>
-  
-  
-  
-    <dt><strong>詳細描述網址</strong></dt>
-  
-    <dd>
-    
-        <a href="https://lily-xie.com/Washing" target="_blank">https://lily-xie.com/Washing</a>
-    
-    </dd>
-  
-  
-  
-    <dt><strong>材料類型（通用）</strong></dt>
-  
-    <dd>
-    
-        
-        <a href="/zh-Hant/terms/moving_images">動態影像</a><br>
-        
-        <a href="/zh-Hant/terms/sound_recordings">錄音</a><br>
-        
-        <a href="/zh-Hant/terms/web_pages">網頁</a><br>
-        
-    
-    </dd>
-  
-  
-  
-    <dt><strong>材料類型（具體）</strong></dt>
-  
-    <dd>
-    
-        
-        <a href="/zh-Hant/terms/interviews">訪談</a><br>
-        
-        <a href="/zh-Hant/terms/photographs">相片</a><br>
-        
-    
-    </dd>
-  
-  
-  
-    <dt><strong>作品主題</strong></dt>
-  
-    <dd>
-    
-        
-        <a href="/zh-Hant/terms/chinese_cultural_activities">中國文化活動</a><br>
-        
-        <a href="/zh-Hant/terms/urban_development">城市發展</a><br>
-        
-    
-    </dd>
-  
-  
-  
-    <dt><strong>作品或名稱語言</strong></dt>
-  
-    <dd>
-    
-        
-        <a href="/zh-Hant/terms/chinese">漢語</a><br>
-        
-        <a href="/zh-Hant/terms/english">英語</a><br>
-        
-    
-    </dd>
-  
-  
-  
-    <dt><strong>維護者</strong></dt>
-  
-    <dd>
-    
-        
-        
-            <a href="/zh-Hant/people/Lily_Xie">Lily Xie</a><br>
-        
-        
-    </dd>
-  
-  
-  
-    <dt><strong>接觸</strong></dt>
-  
-    <dd>
-    
-        
-        
-            <a href="/zh-Hant/people/Lily_Xie">Lily Xie</a><br>
-        
-        
-    </dd>
-  
-</dl>
+        <dd>
+          <a href="/zh-Hant/terms/website">網站</a>
+        </dd>
 
+        <dt><strong>數位化狀態</strong></dt>
 
+        <dd>
+          <a href="/zh-Hant/terms/fully_digitized">完全數位化</a>
+        </dd>
 
+        <dt><strong>存取限制狀態</strong></dt>
+
+        <dd>
+          <a href="/zh-Hant/terms/not_yet_determined_access">待確認</a>
+        </dd>
+
+        <dt><strong>專案狀態</strong></dt>
+
+        <dd>
+          音訊已經過處理——數位化、整理、編輯、混音和母帶處理，用於這件藝術作品。
+        </dd>
+
+        <dt><strong>專案啟動年份</strong></dt>
+
+        <dd>2020</dd>
+
+        <dt><strong>專案年終</strong></dt>
+
+        <dd>2022</dd>
+
+        <dt><strong>材料起始年份</strong></dt>
+
+        <dd>2020</dd>
+
+        <dt><strong>年末物資</strong></dt>
+
+        <dd>2022</dd>
+
+        <dt><strong>詳細描述網址</strong></dt>
+
+        <dd>
+          <a href="https://lily-xie.com/Washing" target="_blank"
+            >https://lily-xie.com/Washing</a
+          >
+        </dd>
+
+        <dt><strong>材料類型（通用）</strong></dt>
+
+        <dd>
+          <a href="/zh-Hant/terms/moving_images">動態影像</a><br />
+
+          <a href="/zh-Hant/terms/sound_recordings">錄音</a><br />
+
+          <a href="/zh-Hant/terms/web_pages">網頁</a><br />
+        </dd>
+
+        <dt><strong>材料類型（具體）</strong></dt>
+
+        <dd>
+          <a href="/zh-Hant/terms/interviews">訪談</a><br />
+
+          <a href="/zh-Hant/terms/photographs">相片</a><br />
+        </dd>
+
+        <dt><strong>作品主題</strong></dt>
+
+        <dd>
+          <a href="/zh-Hant/terms/chinese_cultural_activities">中國文化活動</a
+          ><br />
+
+          <a href="/zh-Hant/terms/urban_development">城市發展</a><br />
+        </dd>
+
+        <dt><strong>作品或名稱語言</strong></dt>
+
+        <dd>
+          <a href="/zh-Hant/terms/chinese">漢語</a><br />
+
+          <a href="/zh-Hant/terms/english">英語</a><br />
+        </dd>
+
+        <dt><strong>維護者</strong></dt>
+
+        <dd><a href="/zh-Hant/people/Lily_Xie">Lily Xie</a><br /></dd>
+
+        <dt><strong>接觸</strong></dt>
+
+        <dd><a href="/zh-Hant/people/Lily_Xie">Lily Xie</a><br /></dd>
+      </dl>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本頁另有以下語言版本：</span>
 
+        <nav class="lang-nav" aria-label="切換語言">
+          <a
+            class="lang-switch"
+            href="/en/collections/Washing/"
+            lang="en"
+            hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本頁另有以下語言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hans/collections/Washing/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切換語言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/collections/Washing/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/collections/Washing/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

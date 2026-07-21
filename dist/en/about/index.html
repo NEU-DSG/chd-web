@@ -14,18 +14,16 @@
       hreflang="en"
       href="http://localhost:8080/en/about/"
     />
-
-    
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/about/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hant" href="http://localhost:8080/zh-Hant/about/" />
-      
-    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/about/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/about/"
+    />
 
     <link
       rel="alternate"
@@ -51,239 +49,279 @@
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">Jump to main content</a>
 
-<a href="#main" class="skip-link">Jump to main content</a>
+    <header>
+      <nav aria-label="Primary">
+        <ul>
+          <li>
+            <a href="/en/" data-state="active">Home</a>
+          </li>
 
-<header>
-  <nav aria-label="Primary">
-    <ul>
-      
-      <li>
-        <a
-          href="/en/"
-           data-state="active"
-          >Home</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/about/"
-           aria-current="page" data-state="active"
-          >About</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/collectionlist/"
-          
-          >Collections</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/orglist/"
-          
-          >Organizations</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/peoplelist"
-          
-          >People</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/map/"
-          
-          >Map</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/search/"
-          
-          >Search</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/form/"
-          
-          >Add Collection</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/en/about/" aria-current="page" data-state="active"
+              >About</a
+            >
+          </li>
+
+          <li>
+            <a href="/en/collectionlist/">Collections</a>
+          </li>
+
+          <li>
+            <a href="/en/orglist/">Organizations</a>
+          </li>
+
+          <li>
+            <a href="/en/peoplelist">People</a>
+          </li>
+
+          <li>
+            <a href="/en/map/">Map</a>
+          </li>
+
+          <li>
+            <a href="/en/search/">Search</a>
+          </li>
+
+          <li>
+            <a href="/en/form/">Add Collection</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1>About</h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="en">English</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="en">English</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a
+                class="lang-switch"
+                href="/en/about/"
+                lang="en"
+                hreflang="en"
+                aria-current="true"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/about/"
-        lang="en"
-        hreflang="en"
-        aria-current="true"
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/about/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/about/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/about/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/about/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <h2>Project Background</h2>
-<p>Boston's Chinatown is home to many community-oriented cultural and activist organizations. These organizations, along with many longtime neighborhood residents, hold a wealth of historical collections of photographs, newsletters, flyers, recorded interviews, maps, meeting minutes, and more. In addition, many area libraries, archives, and museums host collections pertaining to Chinatown's history. Together, this material tells a powerful and complex history, and access to them can enrich our understanding of this neighborhood's history.</p>
-<p>In the spring of 2021, the Boston Research Center met with community partners including representatives from Boston Chinatown Neighborhood Center, Pao Arts Center, Chinese Historical Society of New England, the Chinatown Community Land Trust, the Chinatown Branch of the Boston Public Library, the Friends of the Chinatown Library, as well as author Dr. Michael Liu. In a series of planning meetings, our partners cited concerns that neighborhood historical materials are scattered throughout the city—some are accessible to the public, but even more are hidden. They further advised us that community members looking to learn more about their neighborhood history would benefit from a publicly accessible database linking relevant collections—a launching point for neighborhood research. These discussions also revealed that such an inventory could: contribute information to ongoing community projects, such as an interactive map about Chinatown's immigration history; identify items in need of preservation support; and establish partnerships for future collaborative efforts, including digitization projects. Our advisors also urged us to create a bilingual website, to ensure that the project was accessible to Boston's Chinatown community.</p>
-<h2>Implementation</h2>
-<p>With these collective ambitions in mind, we worked with our community advisors to develop a survey, which has been made available in simplified and traditional Chinese script, as well as in English. We shared print and digital versions of this survey with repositories and community members, and over the course of 2021, gathered survey results to document archival collections held at universities and other repositories, blogs, art installations, personal collections, and other ways of documenting Chinatown's history.</p>
-<p>We established data models for representing collections, organizations, and people in a structured way that would allow us to create a searchable and browsable directory of collections. In coming up with our data models and controlled vocabularies, we looked at similar projects, such as COURAGE, and consulted with archivists. BRC staff parsed and coded the initial survey responses according to these data models, following up with respondees to get additional information about their collections where necessary. Once the coding process was completed in English, we hired a translator to translate the relevant text into simplified Chinese.</p>
-<p>The data was then loaded into a custom Wikibase instance. Wikibase is a free, open-source knowledge base software suite that can be used to represent multiple types of entities and the different types of relationships between them. We chose to use Wikibase due to the way it handles multilingual data, allowing us to easily store field names and values in English and Chinese, as well as the flexibility its schema provides, allowing us to potentially expand our project scope down the line to include entities such as events.</p>
-<p>Finally, we developed a website that pulls in data from the Wikibase and presents it in a more user-friendly manner. The web interface for the project currently uses Snowman, a static site generator for SPARQL backends.</p>
-<p>In the summer of 2022, the BRC collaborated with the Chinese Historical Society of New England (CHSNE) to hold design meetings with their stakeholders to gather their feedback about the Chinatown Collections Project. Dr. Heang Leung Rubin acted as the facilitator for this design meeting. The group provided feedback about ways to ensure the web project's accessibility, interactivity, and visual appeal for a variety of potential end-users, including neighborhood residents, community agencies, students, scholars, educators, and visitors to Chinatown.</p>
-<p>In the next phase of this project, we plan to migrate this data into a CERES-supported site, which will include browsing capabilities and more sophisticated design.</p>
-<h2>About the Boston Research Center</h2>
-<p>The Boston Research Center (BRC), based in the Northeastern University Library, is a digital community history and archives lab, built in partnership with the Boston Public Library. The BRC's mission is to help bring Boston's deep neighborhood and community histories to light through the creation and use of new technologies. Through these technologies, Boston residents can share the underrepresented stories from their community's past, as well as a deeper understanding of how this past shapes our present.</p>
-<p>The BRC is hosted at Northeastern, but is designed to be a collaborative effort among many organizations in Boston—civic, research, teaching, and cultural heritage—devoted to developing institutional partnerships and fostering community engagement.</p>
-<p>Funded in part by generous support from the Andrew W. Mellon Foundation and the National Endowment for the Humanities.</p>
-
+      <p>
+        Boston's Chinatown is home to many community-oriented cultural and
+        activist organizations. These organizations, along with many longtime
+        neighborhood residents, hold a wealth of historical collections of
+        photographs, newsletters, flyers, recorded interviews, maps, meeting
+        minutes, and more. In addition, many area libraries, archives, and
+        museums host collections pertaining to Chinatown's history. Together,
+        this material tells a powerful and complex history, and access to them
+        can enrich our understanding of this neighborhood's history.
+      </p>
+      <p>
+        In the spring of 2021, the Boston Research Center met with community
+        partners including representatives from Boston Chinatown Neighborhood
+        Center, Pao Arts Center, Chinese Historical Society of New England, the
+        Chinatown Community Land Trust, the Chinatown Branch of the Boston
+        Public Library, the Friends of the Chinatown Library, as well as author
+        Dr. Michael Liu. In a series of planning meetings, our partners cited
+        concerns that neighborhood historical materials are scattered throughout
+        the city—some are accessible to the public, but even more are hidden.
+        They further advised us that community members looking to learn more
+        about their neighborhood history would benefit from a publicly
+        accessible database linking relevant collections—a launching point for
+        neighborhood research. These discussions also revealed that such an
+        inventory could: contribute information to ongoing community projects,
+        such as an interactive map about Chinatown's immigration history;
+        identify items in need of preservation support; and establish
+        partnerships for future collaborative efforts, including digitization
+        projects. Our advisors also urged us to create a bilingual website, to
+        ensure that the project was accessible to Boston's Chinatown community.
+      </p>
+      <h2>Implementation</h2>
+      <p>
+        With these collective ambitions in mind, we worked with our community
+        advisors to develop a survey, which has been made available in
+        simplified and traditional Chinese script, as well as in English. We
+        shared print and digital versions of this survey with repositories and
+        community members, and over the course of 2021, gathered survey results
+        to document archival collections held at universities and other
+        repositories, blogs, art installations, personal collections, and other
+        ways of documenting Chinatown's history.
+      </p>
+      <p>
+        We established data models for representing collections, organizations,
+        and people in a structured way that would allow us to create a
+        searchable and browsable directory of collections. In coming up with our
+        data models and controlled vocabularies, we looked at similar projects,
+        such as COURAGE, and consulted with archivists. BRC staff parsed and
+        coded the initial survey responses according to these data models,
+        following up with respondees to get additional information about their
+        collections where necessary. Once the coding process was completed in
+        English, we hired a translator to translate the relevant text into
+        simplified Chinese.
+      </p>
+      <p>
+        The data was then loaded into a custom Wikibase instance. Wikibase is a
+        free, open-source knowledge base software suite that can be used to
+        represent multiple types of entities and the different types of
+        relationships between them. We chose to use Wikibase due to the way it
+        handles multilingual data, allowing us to easily store field names and
+        values in English and Chinese, as well as the flexibility its schema
+        provides, allowing us to potentially expand our project scope down the
+        line to include entities such as events.
+      </p>
+      <p>
+        Finally, we developed a website that pulls in data from the Wikibase and
+        presents it in a more user-friendly manner. The web interface for the
+        project currently uses Snowman, a static site generator for SPARQL
+        backends.
+      </p>
+      <p>
+        In the summer of 2022, the BRC collaborated with the Chinese Historical
+        Society of New England (CHSNE) to hold design meetings with their
+        stakeholders to gather their feedback about the Chinatown Collections
+        Project. Dr. Heang Leung Rubin acted as the facilitator for this design
+        meeting. The group provided feedback about ways to ensure the web
+        project's accessibility, interactivity, and visual appeal for a variety
+        of potential end-users, including neighborhood residents, community
+        agencies, students, scholars, educators, and visitors to Chinatown.
+      </p>
+      <p>
+        In the next phase of this project, we plan to migrate this data into a
+        CERES-supported site, which will include browsing capabilities and more
+        sophisticated design.
+      </p>
+      <h2>About the Boston Research Center</h2>
+      <p>
+        The Boston Research Center (BRC), based in the Northeastern University
+        Library, is a digital community history and archives lab, built in
+        partnership with the Boston Public Library. The BRC's mission is to help
+        bring Boston's deep neighborhood and community histories to light
+        through the creation and use of new technologies. Through these
+        technologies, Boston residents can share the underrepresented stories
+        from their community's past, as well as a deeper understanding of how
+        this past shapes our present.
+      </p>
+      <p>
+        The BRC is hosted at Northeastern, but is designed to be a collaborative
+        effort among many organizations in Boston—civic, research, teaching, and
+        cultural heritage—devoted to developing institutional partnerships and
+        fostering community engagement.
+      </p>
+      <p>
+        Funded in part by generous support from the Andrew W. Mellon Foundation
+        and the National Endowment for the Humanities.
+      </p>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">This page is also available in:</span>
 
+        <nav class="lang-nav" aria-label="Change language">
+          <a
+            class="lang-switch"
+            href="/zh-Hans/about/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
 
-<span class="lang-available">This page is also available in:</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hant/about/"
+            lang="zh-Hant"
+            hreflang="zh-Hant"
+            >繁體中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="Change language">
-  
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/about/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hant/about/"
-      lang="zh-Hant"
-      hreflang="zh-Hant"
-      >繁體中文</a
-    >
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

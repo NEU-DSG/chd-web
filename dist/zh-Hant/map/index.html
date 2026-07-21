@@ -14,18 +14,12 @@
       hreflang="zh-Hant"
       href="http://localhost:8080/zh-Hant/map/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/map/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/map/" />
-      
-    
-      
-    
+    <link rel="alternate" hreflang="en" href="http://localhost:8080/en/map/" />
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/map/"
+    />
 
     <link
       rel="alternate"
@@ -44,286 +38,234 @@
     <meta property="og:site_name" content="18n-starter" />
     <meta property="og:title" content=" | 18n-starter" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin" />
+    <meta
+      property="og:description"
+      content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin"
+    />
     <meta property="og:url" content="http://localhost:8080/zh-Hant/map/" />
     <meta property="og:locale" content="zh-Hant" />
     <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳至主要內容</a>
 
-<a href="#main" class="skip-link">跳至主要內容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hant" data-state="active">首頁</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hant"
-           data-state="active"
-          >首頁</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/about/"
-          
-          >關於</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/collectionlist/"
-          
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/orglist/"
-          
-          >組織</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/peoplelist"
-          
-          >人們</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/map/"
-           aria-current="page" data-state="active"
-          >地圖</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/search/"
-          
-          >搜尋</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hant/form/"
-          
-          >新增收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hant/about/">關於</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/collectionlist/">收藏</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/orglist/">組織</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/peoplelist">人們</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/map/" aria-current="page" data-state="active"
+              >地圖</a
+            >
+          </li>
+
+          <li>
+            <a href="/zh-Hant/search/">搜尋</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hant/form/">新增收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1></h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hant">繁體中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hant">繁體中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a class="lang-switch" href="/en/map/" lang="en" hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/map/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/map/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/map/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        aria-current="true"
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/map/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/map/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                aria-current="true"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
-      
-
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-	<style>
-		.leaflet-container {
-			height: 600px;
-			width: 800px;
-			max-width: 100%;
-			margin: 0 auto;
-		}
-        .leaflet-popup-content strong {
-            color: #333 !important;
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+      />
+      <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin=""
+      ></script>
+      <style>
+        .leaflet-container {
+          height: 600px;
+          width: 800px;
+          max-width: 100%;
+          margin: 0 auto;
         }
-	</style>
+        .leaflet-popup-content strong {
+          color: #333 !important;
+        }
+      </style>
 
+      <h1 style="text-align: center">組織</h1>
+      <div id="map"></div>
 
-<h1 style="text-align: center;">組織</h1>
-<div id="map"></div>
+      <script>
+        const map = L.map('map').setView([42.35, -71.08], 11);
 
-<script>
-	const map = L.map('map').setView([42.35, -71.08], 11);
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        	maxZoom: 19,
+        	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
 
-	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(map);
+        const organizations = ;
 
-	const organizations = ;
+        // Store markers by ID
+        const markers = {};
 
-	// Store markers by ID
-	const markers = {};
+        organizations.forEach(loc => {
+        	const coordStr = loc.coordinate_location?.value;
+        	if (!coordStr) return;
+        	const [lat, lng] = coordStr.split(",").map(Number);
+        	// grab id for each org
+        	const id = loc.organization.value.split("/").pop();
+        	const marker = L.marker([lat, lng])
+        		.addTo(map)
+        		.bindPopup(`<strong><a href="/zh-Hant/organizations/${ loc.organization.value.split('/').pop() }">${loc.organizationLabel.value}</a></strong>`);
+        	// add id to markers dict
+        	markers[id] = { marker, lat, lng };
+        });
 
-	organizations.forEach(loc => {
-		const coordStr = loc.coordinate_location?.value;
-		if (!coordStr) return;
-		const [lat, lng] = coordStr.split(",").map(Number);
-		// grab id for each org
-		const id = loc.organization.value.split("/").pop();
-		const marker = L.marker([lat, lng])
-			.addTo(map)
-			.bindPopup(`<strong><a href="/zh-Hant/organizations/${ loc.organization.value.split('/').pop() }">${loc.organizationLabel.value}</a></strong>`);
-		// add id to markers dict
-		markers[id] = { marker, lat, lng };
-	});
-
-	const params = new URLSearchParams(window.location.search);
-	const targetOrg = params.get("org");
-	// if both exist, retrieve the marker from the dict and display
-	if (targetOrg && markers[targetOrg]) {
-		const { marker, lat, lng } = markers[targetOrg];
-		map.setView([lat, lng], 16);
-		marker.openPopup();
-	}
-</script>
+        const params = new URLSearchParams(window.location.search);
+        const targetOrg = params.get("org");
+        // if both exist, retrieve the marker from the dict and display
+        if (targetOrg && markers[targetOrg]) {
+        	const { marker, lat, lng } = markers[targetOrg];
+        	map.setView([lat, lng], 16);
+        	marker.openPopup();
+        }
+      </script>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本頁另有以下語言版本：</span>
 
+        <nav class="lang-nav" aria-label="切換語言">
+          <a class="lang-switch" href="/en/map/" lang="en" hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本頁另有以下語言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hans/map/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切換語言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/map/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/map/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

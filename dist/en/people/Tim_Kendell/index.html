@@ -14,18 +14,16 @@
       hreflang="en"
       href="http://localhost:8080/en/people/Tim_Kendell/"
     />
-
-    
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hans" href="http://localhost:8080/zh-Hans/people/Carmen_Chan/" />
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hant" href="http://localhost:8080/zh-Hant/people/Carmen_Chan/" />
-      
-    
+    <link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="http://localhost:8080/zh-Hans/people/Carmen_Chan/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/people/Carmen_Chan/"
+    />
 
     <link
       rel="alternate"
@@ -44,249 +42,198 @@
     <meta property="og:site_name" content="18n-starter" />
     <meta property="og:title" content=" | 18n-starter" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin" />
-    <meta property="og:url" content="http://localhost:8080/en/people/Tim_Kendell/" />
+    <meta
+      property="og:description"
+      content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin"
+    />
+    <meta
+      property="og:url"
+      content="http://localhost:8080/en/people/Tim_Kendell/"
+    />
     <meta property="og:locale" content="en" />
     <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">Jump to main content</a>
 
-<a href="#main" class="skip-link">Jump to main content</a>
+    <header>
+      <nav aria-label="Primary">
+        <ul>
+          <li>
+            <a href="/en/" data-state="active">Home</a>
+          </li>
 
-<header>
-  <nav aria-label="Primary">
-    <ul>
-      
-      <li>
-        <a
-          href="/en/"
-           data-state="active"
-          >Home</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/about/"
-          
-          >About</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/collectionlist/"
-          
-          >Collections</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/orglist/"
-          
-          >Organizations</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/peoplelist"
-          
-          >People</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/map/"
-          
-          >Map</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/search/"
-          
-          >Search</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/en/form/"
-          
-          >Add Collection</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/en/about/">About</a>
+          </li>
+
+          <li>
+            <a href="/en/collectionlist/">Collections</a>
+          </li>
+
+          <li>
+            <a href="/en/orglist/">Organizations</a>
+          </li>
+
+          <li>
+            <a href="/en/peoplelist">People</a>
+          </li>
+
+          <li>
+            <a href="/en/map/">Map</a>
+          </li>
+
+          <li>
+            <a href="/en/search/">Search</a>
+          </li>
+
+          <li>
+            <a href="/en/form/">Add Collection</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1></h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="en">English</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="en">English</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a
+                class="lang-switch"
+                href="/en/people/Tim_Kendell/"
+                lang="en"
+                hreflang="en"
+                aria-current="true"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/people/Tim_Kendell/"
-        lang="en"
-        hreflang="en"
-        aria-current="true"
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/people/Tim_Kendell/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/people/Tim_Kendell/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/people/Tim_Kendell/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/people/Tim_Kendell/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
       <a class="back-link" href="/en/peoplelist"> ← Back to People </a>
-<h1 class="obj-title"> Tim Kendell</h1>
-<p class="type-tag">person</p>
-<p class="description">  grandson of Francis P. Kendall (instructor for Chinese Patriotic Flying Club of Boston) </p>
-<dl>
-
-  
-  
-  
-  
-  <dt><strong>Donor For</strong></dt>
-  <dd>
-    
-      <a href="/en/collections/Rose_Lok_Collection">Rose Lok Collection</a><br>
-    
-  </dd>
-  
-</dl>
+      <h1 class="obj-title">Tim Kendell</h1>
+      <p class="type-tag">person</p>
+      <p class="description">
+        grandson of Francis P. Kendall (instructor for Chinese Patriotic Flying
+        Club of Boston)
+      </p>
+      <dl>
+        <dt><strong>Donor For</strong></dt>
+        <dd>
+          <a href="/en/collections/Rose_Lok_Collection">Rose Lok Collection</a
+          ><br />
+        </dd>
+      </dl>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">This page is also available in:</span>
 
+        <nav class="lang-nav" aria-label="Change language">
+          <a
+            class="lang-switch"
+            href="/zh-Hans/people/Tim_Kendell/"
+            lang="zh-Hans"
+            hreflang="zh-Hans"
+            >简体中文</a
+          >
 
-<span class="lang-available">This page is also available in:</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hant/people/Tim_Kendell/"
+            lang="zh-Hant"
+            hreflang="zh-Hant"
+            >繁體中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="Change language">
-  
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hans/people/Tim_Kendell/"
-      lang="zh-Hans"
-      hreflang="zh-Hans"
-      >简体中文</a
-    >
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hant/people/Tim_Kendell/"
-      lang="zh-Hant"
-      hreflang="zh-Hant"
-      >繁體中文</a
-    >
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

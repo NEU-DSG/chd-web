@@ -14,18 +14,16 @@
       hreflang="zh-Hans"
       href="http://localhost:8080/zh-Hans/terms/boston/"
     />
-
-    
-      
-      <link rel="alternate" hreflang="en" href="http://localhost:8080/en/terms/boston/" />
-      
-    
-      
-    
-      
-      <link rel="alternate" hreflang="zh-Hant" href="http://localhost:8080/zh-Hant/terms/covid_19/" />
-      
-    
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:8080/en/terms/boston/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-Hant"
+      href="http://localhost:8080/zh-Hant/terms/covid_19/"
+    />
 
     <link
       rel="alternate"
@@ -44,271 +42,247 @@
     <meta property="og:site_name" content="18n-starter" />
     <meta property="og:title" content=" | 18n-starter" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin" />
-    <meta property="og:url" content="http://localhost:8080/zh-Hans/terms/boston/" />
+    <meta
+      property="og:description"
+      content="Minimal starter for localized content, using Eleventy&#39;s own Internationalization (I18n) plugin"
+    />
+    <meta
+      property="og:url"
+      content="http://localhost:8080/zh-Hans/terms/boston/"
+    />
     <meta property="og:locale" content="zh-Hans" />
     <meta property="og:image" content="http://localhost:8080/opengraph.jpg" />
   </head>
 
   <body>
-    
+    <a href="#main" class="skip-link">跳转到主要内容</a>
 
-<a href="#main" class="skip-link">跳转到主要内容</a>
+    <header>
+      <nav aria-label="主要">
+        <ul>
+          <li>
+            <a href="/zh-Hans" data-state="active">首页</a>
+          </li>
 
-<header>
-  <nav aria-label="主要">
-    <ul>
-      
-      <li>
-        <a
-          href="/zh-Hans"
-           data-state="active"
-          >首页</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/about/"
-          
-          >关于</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/collectionlist/"
-          
-          >收藏</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/orglist/"
-          
-          >组织</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/peoplelist"
-          
-          >人们</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/map/"
-          
-          >地图</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/search/"
-          
-          >搜索</a
-        >
-      </li>
-      
-      <li>
-        <a
-          href="/zh-Hans/form/"
-          
-          >添加收藏</a
-        >
-      </li>
-      
-    </ul>
-  </nav>
-</header>
+          <li>
+            <a href="/zh-Hans/about/">关于</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/collectionlist/">收藏</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/orglist/">组织</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/peoplelist">人们</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/map/">地图</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/search/">搜索</a>
+          </li>
+
+          <li>
+            <a href="/zh-Hans/form/">添加收藏</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main id="main">
       <div class="page-head">
         <h1></h1>
-        
 
+        <div class="lang-dropdown">
+          <button
+            type="button"
+            class="lang-dropdown__button"
+            aria-expanded="false"
+            aria-controls="lang-menu"
+          >
+            <span lang="zh-Hans">简体中文</span>
+            <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
+          </button>
 
-<div class="lang-dropdown">
-  <button
-    type="button"
-    class="lang-dropdown__button"
-    aria-expanded="false"
-    aria-controls="lang-menu"
-  >
-    <span lang="zh-Hans">简体中文</span>
-    <span class="lang-dropdown__caret" aria-hidden="true">&#9662;</span>
-  </button>
+          <ul id="lang-menu" class="lang-dropdown__menu" hidden>
+            <li>
+              <a
+                class="lang-switch"
+                href="/en/terms/boston/"
+                lang="en"
+                hreflang="en"
+                >English</a
+              >
+            </li>
 
-  <ul id="lang-menu" class="lang-dropdown__menu" hidden>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/en/terms/boston/"
-        lang="en"
-        hreflang="en"
-        
-        >English</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hans/terms/boston/"
-        lang="zh-Hans"
-        hreflang="zh-Hans"
-        aria-current="true"
-        >简体中文</a
-      >
-    </li>
-    
-    <li>
-      <a
-        class="lang-switch"
-        href="/zh-Hant/terms/boston/"
-        lang="zh-Hant"
-        hreflang="zh-Hant"
-        
-        >繁體中文</a
-      >
-    </li>
-    
-  </ul>
-</div>
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hans/terms/boston/"
+                lang="zh-Hans"
+                hreflang="zh-Hans"
+                aria-current="true"
+                >简体中文</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="lang-switch"
+                href="/zh-Hant/terms/boston/"
+                lang="zh-Hant"
+                hreflang="zh-Hant"
+                >繁體中文</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <h1> 波士顿</h1>
-<em>术语</em>
-<h3> 美国马萨诸塞州首府 </h3>
-<dl>
-
-
-    <dt><strong>维基数据关联</strong></dt>
+      <h1>波士顿</h1>
+      <em>术语</em>
+      <h3>美国马萨诸塞州首府</h3>
+      <dl>
+        <dt><strong>维基数据关联</strong></dt>
         <dd>
-            <a target="_blank" href="https://wikidata.org/wiki/Q100">Q100</a><br>
+          <a target="_blank" href="https://wikidata.org/wiki/Q100">Q100</a
+          ><br />
         </dd>
 
+        <dt><strong>包含该术语的实体： "波士顿"</strong></dt>
+        <dd>
+          <a
+            href="/zh-Hans/organizations/Northeastern_University_Archives_and_Special_Collections"
+            >东北大学档案与特藏</a
+          ><br />
 
-    <dt><strong>包含该术语的实体： "波士顿"</strong></dt>
-    <dd>
-        
-            <a href="/zh-Hans/organizations/Northeastern_University_Archives_and_Special_Collections">东北大学档案与特藏</a><br>
-        
-            <a href="/zh-Hans/organizations/Asian_Community_Development_Corporation">亚裔社区发展公司</a><br>
-        
-            <a href="/zh-Hans/organizations/Chinese_Progressive_Association">华人进步协会</a><br>
-        
-            <a href="/zh-Hans/organizations/Chinatown_Community_Land_Trust">华埠社区土地信托</a><br>
-        
-            <a href="/zh-Hans/organizations/Wah_Lum_Kung_Fu_Athletic_Association">华林功夫田径会</a><br>
-        
-            <a href="/zh-Hans/organizations/Kwong_Kow_Chinese_School">广教中文学校</a><br>
-        
-            <a href="/zh-Hans/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England">新英格兰华人联合慈善会</a><br>
-        
-            <a href="/zh-Hans/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library">波士顿公共图书馆诺曼·B·莱文塔尔地图与教育中心</a><br>
-        
-            <a href="/zh-Hans/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston">约瑟夫·P·希利图书馆大学档案馆和特别馆藏 
- 马萨诸塞大学波士顿分校</a><br>
-        
-            <a href="/zh-Hans/organizations/Chinese_Historical_Society_of_New_England">纽英伦华人历史协会</a><br>
-        
-            <a href="/zh-Hans/organizations/Moakley_Archive_Institute">萨福克大学莫克利档案馆</a><br>
-        
-    </dd>
-</dl>
+          <a
+            href="/zh-Hans/organizations/Asian_Community_Development_Corporation"
+            >亚裔社区发展公司</a
+          ><br />
+
+          <a href="/zh-Hans/organizations/Chinese_Progressive_Association"
+            >华人进步协会</a
+          ><br />
+
+          <a href="/zh-Hans/organizations/Chinatown_Community_Land_Trust"
+            >华埠社区土地信托</a
+          ><br />
+
+          <a href="/zh-Hans/organizations/Wah_Lum_Kung_Fu_Athletic_Association"
+            >华林功夫田径会</a
+          ><br />
+
+          <a href="/zh-Hans/organizations/Kwong_Kow_Chinese_School"
+            >广教中文学校</a
+          ><br />
+
+          <a
+            href="/zh-Hans/organizations/Chinese_Consolidated_Benevolent_Association_of_New_England"
+            >新英格兰华人联合慈善会</a
+          ><br />
+
+          <a
+            href="/zh-Hans/organizations/Norman_B_Leventhal_Map_Education_Center_at_the_Boston_Public_Library"
+            >波士顿公共图书馆诺曼·B·莱文塔尔地图与教育中心</a
+          ><br />
+
+          <a
+            href="/zh-Hans/organizations/University_Archives_and_Special_Collections_Joseph_P_Healey_Library_University_of_Massachusetts_Boston"
+            >约瑟夫·P·希利图书馆大学档案馆和特别馆藏 马萨诸塞大学波士顿分校</a
+          ><br />
+
+          <a
+            href="/zh-Hans/organizations/Chinese_Historical_Society_of_New_England"
+            >纽英伦华人历史协会</a
+          ><br />
+
+          <a href="/zh-Hans/organizations/Moakley_Archive_Institute"
+            >萨福克大学莫克利档案馆</a
+          ><br />
+        </dd>
+      </dl>
     </main>
 
     <footer>
-  <div class="lang-switch--footer">
-    
+      <div class="lang-switch--footer">
+        <span class="lang-available">本页还提供以下语言版本：</span>
 
+        <nav class="lang-nav" aria-label="切换语言">
+          <a
+            class="lang-switch"
+            href="/en/terms/boston/"
+            lang="en"
+            hreflang="en"
+            >English</a
+          >
 
-<span class="lang-available">本页还提供以下语言版本：</span>
+          <a
+            class="lang-switch"
+            href="/zh-Hant/terms/boston/"
+            lang="zh-Hant"
+            hreflang="zh-Hant"
+            >繁體中文</a
+          >
+        </nav>
+      </div>
+    </footer>
 
-<nav class="lang-nav" aria-label="切换语言">
-  
-    
-    <a
-      class="lang-switch"
-      href="/en/terms/boston/"
-      lang="en"
-      hreflang="en"
-      >English</a
-    >
-    
-  
-    
-  
-    
-    <a
-      class="lang-switch"
-      href="/zh-Hant/terms/boston/"
-      lang="zh-Hant"
-      hreflang="zh-Hant"
-      >繁體中文</a
-    >
-    
-  
-</nav>
-  </div>
-</footer>
+    <script>
+      // immediately initialize
+      (() => {
+        // Keep any query string on every language link — header dropdown AND footer
+        const query = window.location.search;
 
-<script>
-// immediately initialize
-(() => {
-  // Keep any query string on every language link — header dropdown AND footer
-  const query = window.location.search;
+        if (query) {
+          document.querySelectorAll("a.lang-switch").forEach((link) => {
+            const url = new URL(link.href, window.location.origin);
+            url.search = query;
+            link.href = url.toString();
+          });
+        }
 
-  if (query) {
-    document.querySelectorAll("a.lang-switch").forEach(link => {
-      const url = new URL(link.href, window.location.origin);
-      url.search = query;
-      link.href = url.toString();
-    });
-  }
+        // Header language dropdown
+        // check if dropdown exists
+        const dropdown = document.querySelector(".lang-dropdown");
+        if (!dropdown) return;
 
-  // Header language dropdown
-  // check if dropdown exists
-  const dropdown = document.querySelector(".lang-dropdown");
-  if (!dropdown) return;
+        // grab items
+        const button = dropdown.querySelector(".lang-dropdown__button");
+        const menu = dropdown.querySelector(".lang-dropdown__menu");
 
-  // grab items
-  const button = dropdown.querySelector(".lang-dropdown__button");
-  const menu = dropdown.querySelector(".lang-dropdown__menu");
+        // function for opening and closing menu
+        function setOpen(open) {
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open);
+        }
 
-  // function for opening and closing menu
-  function setOpen(open) {
-  menu.hidden = !open;
-  button.setAttribute("aria-expanded", open);
-  }
+        // listen for click
+        button.addEventListener("click", (event) => {
+          event.stopPropagation();
+          setOpen(menu.hidden);
+        });
 
-  // listen for click
-  button.addEventListener("click", event => {
-    event.stopPropagation();
-    setOpen(menu.hidden);
-  });
+        // listen for click away
+        document.addEventListener("click", (event) => {
+          if (!dropdown.contains(event.target)) {
+            setOpen(false);
+          }
+        });
 
-  // listen for click away
-  document.addEventListener("click", event => {
-    if (!dropdown.contains(event.target)) {
-      setOpen(false);
-    }
-  });
-
-  // listen for keydown
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      setOpen(false);
-    }
-  });
-})();
-</script>
+        // listen for keydown
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setOpen(false);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
