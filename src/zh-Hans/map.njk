@@ -1,5 +1,5 @@
 ---
-data: organizations.organizationsZhHans
+data: organizationfolder.organizationsZhHans
 ---
 
 {% block head %}
@@ -29,7 +29,7 @@ data: organizations.organizationsZhHans
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
-	const organizations = {{ organizations.organizationsZhHans | dump | safe }};
+	const organizations = {{ organizationfolder.organizationsZhHans | dump | safe }};
 
 	// Store markers by ID
 	const markers = {};
