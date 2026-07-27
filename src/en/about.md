@@ -1,7 +1,6 @@
 ---
 title: 'About'
 description: 'An English subpage'
-slugOverride: 'about'
 ---
 
 ## Project Background

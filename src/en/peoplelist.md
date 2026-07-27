@@ -1,7 +1,6 @@
 ---
 title: 'People'
 description: 'Listing all people'
-slugOverride: 'peoplelist'
 ---
 
 <ul>

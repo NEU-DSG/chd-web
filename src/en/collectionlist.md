@@ -1,7 +1,6 @@
 ---
 title: 'Collections'
 description: 'Listing all collections'
-slugOverride: 'collectionlist'
 ---
 <ul>
 {% for item in collectionfolder.collectionsEn %}

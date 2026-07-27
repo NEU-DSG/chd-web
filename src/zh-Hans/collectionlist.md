@@ -1,7 +1,6 @@
 ---
 title: '收藏'
 description: 'Listing all collections'
-slugOverride: 'collectionlist'
 ---
 
 <ul>

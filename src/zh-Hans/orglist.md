@@ -1,7 +1,6 @@
 ---
 title: '组织'
 description: 'Listing all organizations'
-slugOverride: 'orglist'
 ---
 
 <ul>

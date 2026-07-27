@@ -1,7 +1,6 @@
 ---
 title: '人们'
 description: 'Listing all people'
-slugOverride: 'peoplelist'
 ---
 
 <ul>

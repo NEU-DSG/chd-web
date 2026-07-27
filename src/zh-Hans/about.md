@@ -1,7 +1,6 @@
 ---
 title: '关于'
 description: '一个英文子页面'
-slugOverride: 'about'
 ---
 
 ## 项目背景
