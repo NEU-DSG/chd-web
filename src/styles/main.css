@@ -118,26 +118,30 @@ header nav:first-of-type:before {
     bottom: 0
 }
 
-header nav:first-of-type a {
+/* CHANGED: was `header nav:first-of-type a` — the descendant selector also hit
+   the submenu links and beat `.dropdown a` on specificity. Now top-level only. */
+header nav:first-of-type>ul>li>a {
     margin: 10px;
     display: inline-block
 }
 
-header nav:first-of-type ul {
+/* CHANGED: was `header nav:first-of-type ul` with `display: inline; overflow: hidden`.
+   Two problems: `overflow: hidden` clipped the absolutely-positioned submenu, and
+   `display: inline` outranked `.dropdown { display: none }`. Flex replaces the
+   float layout, so the overflow hack is no longer needed, and the child combinator
+   keeps these rules from cascading into .dropdown. */
+header nav:first-of-type>ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    display: inline
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center
 }
 
-header nav:first-of-type>ul>li {
-    float: left
-}
-
-header nav:first-of-type>ul>li:lang(fa) {
-    float: right
-}
+/* REMOVED: `>ul>li { float: left }` and `>ul>li:lang(fa) { float: right }`.
+   Flex items ignore float. For an RTL language, set dir="rtl" on <html> and
+   flex follows the writing direction on its own. */
 
 /* custom */
 body {
@@ -349,4 +353,54 @@ dd {
 iframe {
     background-color: #EEEDFC;
     margin-top: 1.5rem;
+}
+
+/* collections submenu — styled to match .lang-dropdown__menu above */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12rem;
+    margin: 0;
+    padding: 0.25rem;
+    list-style: none;
+    background: var(--background);
+    border: 1px solid var(--border-bright);
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.has-dropdown:hover>.dropdown,
+.has-dropdown:focus-within>.dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown a {
+    display: block;
+    margin: 0;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    color: var(--text-main);
+    text-decoration: none !important;
+}
+
+.dropdown a:hover {
+    background: var(--button-hover);
+    color: var(--text-bright);
+}
+
+.dropdown a:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: -2px;
 }

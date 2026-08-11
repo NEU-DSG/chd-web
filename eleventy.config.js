@@ -83,6 +83,24 @@ eleventyConfig.addFilter("translate", (str) => {
     return [lat, lng];
 });
 
+  eleventyConfig.addFilter("groupByMultiple", (items, keyPath) => {
+    return items.reduce((groups, item) => {
+      const raw = keyPath.split(".").reduce((obj, k) => obj?.[k], item);
+      // raw is the pipe-delimited string, e.g. "uri1|uri2|uri3"
+
+      const subjectUris = raw ? raw.split("|") : [];
+
+      subjectUris.forEach((uri) => {
+        const key = uri.trim(); // guard against stray whitespace around pipes
+        if (!key) return;       // skip empty strings (trailing pipe, empty field, etc.)
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(item);
+      });
+
+      return groups;
+    }, {});
+  });
+
   eleventyConfig.addTransform("prettier", async function (content) {
       if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
         return await prettier.format(content, { parser: "html" });
