@@ -1,5 +1,5 @@
 ---
-title: 'Collections by Subject'
+title: '按主题浏览馆藏'
 description: 'Listing all collections'
 permalink: "/zh-Hans/collectionlist/by-subject/"
 ---

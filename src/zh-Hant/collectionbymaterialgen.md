@@ -1,5 +1,5 @@
 ---
-title: 'Collections by Material'
+title: '按一般資料類型瀏覽館藏'
 description: 'Listing all collections'
 permalink: "/zh-Hant/collectionlist/by-material-general/"
 ---

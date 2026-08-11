@@ -13,8 +13,12 @@ export default {
       url: '/en/collectionlist/',
       children: [
         {
-          text: 'By Creator',
-          url: '/en/collectionlist/by-creator/'
+          text: 'All Collections',
+          url: '/en/collectionlist/'
+        },
+        {
+          text: 'By Maintainer',
+          url: '/en/collectionlist/by-maintainer/'
         },
         {
           text: 'By Subject',
@@ -65,8 +69,12 @@ export default {
       url: '/zh-Hans/collectionlist/',
       children: [
         {
+          text: '所有馆藏',
+          url: '/zh-Hans/collectionlist/'
+        },
+        {
           text: '按创作者',
-          url: '/zh-Hans/collectionlist/by-creator/'
+          url: '/zh-Hans/collectionlist/by-maintainer/'
         },
         {
           text: '按主题',
@@ -117,8 +125,12 @@ export default {
       url: '/zh-Hant/collectionlist/',
       children: [
         {
+          text: '所有館藏',
+          url: '/zh-Hant/collectionlist/'
+        },
+        {
           text: '按創作者',
-          url: '/zh-Hant/collectionlist/by-creator/'
+          url: '/zh-Hant/collectionlist/by-maintainer/'
         },
         {
           text: '按主題',

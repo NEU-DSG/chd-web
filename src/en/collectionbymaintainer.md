@@ -1,7 +1,7 @@
 ---
 title: 'Collections by Maintainer'
 description: 'Listing all collections'
-permalink: "/en/collectionlist/by-creator/"
+permalink: "/en/collectionlist/by-maintainer/"
 ---
 
 {%- set grouped = collectionfolder.collectionsEn | groupByMultiple("maintainer_list.value") %}

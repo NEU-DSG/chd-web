@@ -1,5 +1,5 @@
 ---
-title: 'Collections by Subject'
+title: '按主題瀏覽館藏'
 description: 'Listing all collections'
 permalink: "/zh-Hant/collectionlist/by-subject/"
 ---

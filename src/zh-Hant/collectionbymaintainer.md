@@ -1,7 +1,7 @@
 ---
-title: 'Collections by Maintainer'
+title: '按維護者瀏覽館藏'
 description: 'Listing all collections'
-permalink: "/zh-Hant/collectionlist/by-creator/"
+permalink: "/zh-Hant/collectionlist/by-maintainer/"
 ---
 
 {%- set grouped = collectionfolder.collectionsZhHant | groupByMultiple("maintainer_list.value") %}

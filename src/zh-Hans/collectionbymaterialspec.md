@@ -1,5 +1,5 @@
 ---
-title: 'Collections by Material'
+title: '按具体资料类型浏览馆藏'
 description: 'Listing all collections'
 permalink: "/zh-Hans/collectionlist/by-material-specific/"
 ---
