@@ -1,5 +1,5 @@
 ---
-title: 'Collections by Material'
+title: 'Collections by Specific Material'
 description: 'Listing all collections'
 permalink: "/en/collectionlist/by-material-specific/"
 ---
