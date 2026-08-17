@@ -13,10 +13,3 @@ description: 'Listing all collections'
   
 {% endfor %}
 </ul>
-
-<!-- {% if item.subject_list %}
-      {% set subjects = item.subject_list.value | split("|") %}
-      {% for subject in subjects %}
-        <a href="/en/terms/{{ subject | lastSegment }}">{{ subject | labelFromUrl | capitalize}}</a><br>
-      {% endfor %}
-    {% endif %} -->
