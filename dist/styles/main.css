@@ -43,6 +43,12 @@ body {
     text-rendering: optimizeLegibility
 }
 
+@media (max-width: 600px) {
+  body {
+    padding-top: 60px; /* whatever your two-row nav height is */
+  }
+}
+
 h1,
 h2,
 h3,
